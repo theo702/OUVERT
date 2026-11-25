@@ -5,7 +5,13 @@
 /* ---- À compléter ---------------------------------------- */
 const CONFIG = {
   phone: '',        // ex. '+33600000000' (format international, sans espaces)
-  phoneDisplay: ''  // ex. '06 00 00 00 00'
+  phoneDisplay: '', // ex. '06 00 00 00 00'
+  // Liens de paiement Stripe (Payment Links), un par offre payable en ligne.
+  // Tant qu'un lien est vide, le bouton renvoie vers la page contact.
+  pay: {
+    'une-page': '',   // ex. 'https://buy.stripe.com/xxxx'
+    'vitrine': ''
+  }
 };
 
 /* Vrais avis clients : ajoutez-en ici, ils s'affichent dans le rail
@@ -18,6 +24,12 @@ const AVIS = [];
 (function () {
   const root = document.documentElement;
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Boutons de paiement Stripe */
+  document.querySelectorAll('[data-pay]').forEach(el => {
+    const url = CONFIG.pay[el.dataset.pay];
+    if (url) el.href = url;
+  });
 
   /* Année, téléphone */
   document.querySelectorAll('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
