@@ -430,3 +430,6 @@ details[open] .pm::after{transform:rotate(0)}
 }
 .rm .shelf{overflow-x:auto}
 .rm .shelf-track{animation:none}
+
+/* Le logo SVG contient déjà le point vert : on masque le voyant ajouté à côté quand le logo est chargé */
+.brand-logo:not([hidden]) ~ .brand-voyant{display:none}
