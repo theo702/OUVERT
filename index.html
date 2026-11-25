@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ouvert · Sites web pour artisans, commerçants et loueurs à Annecy</title>
-<meta name="description" content="Des sites simples, rapides et beaux pour les pros autour d'Annecy. Demandes, réservations et paiements 24 h/24. Prix affichés, en ligne en 2 semaines, le site est à vous.">
+<meta name="description" content="Des sites simples, rapides et beaux pour les pros autour d'Annecy. Demandes, réservations et paiements 24 h/24. Loueurs : gestion des résas, extras et stock.">
 <link rel="canonical" href="https://studio-ouvert.fr/">
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="assets/ouvert-icone.svg" type="image/svg+xml">
@@ -12,8 +12,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Ouvert">
-<meta property="og:title" content="Ouvert · Ouvert même quand vous êtes fermé">
-<meta property="og:description" content="Sites web pour artisans, commerçants, indépendants et loueurs autour d'Annecy. Demandes, réservations et paiements 24 h/24.">
+<meta property="og:title" content="Ouvert · Sites web pour artisans, commerçants et loueurs à Annecy">
+<meta property="og:description" content="Des sites simples, rapides et beaux pour les pros autour d'Annecy. Demandes, réservations et paiements 24 h/24. Loueurs : gestion des résas, extras et stock.">
 <meta property="og:url" content="https://studio-ouvert.fr/">
 <meta property="og:image" content="https://studio-ouvert.fr/assets/bonneaventure-desktop.webp">
 <meta name="twitter:card" content="summary_large_image">
@@ -33,15 +33,47 @@
   "url": "https://studio-ouvert.fr/",
   "email": "contact@studio-ouvert.fr",
   "slogan": "Ouvert même quand vous êtes fermé.",
-  "description": "Création de sites web simples, rapides et beaux pour artisans, commerçants, indépendants et loueurs autour d'Annecy.",
-  "founder": { "@type": "Person", "name": "Théo Bonaventure" },
-  "address": { "@type": "PostalAddress", "addressLocality": "Annecy", "addressRegion": "Haute-Savoie", "addressCountry": "FR" },
-  "areaServed": [{ "@type": "AdministrativeArea", "name": "Haute-Savoie" }, { "@type": "Country", "name": "France" }],
+  "description": "Création de sites web simples, rapides et beaux pour artisans, commerçants, indépendants et loueurs en courte durée autour d'Annecy.",
+  "founder": {
+    "@type": "Person",
+    "name": "Théo Bonaventure"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Annecy",
+    "addressRegion": "Haute-Savoie",
+    "addressCountry": "FR"
+  },
+  "areaServed": [
+    {
+      "@type": "AdministrativeArea",
+      "name": "Haute-Savoie"
+    },
+    {
+      "@type": "Country",
+      "name": "France"
+    }
+  ],
   "priceRange": "390 € – 1 290 €+",
   "makesOffer": [
-    { "@type": "Offer", "name": "Une page", "price": "390", "priceCurrency": "EUR" },
-    { "@type": "Offer", "name": "Vitrine", "price": "790", "priceCurrency": "EUR" },
-    { "@type": "Offer", "name": "Sur mesure", "price": "1290", "priceCurrency": "EUR" }
+    {
+      "@type": "Offer",
+      "name": "Une page",
+      "price": "390",
+      "priceCurrency": "EUR"
+    },
+    {
+      "@type": "Offer",
+      "name": "Vitrine",
+      "price": "790",
+      "priceCurrency": "EUR"
+    },
+    {
+      "@type": "Offer",
+      "name": "Sur mesure",
+      "price": "1290",
+      "priceCurrency": "EUR"
+    }
   ]
 }
 </script>
@@ -93,6 +125,7 @@
   </div>
 </header>
 
+
 <main id="contenu">
 
 <!-- HERO · Promise and outcome shelf -->
@@ -103,7 +136,7 @@
       <h1 class="display hero-title" id="hero-title">Ouvert même quand vous êtes fermé.</h1>
     </div>
     <div class="hero-right">
-      <p class="lead hero-lead" data-intro="lead">Votre site prend les demandes, les réservations et les paiements 24 h/24. Vous, vous travaillez. Ou vous dormez.</p>
+      <p class="lead hero-lead" data-intro="lead">Artisans, commerçants, loueurs : votre site prend les demandes, les réservations et les paiements 24 h/24. Vous, vous travaillez. Ou vous dormez.</p>
       <div class="btn-row" data-intro="ctas">
         <a class="btn btn-green" href="contact.html">Demander un devis <svg class="arr" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <a class="btn btn-grey" href="#offres">Voir les prix</a>
@@ -235,6 +268,70 @@
   </div>
 </section>
 
+
+<!-- LOUEURS · écrans de gestion -->
+<section class="hosts" id="loueurs" aria-labelledby="hosts-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Loueurs en courte durée</p>
+      <h2 class="h2" id="hosts-title" data-split>Pas juste une vitrine : un vrai outil de gestion.</h2>
+      <p class="lead" data-reveal>Réservations, paiements, extras, ménage, stock. Tout se gère depuis un seul espace. C'est ce que j'ai construit pour La Bonne Aventure.</p>
+    </div>
+    <div class="hosts-grid">
+      <ol class="feats">
+        <li class="feat is-active">
+          <p class="feat-n"><span class="voyant" aria-hidden="true"></span>01</p>
+          <h3>Réservations en direct, calendrier synchronisé</h3>
+          <p>Le voyageur réserve sur votre site. Le calendrier se synchronise avec Airbnb et Booking : une résa reçue quelque part bloque les dates partout.</p>
+          <div class="feat-media"><figure class="fm-win"><img src="assets/lba-admin-calendrier-720.webp" alt="Calendrier de l'administration La Bonne Aventure" width="720" height="450" loading="lazy" decoding="async"></figure></div>
+        </li>
+        <li class="feat">
+          <p class="feat-n"><span class="voyant" aria-hidden="true"></span>02</p>
+          <h3>Paiement, taxe de séjour et caution</h3>
+          <p>Paiement par carte avec Stripe. La taxe de séjour se calcule toute seule. Une caution par empreinte bancaire si vous le souhaitez.</p>
+          <div class="feat-media"><figure class="fm-win"><img src="assets/lba-admin-sejours-720.webp" alt="Liste des séjours avec paiement et statut" width="720" height="450" loading="lazy" decoding="async"></figure></div>
+        </li>
+        <li class="feat">
+          <p class="feat-n"><span class="voyant" aria-hidden="true"></span>03</p>
+          <h3>Extras payants</h3>
+          <p>Arrivée anticipée, départ tardif, packs : le voyageur les réserve et les paie en ligne. Vous validez d'un clic.</p>
+          <div class="feat-media"><figure class="fm-win"><img src="assets/lba-extras-720.webp" alt="Page des extras proposés aux voyageurs" width="720" height="450" loading="lazy" decoding="async"></figure></div>
+        </li>
+        <li class="feat">
+          <p class="feat-n"><span class="voyant" aria-hidden="true"></span>04</p>
+          <h3>Stock et ménage</h3>
+          <p>La personne du ménage voit ses passages et déclare ce qu'elle utilise depuis son téléphone. Vous recevez un mail quand il faut racheter.</p>
+          <div class="feat-media"><figure class="fm-win"><img src="assets/lba-admin-stock-720.webp" alt="Gestion du stock des consommables" width="720" height="450" loading="lazy" decoding="async"></figure></div>
+        </li>
+        <li class="feat">
+          <p class="feat-n"><span class="voyant" aria-hidden="true"></span>05</p>
+          <h3>Tableau de bord, tarifs et promos</h3>
+          <p>Prochaine arrivée, occupation, revenus du site, produits à racheter. Tarifs, saisons et codes promo se règlent sans toucher au code.</p>
+          <div class="feat-media"><figure class="fm-win"><img src="assets/lba-admin-accueil-720.webp" alt="Tableau de bord de l'administration" width="720" height="450" loading="lazy" decoding="async"></figure></div>
+        </li>
+        <li class="feat">
+          <p class="feat-n"><span class="voyant" aria-hidden="true"></span>06</p>
+          <h3>Livret d'accueil et espace client</h3>
+          <p>Accès, règles, adresses et urgences dans un livret en ligne. Un espace client avec fidélité : −10 % au séjour suivant.</p>
+          <div class="feat-media"><div class="fm-phone"><img src="assets/lba-livret-mobile-240.webp" srcset="assets/lba-livret-mobile-240.webp 240w, assets/lba-livret-mobile.webp 390w" sizes="220px" alt="Livret d'accueil en ligne sur téléphone" width="240" height="519" loading="lazy" decoding="async"></div></div>
+        </li>
+      </ol>
+      <div class="hosts-panel" aria-hidden="true">
+        <div class="hp-stage"><div class="hp-slide is-active"><figure class="hp-win"><div class="window-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">labonneaventure-aixlesbains.fr</span></div><img src="assets/lba-admin-calendrier.webp" srcset="assets/lba-admin-calendrier-720.webp 720w, assets/lba-admin-calendrier.webp 1440w" sizes="680px" alt="" width="1440" height="900" loading="lazy" decoding="async"></figure></div><div class="hp-slide"><figure class="hp-win"><div class="window-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">labonneaventure-aixlesbains.fr</span></div><img src="assets/lba-admin-sejours.webp" srcset="assets/lba-admin-sejours-720.webp 720w, assets/lba-admin-sejours.webp 1440w" sizes="680px" alt="" width="1440" height="900" loading="lazy" decoding="async"></figure></div><div class="hp-slide"><figure class="hp-win"><div class="window-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">labonneaventure-aixlesbains.fr</span></div><img src="assets/lba-extras.webp" srcset="assets/lba-extras-720.webp 720w, assets/lba-extras.webp 1440w" sizes="680px" alt="" width="1440" height="900" loading="lazy" decoding="async"></figure></div><div class="hp-slide"><figure class="hp-win"><div class="window-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">labonneaventure-aixlesbains.fr</span></div><img src="assets/lba-admin-stock.webp" srcset="assets/lba-admin-stock-720.webp 720w, assets/lba-admin-stock.webp 1440w" sizes="680px" alt="" width="1440" height="900" loading="lazy" decoding="async"></figure><div class="hp-phone"><img src="assets/lba-menage-mobile-240.webp" alt="" width="240" height="519" loading="lazy" decoding="async"></div></div><div class="hp-slide"><figure class="hp-win"><div class="window-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">labonneaventure-aixlesbains.fr</span></div><img src="assets/lba-admin-accueil.webp" srcset="assets/lba-admin-accueil-720.webp 720w, assets/lba-admin-accueil.webp 1440w" sizes="680px" alt="" width="1440" height="900" loading="lazy" decoding="async"></figure></div><div class="hp-slide"><div class="hp-phones"><div class="hp-phone"><img src="assets/lba-livret-mobile-240.webp" alt="" width="240" height="519" loading="lazy" decoding="async"></div><div class="hp-phone"><img src="assets/bonneaventure-mobile-240.webp" alt="" width="240" height="519" loading="lazy" decoding="async"></div></div></div></div>
+        <div class="hp-progress"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <p class="hosts-note">Captures du vrai site, avec des données de démonstration.</p>
+      </div>
+    </div>
+    <div class="hosts-cta" data-reveal>
+      <p>Vous louez un appartement, un gîte, un studio ?</p>
+      <div class="btn-row">
+        <a class="btn btn-green" href="contact.html?profil=loueur">Parlons de votre logement <svg class="arr" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn-dark" href="realisations.html#la-bonne-aventure">Voir le projet en détail</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- POURQUOI -->
 <section class="why" aria-labelledby="why-title">
   <div class="wrap why-grid">
@@ -278,10 +375,13 @@
           <li>Calendrier et réservation en direct</li>
           <li>Paiement Stripe + taxe de séjour</li>
           <li>Mails de confirmation automatiques</li>
+          <li>Extras payants : arrivée anticipée, départ tardif…</li>
+          <li>Stock des consommables et espace ménage</li>
           <li>Espace client et fidélité : −10 % au séjour suivant</li>
-          <li>Avis des voyageurs</li>
+          <li>Synchro Airbnb / Booking, avis des voyageurs</li>
         </ul>
-        <a class="link" href="https://labonneaventure-aixlesbains.fr/" target="_blank" rel="noopener">Voir le site<span class="sr-only"> (nouvel onglet)</span> <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <span class="pcard-links"><a class="link" href="realisations.html#la-bonne-aventure">Voir le projet en détail <svg class="arr" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="link" href="https://labonneaventure-aixlesbains.fr/" target="_blank" rel="noopener">Voir le site<span class="sr-only"> (nouvel onglet)</span> <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span>
       </div>
     </article>
     <!-- Les vrais avis clients (tableau AVIS dans js/site.js) s'insèrent ici -->
@@ -340,6 +440,7 @@
           <li>Réservation en direct + calendrier</li>
           <li>Paiement Stripe</li>
           <li>Mails automatiques</li>
+          <li>Loueurs : extras, stock, espace ménage, synchro Airbnb</li>
           <li>Espace client, fidélité, langues : selon besoin</li>
         </ul>
         <a class="btn btn-grey btn-block" href="contact.html?offre=sur-mesure">Choisir Sur mesure</a>
@@ -453,6 +554,7 @@
 </section>
 
 </main>
+
 
 <!-- FOOTER · Monumental emblem -->
 <footer class="footer">
