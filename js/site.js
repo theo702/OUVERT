@@ -6,6 +6,10 @@
 const CONFIG = {
   phone: '',        // ex. '+33600000000' (format international, sans espaces)
   phoneDisplay: '', // ex. '06 00 00 00 00'
+  email: 'contact@studio-ouvert.fr',
+  // Clé Web3Forms (gratuite sur https://web3forms.com) pour recevoir le
+  // formulaire de contact par mail. Vide = le formulaire ouvre la messagerie.
+  web3formsKey: '',
   // Liens de paiement Stripe (Payment Links), un par offre payable en ligne.
   // Tant qu'un lien est vide, le bouton renvoie vers la page contact.
   pay: {
@@ -38,6 +42,52 @@ const AVIS = [];
       el.href = 'tel:' + CONFIG.phone;
       el.textContent = CONFIG.phoneDisplay || CONFIG.phone;
       el.hidden = false;
+    });
+    document.querySelectorAll('[data-phone-row]').forEach(el => { el.hidden = false; });
+  }
+
+  /* Formulaire de contact */
+  const form = document.querySelector('[data-contact-form]');
+  if (form) {
+    const sel = form.querySelector('#offre');
+    const want = new URLSearchParams(location.search).get('offre');
+    if (sel && want && [...sel.options].some(o => o.value === want)) sel.value = want;
+    const status = form.querySelector('.form-status');
+    const btn = form.querySelector('[type="submit"]');
+    const say = (msg, ok) => { status.textContent = msg; status.dataset.state = ok ? 'ok' : 'err'; status.hidden = false; };
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      if (form.botcheck && form.botcheck.checked) return;
+      if (!form.reportValidity()) return;
+      const data = new FormData(form);
+      if (CONFIG.web3formsKey) {
+        data.append('access_key', CONFIG.web3formsKey);
+        data.append('subject', 'Nouvelle demande · Ouvert');
+        data.append('from_name', 'Site Ouvert');
+        btn.disabled = true;
+        try {
+          const r = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+          const j = await r.json();
+          if (!j.success) throw new Error(j.message);
+          form.reset();
+          say("Merci, c'est bien reçu. Je reviens vers vous très vite.", true);
+        } catch (err) {
+          say("L'envoi n'a pas marché. Écrivez-moi directement à " + CONFIG.email + '.', false);
+        }
+        btn.disabled = false;
+      } else {
+        const o = sel && sel.value ? sel.options[sel.selectedIndex].text : '';
+        const body = [
+          'Nom : ' + (data.get('nom') || ''),
+          'Activité : ' + (data.get('activite') || ''),
+          'Téléphone : ' + (data.get('telephone') || ''),
+          'Offre : ' + o,
+          '',
+          data.get('message') || ''
+        ].join('\n');
+        location.href = 'mailto:' + CONFIG.email + '?subject=' + encodeURIComponent('Demande de site · ' + (data.get('nom') || '')) + '&body=' + encodeURIComponent(body);
+        say("Votre messagerie s'ouvre avec le message prêt. Il ne reste qu'à l'envoyer.", true);
+      }
     });
   }
 
@@ -118,6 +168,8 @@ const AVIS = [];
 
   /* ---------- Intro ---------- */
   const title = document.querySelector('.hero-title');
+  if (!title) root.classList.add('intro-ready');
+  else {
   const titleWords = split(title);
   gsap.set(titleWords, { yPercent: 110, scale: 1.2, transformOrigin: '0% 100%' });
   gsap.set('[data-intro="announce"]', { yPercent: -100 });
@@ -147,6 +199,8 @@ const AVIS = [];
   /* Hero au scroll : profondeur légère */
   gsap.to('.hero-grid', { y: -60, opacity: .35, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
   gsap.to('.shelf', { y: -30, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+  }
+  const has = sel => document.querySelector(sel);
 
   /* ---------- Titres de section ---------- */
   document.querySelectorAll('[data-split]').forEach(h => {
@@ -159,7 +213,7 @@ const AVIS = [];
   gsap.utils.toArray('[data-stagger]').forEach(list => gsap.from(list.children, { opacity: 0, y: 40, duration: 1, ease: EASE, stagger: .12, scrollTrigger: { trigger: list, start: 'top 85%' } }));
 
   /* ---------- Product theatre ---------- */
-  mm.add({ desk: '(min-width: 861px)', mob: '(max-width: 860px)' }, ctx => {
+  if (has('.stage')) mm.add({ desk: '(min-width: 861px)', mob: '(max-width: 860px)' }, ctx => {
     const { desk } = ctx.conditions;
     gsap.fromTo('.window', { rotateX: desk ? 24 : 12, scale: .86, y: 60 }, {
       rotateX: 0, scale: 1, y: 0, ease: 'none',
@@ -178,17 +232,17 @@ const AVIS = [];
   });
 
   /* ---------- Rail ---------- */
-  gsap.from('.rail > *', { x: 160, opacity: 0, duration: 1.3, ease: 'power3.out', stagger: .14, scrollTrigger: { trigger: '.rail', start: 'top 85%' } });
-  gsap.fromTo('.pcard-lba .pcard-img img', { scale: 1.18 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '.rail', start: 'top bottom', end: 'bottom top', scrub: true } });
+  if (has('.rail')) gsap.from('.rail > *', { x: 160, opacity: 0, duration: 1.3, ease: 'power3.out', stagger: .14, scrollTrigger: { trigger: '.rail', start: 'top 85%' } });
+  if (has('.rail .pcard-lba')) gsap.fromTo('.pcard-lba .pcard-img img', { scale: 1.18 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '.rail', start: 'top bottom', end: 'bottom top', scrub: true } });
 
   /* ---------- Offres ---------- */
-  gsap.from('.plans .plan-featured', { scale: .94, duration: 1.2, ease: EASE, scrollTrigger: { trigger: '.plans', start: 'top 85%' } });
+  if (has('.plans .plan-featured')) gsap.from('.plans .plan-featured', { scale: .94, duration: 1.2, ease: EASE, scrollTrigger: { trigger: '.plans', start: 'top 85%' } });
   gsap.utils.toArray('.amount').forEach(a => gsap.from(a, { yPercent: 40, opacity: 0, duration: 1, ease: EASE, scrollTrigger: { trigger: a, start: 'top 90%' } }));
   gsap.utils.toArray('.host-row, .opts div').forEach((r, i) => gsap.from(r, { opacity: 0, y: 16, duration: .7, ease: EASE, delay: (i % 6) * .05, scrollTrigger: { trigger: r, start: 'top 92%' } }));
 
   /* ---------- Méthode : la ligne se remplit ---------- */
   const steps = gsap.utils.toArray('.steps li');
-  mm.add({ desk: '(min-width: 861px)', mob: '(max-width: 860px)' }, ctx => {
+  if (steps.length) mm.add({ desk: '(min-width: 861px)', mob: '(max-width: 860px)' }, ctx => {
     const { desk } = ctx.conditions;
     gsap.fromTo('.steps-line span', desk ? { scaleX: 0, scaleY: 1 } : { scaleY: 0, scaleX: 1 }, {
       [desk ? 'scaleX' : 'scaleY']: 1, ease: 'none',
@@ -198,7 +252,7 @@ const AVIS = [];
       }
     });
   });
-  gsap.from(steps, { opacity: 0, y: 30, duration: 1, ease: EASE, stagger: .12, scrollTrigger: { trigger: '.steps', start: 'top 85%' } });
+  if (steps.length) gsap.from(steps, { opacity: 0, y: 30, duration: 1, ease: EASE, stagger: .12, scrollTrigger: { trigger: '.steps', start: 'top 85%' } });
 
   /* ---------- FAQ : ouverture animée ---------- */
   faqs.forEach(d => {
@@ -215,21 +269,28 @@ const AVIS = [];
   });
 
   /* ---------- Clôture ---------- */
-  gsap.fromTo('.flutes', { xPercent: -3 }, { xPercent: 3, ease: 'none', scrollTrigger: { trigger: '.closing', start: 'top bottom', end: 'bottom top', scrub: true } });
+  if (has('.closing')) gsap.fromTo('.flutes', { xPercent: -3 }, { xPercent: 3, ease: 'none', scrollTrigger: { trigger: '.closing', start: 'top bottom', end: 'bottom top', scrub: true } });
+  if (has('.stack')) {
   const stackTl = gsap.timeline({ scrollTrigger: { trigger: '.closing', start: 'top 80%', end: 'center 50%', scrub: .7 } });
   stackTl
     .from('.sk-1', { rotate: 0, x: 60, y: 120, ease: 'none' }, 0)
     .from('.sk-2', { rotate: 0, x: -60, y: 60, ease: 'none' }, 0)
     .from('.sk-3', { rotate: 0, y: -40, scale: .9, ease: 'none' }, 0)
     .from('.stack', { opacity: 0, ease: 'none', duration: .3 }, 0);
+  }
   gsap.utils.toArray('.sk').forEach((img, i) => {
     img.addEventListener('pointerenter', () => gsap.to(img, { y: -14, duration: .5, ease: 'power2.out' }));
     img.addEventListener('pointerleave', () => gsap.to(img, { y: 0, duration: .6, ease: 'power2.out' }));
   });
 
   /* ---------- Footer : emblème ---------- */
+  if (has('.emblem')) {
   gsap.fromTo('.emblem', { yPercent: 25, rotate: -24 }, { yPercent: 0, rotate: 0, ease: 'none', scrollTrigger: { trigger: '.footer', start: 'top bottom', end: 'bottom bottom', scrub: .8 } });
   gsap.from('.emblem-dot', { scale: 0, transformOrigin: '50% 50%', duration: .8, ease: 'back.out(3)', scrollTrigger: { trigger: '.footer', start: 'top 40%' } });
+  }
+
+  /* Galerie des réalisations */
+  gsap.utils.toArray('[data-parallax] img').forEach(img => gsap.fromTo(img, { scale: 1.12 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: img.parentElement, start: 'top bottom', end: 'bottom top', scrub: true } }));
 
   /* Recalcul après chargement des images */
   window.addEventListener('load', () => ScrollTrigger.refresh());
