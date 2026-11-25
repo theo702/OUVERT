@@ -141,14 +141,14 @@ const CONFIG = {
 
   /* Entrée du haut de page */
   root.classList.add('intro-ready');
-  if ($('[data-hero]')) gsap.from('[data-hero] > *', { opacity: 0, y: 24, duration: 1.1, ease: EASE, stagger: .09, delay: .1 });
+  if ($('[data-hero]')) gsap.from('[data-hero] > *', { opacity: 0, y: 28, duration: 1, ease: EASE, stagger: .1, delay: .08 });
 
-  /* Rendu produit : la fenêtre se redresse au scroll */
+  /* Rendu produit : la fenêtre monte légèrement, le téléphone glisse */
   $$('.media').forEach(m => {
     const win = m.querySelector('.window');
     const ph = m.querySelector('.phone');
-    if (win) gsap.fromTo(win, { scale: .9, y: 40, opacity: .6 }, { scale: 1, y: 0, opacity: 1, ease: 'none', scrollTrigger: { trigger: m, start: 'top 95%', end: 'top 30%', scrub: .6 } });
-    if (ph) gsap.fromTo(ph, { y: 44 }, { y: 0, ease: 'none', scrollTrigger: { trigger: m, start: 'top bottom', end: 'bottom 60%', scrub: .6 } });
+    if (win) gsap.fromTo(win, { y: 48, opacity: .55 }, { y: 0, opacity: 1, ease: 'none', scrollTrigger: { trigger: m, start: 'top 98%', end: 'top 35%', scrub: .55 } });
+    if (ph) gsap.fromTo(ph, { y: 56, rotate: 2 }, { y: 0, rotate: 0, ease: 'none', scrollTrigger: { trigger: m, start: 'top bottom', end: 'bottom 55%', scrub: .55 } });
   });
 
   /* Apparitions */
