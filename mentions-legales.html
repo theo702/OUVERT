@@ -6,9 +6,8 @@
 <title>Mentions légales · Ouvert</title>
 <meta name="description" content="Mentions légales et données personnelles du site Ouvert.">
 <link rel="canonical" href="https://studio-ouvert.fr/mentions-legales.html">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#fafafc">
 <link rel="icon" href="assets/ouvert-icone.svg" type="image/svg+xml">
-
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Ouvert">
@@ -17,41 +16,32 @@
 <meta property="og:url" content="https://studio-ouvert.fr/mentions-legales.html">
 <meta property="og:image" content="https://studio-ouvert.fr/assets/bonneaventure-desktop.webp">
 <meta name="twitter:card" content="summary_large_image">
-
-<script>document.documentElement.className=matchMedia('(prefers-reduced-motion: reduce)').matches?'rm':'motion';setTimeout(function(){document.documentElement.classList.add('intro-ready')},3000);</script>
-
-<link rel="preload" href="fonts/outfit-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.className=matchMedia('(prefers-reduced-motion: reduce)').matches?'rm':'motion';setTimeout(function(){document.documentElement.classList.add('intro-ready')},2500);</script>
 <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="stylesheet" href="css/site.css">
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="js/site.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
-
-<header class="nav">
-  <div class="wrap nav-in">
-    <a class="brand" href="./" aria-label="Ouvert, accueil">
-      <img class="brand-logo" src="assets/ouvert-logo.svg" alt="" width="132" height="32" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
-      <span class="brand-text" hidden>ouvert</span>
-      <span class="voyant brand-voyant" aria-hidden="true"></span>
-    </a>
-    <nav class="nav-links" aria-label="Navigation principale">
+<header class="gnav">
+  <div class="wide gnav-in">
+    <a class="brand" href="./" aria-label="Ouvert, accueil"><img src="assets/ouvert-logo.svg" alt="" width="132" height="35"></a>
+    <nav class="gnav-links" aria-label="Navigation principale">
       <a href="a-propos.html">À propos</a>
       <a href="services.html">Services</a>
       <a href="realisations.html">Réalisations</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <div class="nav-actions">
-      <a class="btn btn-green btn-sm nav-cta" href="contact.html">Demander un devis</a>
-      <button class="burger" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu">
-        <span></span><span></span>
-      </button>
+    <div class="gnav-right">
+      <a class="btn btn-fill btn-sm" href="contact.html">Demander un devis</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu"><span></span><span></span></button>
     </div>
   </div>
-  <div class="menu-mobile" id="menu-mobile" hidden>
+  <div class="gnav-menu" id="menu-mobile" hidden>
     <nav aria-label="Navigation mobile">
       <a href="./">Accueil</a>
       <a href="a-propos.html">À propos</a>
@@ -59,97 +49,66 @@
       <a href="realisations.html">Réalisations</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <a class="btn btn-green" href="contact.html">Demander un devis</a>
+    <a class="btn btn-fill" href="contact.html">Demander un devis</a>
   </div>
 </header>
 
 <main id="contenu">
-<section class="page-hero">
-  <div class="wrap page-hero-grid">
-    <div>
-      <p class="kicker">Informations légales</p>
-      <h1 class="page-title" data-split>Mentions légales</h1>
-    </div>
-  </div>
-</section>
-
-<section class="sec">
+<section class="sec s-white">
   <div class="wrap legal">
+    <h1>Mentions légales</h1>
     <h2>Éditeur du site</h2>
     <p>Ce site est édité par Théo Bonaventure, entrepreneur individuel, sous le nom commercial Ouvert.</p>
     <ul>
-      <li>Adresse : <span class="todo">à compléter</span></li>
-      <li>SIRET : <span class="todo">à compléter</span></li>
-      <li>Email : <a href="mailto:contact@studio-ouvert.fr">contact@studio-ouvert.fr</a></li>
-      <li>Téléphone : <span class="todo">à compléter</span></li>
+      <li>Adresse&nbsp;: <span class="todo">à compléter</span></li>
+      <li>SIRET&nbsp;: <span class="todo">à compléter</span></li>
+      <li>Email&nbsp;: <a href="mailto:contact@studio-ouvert.fr">contact@studio-ouvert.fr</a></li>
+      <li>Téléphone&nbsp;: <span class="todo">à compléter</span></li>
     </ul>
-    <p>Directeur de la publication : Théo Bonaventure.</p>
-
+    <p>Directeur de la publication&nbsp;: Théo Bonaventure.</p>
     <h2>Hébergement</h2>
-    <p>Cloudflare, Inc.<br>101 Townsend St, San Francisco, CA 94107, États-Unis<br>Téléphone : +1 (650) 319-8930<br><a href="https://www.cloudflare.com/" target="_blank" rel="noopener">cloudflare.com</a></p>
-
+    <p>Cloudflare, Inc.<br>101 Townsend St, San Francisco, CA 94107, États-Unis<br>Téléphone&nbsp;: +1 (650) 319-8930<br><a href="https://www.cloudflare.com/" target="_blank" rel="noopener">cloudflare.com</a></p>
     <h2>Propriété intellectuelle</h2>
     <p>Les textes, le logo et les visuels de ce site appartiennent à Ouvert. Merci de ne pas les reproduire sans accord. Les captures du site La Bonne Aventure sont publiées avec l'accord de son propriétaire.</p>
-
     <h2 id="donnees">Données personnelles</h2>
     <p>Quand vous remplissez le formulaire de contact, je reçois votre nom, votre email, votre téléphone si vous le donnez, votre activité et votre message. Ces infos servent uniquement à vous répondre et à préparer votre projet. Elles ne sont ni vendues ni partagées.</p>
-    <p>Les messages du formulaire me sont transmis par mail via le service Web3Forms. Les paiements en ligne sont gérés par Stripe : je ne vois jamais vos données de carte.</p>
+    <p>Les messages du formulaire me sont transmis par mail via le service Web3Forms. Les paiements en ligne sont gérés par Stripe&nbsp;: je ne vois jamais vos données de carte.</p>
     <p>Je garde vos messages le temps de notre échange, puis au plus 3 ans après notre dernier contact si nous ne travaillons pas ensemble. Les factures sont conservées 10 ans, comme la loi l'exige.</p>
     <p>Vous pouvez demander à consulter, corriger ou supprimer vos données en écrivant à <a href="mailto:contact@studio-ouvert.fr">contact@studio-ouvert.fr</a>. Vous pouvez aussi faire une réclamation auprès de la <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener">CNIL</a>.</p>
-
     <h2>Cookies</h2>
     <p>Ce site n'utilise pas de cookies de mesure d'audience ni de publicité.</p>
-
     <h2>Crédits</h2>
-    <p>Polices Outfit et Inter (licence SIL Open Font). Animations GSAP.</p>
+    <p>Police Inter (licence SIL Open Font). Animations GSAP.</p>
   </div>
 </section>
-
 </main>
-
-<!-- FOOTER · Monumental emblem -->
 <footer class="footer">
-  <div class="wrap footer-grid">
-    <div class="f-brand">
-      <a class="brand" href="./" aria-label="Ouvert, accueil">
-        <img class="brand-logo" src="assets/ouvert-logo.svg" alt="" width="132" height="32" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
-        <span class="brand-text" hidden>ouvert</span>
-        <span class="voyant brand-voyant" aria-hidden="true"></span>
-      </a>
-      <p>Des sites simples, rapides et beaux pour les pros autour d'Annecy.</p>
+  <div class="wide">
+    <div class="f-note">
+      <p>Prix en euros. La création du site se paie une fois&nbsp;; l'hébergement est facturé à part, sans engagement.</p>
+      <p>Paiement en ligne sécurisé par Stripe. Ouvert ne prend aucune commission sur vos ventes.</p>
     </div>
-    <nav class="f-col" aria-label="Pages">
-      <p class="f-title">Pages</p>
-      <a href="./">Accueil</a>
-      <a href="a-propos.html">À propos</a>
-      <a href="services.html">Services</a>
-      <a href="realisations.html">Réalisations</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <nav class="f-col" aria-label="Offres">
-      <p class="f-title">Offres</p>
-      <a href="services.html#une-page">Une page · 390 €</a>
-      <a href="services.html#vitrine">Vitrine · 790 €</a>
-      <a href="services.html#sur-mesure">Sur mesure · dès 1 290 €</a>
-      <a href="services.html#ia">Visible sur les IA · 190 €</a>
-      <a href="services.html#hebergement">Hébergement &amp; suivi</a>
-    </nav>
-    <div class="f-col">
-      <p class="f-title">Contact</p>
-      <a href="mailto:contact@studio-ouvert.fr">contact@studio-ouvert.fr</a>
-      <!-- Téléphone : renseigner CONFIG.phone dans js/site.js -->
-      <a data-phone hidden href="#"></a>
-      <p>Annecy, Haute-Savoie</p>
-      <p>À distance partout en France</p>
+    <div class="f-dir">
+      <div class="f-brand">
+        <img src="assets/ouvert-logo.svg" alt="Ouvert" width="132" height="35" loading="lazy">
+        <p>Des sites simples, rapides et beaux pour les pros autour d'Annecy.</p>
+      </div>
+      <nav aria-label="Pages"><h2>Pages</h2><ul>
+        <li><a href="./">Accueil</a></li><li><a href="a-propos.html">À propos</a></li><li><a href="services.html">Services</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="contact.html">Contact</a></li>
+      </ul></nav>
+      <nav aria-label="Offres"><h2>Offres</h2><ul>
+        <li><a href="services.html#une-page">Une page · 390 €</a></li><li><a href="services.html#vitrine">Vitrine · 790 €</a></li><li><a href="services.html#sur-mesure">Sur mesure · dès 1 290 €</a></li><li><a href="services.html#ia">Visible sur les IA · 190 €</a></li><li><a href="services.html#hebergement">Hébergement et suivi</a></li>
+      </ul></nav>
+      <div><h2>Contact</h2><ul>
+        <li><a href="mailto:contact@studio-ouvert.fr">contact@studio-ouvert.fr</a></li>
+        <li data-phone-row hidden><a data-phone hidden href="#"></a></li>
+        <li>Annecy, Haute-Savoie</li><li>À distance partout en France</li>
+      </ul></div>
     </div>
-  </div>
-  <div class="wrap f-bottom">
-    <p>© <span data-year>2026</span> Ouvert · Théo Bonaventure, entrepreneur individuel</p>
-    <a href="mentions-legales.html">Mentions légales</a>
-  </div>
-  <div class="emblem" aria-hidden="true">
-    <!-- PLACEHOLDER : à remplacer par le "o" + point extraits de assets/ouvert-logo.svg -->
-    <svg viewBox="0 0 200 200" width="672" height="672"><circle cx="100" cy="100" r="78" fill="none" stroke="currentColor" stroke-width="34" stroke-dasharray="400 90" transform="rotate(-50 100 100)"/><circle class="emblem-dot" cx="158" cy="36" r="17" fill="currentColor"/></svg>
+    <div class="f-bottom">
+      <p>© <span data-year>2026</span> Ouvert · Théo Bonaventure, entrepreneur individuel</p>
+      <nav aria-label="Légal"><a href="mentions-legales.html">Mentions légales</a><a href="contact.html">Contact</a></nav>
+    </div>
   </div>
 </footer>
 </body>

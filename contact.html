@@ -6,9 +6,8 @@
 <title>Contact · Ouvert, sites web près d'Annecy</title>
 <meta name="description" content="Parlez-moi de votre projet de site. Premier échange de 20 minutes gratuit. Annecy, Haute-Savoie et à distance partout en France.">
 <link rel="canonical" href="https://studio-ouvert.fr/contact.html">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#fafafc">
 <link rel="icon" href="assets/ouvert-icone.svg" type="image/svg+xml">
-
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Ouvert">
@@ -17,49 +16,32 @@
 <meta property="og:url" content="https://studio-ouvert.fr/contact.html">
 <meta property="og:image" content="https://studio-ouvert.fr/assets/bonneaventure-desktop.webp">
 <meta name="twitter:card" content="summary_large_image">
-
-<script>document.documentElement.className=matchMedia('(prefers-reduced-motion: reduce)').matches?'rm':'motion';setTimeout(function(){document.documentElement.classList.add('intro-ready')},3000);</script>
-
-<link rel="preload" href="fonts/outfit-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.className=matchMedia('(prefers-reduced-motion: reduce)').matches?'rm':'motion';setTimeout(function(){document.documentElement.classList.add('intro-ready')},2500);</script>
 <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="stylesheet" href="css/site.css">
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="js/site.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
-
-<!-- Bandeau d'annonce -->
-<div class="announce">
-  <a href="realisations.html#la-bonne-aventure">
-    <span>Loueurs Airbnb : vos réservations en direct, sans commission</span>
-    <span class="announce-cta">voir La Bonne Aventure <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-  </a>
-</div>
-
-<header class="nav">
-  <div class="wrap nav-in">
-    <a class="brand" href="./" aria-label="Ouvert, accueil">
-      <img class="brand-logo" src="assets/ouvert-logo.svg" alt="" width="132" height="32" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
-      <span class="brand-text" hidden>ouvert</span>
-      <span class="voyant brand-voyant" aria-hidden="true"></span>
-    </a>
-    <nav class="nav-links" aria-label="Navigation principale">
+<header class="gnav">
+  <div class="wide gnav-in">
+    <a class="brand" href="./" aria-label="Ouvert, accueil"><img src="assets/ouvert-logo.svg" alt="" width="132" height="35"></a>
+    <nav class="gnav-links" aria-label="Navigation principale">
       <a href="a-propos.html">À propos</a>
       <a href="services.html">Services</a>
       <a href="realisations.html">Réalisations</a>
       <a href="contact.html" aria-current="page">Contact</a>
     </nav>
-    <div class="nav-actions">
-      <a class="btn btn-green btn-sm nav-cta" href="contact.html">Demander un devis</a>
-      <button class="burger" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu">
-        <span></span><span></span>
-      </button>
+    <div class="gnav-right">
+      <a class="btn btn-fill btn-sm" href="contact.html">Demander un devis</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu"><span></span><span></span></button>
     </div>
   </div>
-  <div class="menu-mobile" id="menu-mobile" hidden>
+  <div class="gnav-menu" id="menu-mobile" hidden>
     <nav aria-label="Navigation mobile">
       <a href="./">Accueil</a>
       <a href="a-propos.html">À propos</a>
@@ -67,44 +49,22 @@
       <a href="realisations.html">Réalisations</a>
       <a href="contact.html" aria-current="page">Contact</a>
     </nav>
-    <a class="btn btn-green" href="contact.html">Demander un devis</a>
+    <a class="btn btn-fill" href="contact.html">Demander un devis</a>
   </div>
 </header>
 
 <main id="contenu">
-<section class="page-hero">
-  <div class="wrap page-hero-grid">
-    <div>
-      <p class="kicker">Contact</p>
-      <h1 class="page-title" data-split>Parlons de votre site.</h1>
-    </div>
-    <div>
-      <p class="lead" data-reveal>Dites-moi en quelques mots ce que vous faites et ce dont vous avez besoin. Le premier échange de 20 minutes est gratuit.</p>
-      
-    </div>
+<section class="hero s-white hero-only" aria-labelledby="titre">
+  <div class="wrap center" data-hero>
+    <p class="eyebrow">Contact</p>
+    <h1 class="h1" id="titre">Parlons de votre site.</h1>
+    <p class="sub">Dites-moi en quelques mots ce que vous faites et ce dont vous avez besoin. Le premier échange de 20 minutes est gratuit.</p>
+    
   </div>
 </section>
 
-<section class="sec">
-  <div class="wrap contact-grid">
-    <div class="contact-side" data-reveal>
-      <ul class="c-list">
-        <li><span>Email</span><a href="mailto:contact@studio-ouvert.fr">contact@studio-ouvert.fr</a></li>
-        <li data-phone-row hidden><span>Téléphone</span><a data-phone hidden href="#"></a></li>
-        <li><span>Zone</span>Annecy, Haute-Savoie · à distance partout en France</li>
-        <li><span>Premier échange</span>20 min, au téléphone ou en visio, gratuit</li>
-      </ul>
-      <div class="quick-pay">
-        <h3>Vous savez déjà ce que vous voulez&nbsp;?</h3>
-        <p>Payez l'offre en ligne, je vous contacte juste après pour lancer le site.</p>
-        <div class="btn-row">
-          <a class="btn btn-grey" data-pay="une-page" href="services.html#une-page">Une page · 390 €</a>
-          <a class="btn btn-green" data-pay="vitrine" href="services.html#vitrine">Vitrine · 790 €</a>
-        </div>
-        <p class="pay-note" style="justify-content:flex-start;text-align:left;margin:14px 0 0"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2M3.5 7h9v7h-9z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>Paiement sécurisé par Stripe</p>
-      </div>
-    </div>
-
+<section class="sec s-frost" aria-label="Formulaire de contact">
+  <div class="wrap">
     <form class="form" id="formulaire" data-contact-form action="https://api.web3forms.com/submit" method="post" data-reveal>
       <div class="field"><label for="nom">Votre nom</label><input id="nom" name="nom" autocomplete="name" required></div>
       <div class="field"><label for="email">Votre email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
@@ -124,58 +84,57 @@
       <div class="hp" aria-hidden="true"><label>Ne pas remplir <input type="checkbox" name="botcheck" tabindex="-1"></label></div>
       <p class="form-status" role="status" aria-live="polite" hidden></p>
       <div class="form-foot">
-        <button class="btn btn-green" type="submit">Envoyer ma demande <svg class="arr" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        <p>Vos infos servent seulement à vous répondre. <a class="link-inline" href="mentions-legales.html#donnees">En savoir plus</a>.</p>
+        <button class="btn btn-fill" type="submit">Envoyer ma demande</button>
+        <p class="small">Vos infos servent seulement à vous répondre. <a class="link-inline" href="mentions-legales.html#donnees">En savoir plus</a>.</p>
       </div>
     </form>
   </div>
 </section>
 
+<section class="sec s-white" aria-labelledby="direct-t">
+  <div class="wrap center">
+    <div class="head" data-reveal>
+      <h2 class="h2" id="direct-t">Vous savez déjà ce que vous voulez&nbsp;?</h2>
+      <p class="sub" style="margin-bottom:32px">Payez l'offre en ligne. Je vous contacte juste après pour lancer le site.</p>
+      <div class="cta-row"><a class="btn btn-fill" data-pay="vitrine" href="services.html#vitrine">Vitrine · 790 €</a><a class="btn btn-line" data-pay="une-page" href="services.html#une-page">Une page · 390 €</a></div>
+      <p class="pay-note" style="margin-top:20px"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2M3.5 7h9v7h-9z"/></svg>Paiement sécurisé par Stripe</p>
+    </div>
+    <dl class="specs" data-reveal style="text-align:left">
+      <div><dt>Email</dt><dd class="n"><a href="mailto:contact@studio-ouvert.fr">contact@studio-ouvert.fr</a></dd></div>
+      <div data-phone-row hidden><dt>Téléphone</dt><dd class="n"><a data-phone hidden href="#"></a></dd></div>
+      <div><dt>Zone</dt><dd class="n">Annecy, Haute-Savoie · à distance partout en France</dd></div>
+      <div><dt>Premier échange</dt><dd class="n">20 min, au téléphone ou en visio, gratuit</dd></div>
+    </dl>
+  </div>
+</section>
 </main>
-
-<!-- FOOTER · Monumental emblem -->
 <footer class="footer">
-  <div class="wrap footer-grid">
-    <div class="f-brand">
-      <a class="brand" href="./" aria-label="Ouvert, accueil">
-        <img class="brand-logo" src="assets/ouvert-logo.svg" alt="" width="132" height="32" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
-        <span class="brand-text" hidden>ouvert</span>
-        <span class="voyant brand-voyant" aria-hidden="true"></span>
-      </a>
-      <p>Des sites simples, rapides et beaux pour les pros autour d'Annecy.</p>
+  <div class="wide">
+    <div class="f-note">
+      <p>Prix en euros. La création du site se paie une fois&nbsp;; l'hébergement est facturé à part, sans engagement.</p>
+      <p>Paiement en ligne sécurisé par Stripe. Ouvert ne prend aucune commission sur vos ventes.</p>
     </div>
-    <nav class="f-col" aria-label="Pages">
-      <p class="f-title">Pages</p>
-      <a href="./">Accueil</a>
-      <a href="a-propos.html">À propos</a>
-      <a href="services.html">Services</a>
-      <a href="realisations.html">Réalisations</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <nav class="f-col" aria-label="Offres">
-      <p class="f-title">Offres</p>
-      <a href="services.html#une-page">Une page · 390 €</a>
-      <a href="services.html#vitrine">Vitrine · 790 €</a>
-      <a href="services.html#sur-mesure">Sur mesure · dès 1 290 €</a>
-      <a href="services.html#ia">Visible sur les IA · 190 €</a>
-      <a href="services.html#hebergement">Hébergement &amp; suivi</a>
-    </nav>
-    <div class="f-col">
-      <p class="f-title">Contact</p>
-      <a href="mailto:contact@studio-ouvert.fr">contact@studio-ouvert.fr</a>
-      <!-- Téléphone : renseigner CONFIG.phone dans js/site.js -->
-      <a data-phone hidden href="#"></a>
-      <p>Annecy, Haute-Savoie</p>
-      <p>À distance partout en France</p>
+    <div class="f-dir">
+      <div class="f-brand">
+        <img src="assets/ouvert-logo.svg" alt="Ouvert" width="132" height="35" loading="lazy">
+        <p>Des sites simples, rapides et beaux pour les pros autour d'Annecy.</p>
+      </div>
+      <nav aria-label="Pages"><h2>Pages</h2><ul>
+        <li><a href="./">Accueil</a></li><li><a href="a-propos.html">À propos</a></li><li><a href="services.html">Services</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="contact.html">Contact</a></li>
+      </ul></nav>
+      <nav aria-label="Offres"><h2>Offres</h2><ul>
+        <li><a href="services.html#une-page">Une page · 390 €</a></li><li><a href="services.html#vitrine">Vitrine · 790 €</a></li><li><a href="services.html#sur-mesure">Sur mesure · dès 1 290 €</a></li><li><a href="services.html#ia">Visible sur les IA · 190 €</a></li><li><a href="services.html#hebergement">Hébergement et suivi</a></li>
+      </ul></nav>
+      <div><h2>Contact</h2><ul>
+        <li><a href="mailto:contact@studio-ouvert.fr">contact@studio-ouvert.fr</a></li>
+        <li data-phone-row hidden><a data-phone hidden href="#"></a></li>
+        <li>Annecy, Haute-Savoie</li><li>À distance partout en France</li>
+      </ul></div>
     </div>
-  </div>
-  <div class="wrap f-bottom">
-    <p>© <span data-year>2026</span> Ouvert · Théo Bonaventure, entrepreneur individuel</p>
-    <a href="mentions-legales.html">Mentions légales</a>
-  </div>
-  <div class="emblem" aria-hidden="true">
-    <!-- PLACEHOLDER : à remplacer par le "o" + point extraits de assets/ouvert-logo.svg -->
-    <svg viewBox="0 0 200 200" width="672" height="672"><circle cx="100" cy="100" r="78" fill="none" stroke="currentColor" stroke-width="34" stroke-dasharray="400 90" transform="rotate(-50 100 100)"/><circle class="emblem-dot" cx="158" cy="36" r="17" fill="currentColor"/></svg>
+    <div class="f-bottom">
+      <p>© <span data-year>2026</span> Ouvert · Théo Bonaventure, entrepreneur individuel</p>
+      <nav aria-label="Légal"><a href="mentions-legales.html">Mentions légales</a><a href="contact.html">Contact</a></nav>
+    </div>
   </div>
 </footer>
 </body>

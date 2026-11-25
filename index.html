@@ -4,27 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ouvert · Sites web pour artisans, commerçants et loueurs à Annecy</title>
-<meta name="description" content="Des sites simples, rapides et beaux pour les pros autour d'Annecy. Demandes, réservations et paiements 24 h/24. Prix affichés, en ligne en 2 semaines, le site est à vous.">
+<meta name="description" content="Des sites simples, rapides et beaux pour les pros autour d'Annecy. Demandes, réservations et paiements 24&nbsp;h/24. Prix affichés, en ligne en 2 semaines, le site est à vous.">
 <link rel="canonical" href="https://studio-ouvert.fr/">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#fafafc">
 <link rel="icon" href="assets/ouvert-icone.svg" type="image/svg+xml">
-
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Ouvert">
-<meta property="og:title" content="Ouvert · Ouvert même quand vous êtes fermé">
-<meta property="og:description" content="Sites web pour artisans, commerçants, indépendants et loueurs autour d'Annecy. Demandes, réservations et paiements 24 h/24.">
+<meta property="og:title" content="Ouvert · Sites web pour artisans, commerçants et loueurs à Annecy">
+<meta property="og:description" content="Des sites simples, rapides et beaux pour les pros autour d'Annecy. Demandes, réservations et paiements 24&nbsp;h/24. Prix affichés, en ligne en 2 semaines, le site est à vous.">
 <meta property="og:url" content="https://studio-ouvert.fr/">
 <meta property="og:image" content="https://studio-ouvert.fr/assets/bonneaventure-desktop.webp">
 <meta name="twitter:card" content="summary_large_image">
-
-<script>document.documentElement.className=matchMedia('(prefers-reduced-motion: reduce)').matches?'rm':'motion';setTimeout(function(){document.documentElement.classList.add('intro-ready')},4000);</script>
-
-<link rel="preload" href="fonts/outfit-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.className=matchMedia('(prefers-reduced-motion: reduce)').matches?'rm':'motion';setTimeout(function(){document.documentElement.classList.add('intro-ready')},2500);</script>
 <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="stylesheet" href="css/site.css">
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -37,11 +32,12 @@
   "founder": { "@type": "Person", "name": "Théo Bonaventure" },
   "address": { "@type": "PostalAddress", "addressLocality": "Annecy", "addressRegion": "Haute-Savoie", "addressCountry": "FR" },
   "areaServed": [{ "@type": "AdministrativeArea", "name": "Haute-Savoie" }, { "@type": "Country", "name": "France" }],
-  "priceRange": "390 € – 1 290 €+",
+  "priceRange": "190 € – 1 290 €+",
   "makesOffer": [
     { "@type": "Offer", "name": "Une page", "price": "390", "priceCurrency": "EUR" },
     { "@type": "Offer", "name": "Vitrine", "price": "790", "priceCurrency": "EUR" },
-    { "@type": "Offer", "name": "Sur mesure", "price": "1290", "priceCurrency": "EUR" }
+    { "@type": "Offer", "name": "Sur mesure", "price": "1290", "priceCurrency": "EUR" },
+    { "@type": "Offer", "name": "Visible sur les IA", "price": "190", "priceCurrency": "EUR" }
   ]
 }
 </script>
@@ -51,359 +47,187 @@
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
-
-<!-- Bandeau d'annonce -->
-<div class="announce" data-intro="announce">
-  <a href="realisations.html#la-bonne-aventure">
-    <span>Loueurs Airbnb : vos réservations en direct, sans commission</span>
-    <span class="announce-cta">voir La Bonne Aventure <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-  </a>
-</div>
-
-<!-- Navigation -->
-<header class="nav" data-intro="nav">
-  <div class="wrap nav-in">
-    <a class="brand" href="./" aria-label="Ouvert, accueil">
-      <img class="brand-logo" src="assets/ouvert-logo.svg" alt="" width="132" height="32" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
-      <span class="brand-text" hidden>ouvert</span>
-      <span class="voyant brand-voyant" aria-hidden="true"></span>
-    </a>
-    <nav class="nav-links" aria-label="Navigation principale">
+<header class="gnav">
+  <div class="wide gnav-in">
+    <a class="brand" href="./" aria-label="Ouvert, accueil"><img src="assets/ouvert-logo.svg" alt="" width="132" height="35"></a>
+    <nav class="gnav-links" aria-label="Navigation principale">
       <a href="a-propos.html">À propos</a>
       <a href="services.html">Services</a>
       <a href="realisations.html">Réalisations</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <div class="nav-actions">
-      <a class="btn btn-green btn-sm nav-cta" href="contact.html">Demander un devis</a>
-      <button class="burger" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu">
-        <span></span><span></span>
-      </button>
+    <div class="gnav-right">
+      <a class="btn btn-fill btn-sm" href="contact.html">Demander un devis</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu"><span></span><span></span></button>
     </div>
   </div>
-  <div class="menu-mobile" id="menu-mobile" hidden>
+  <div class="gnav-menu" id="menu-mobile" hidden>
     <nav aria-label="Navigation mobile">
-      <a href="./" aria-current="page">Accueil</a>
+      <a href="./">Accueil</a>
       <a href="a-propos.html">À propos</a>
       <a href="services.html">Services</a>
       <a href="realisations.html">Réalisations</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <a class="btn btn-green" href="contact.html">Demander un devis</a>
+    <a class="btn btn-fill" href="contact.html">Demander un devis</a>
   </div>
 </header>
-
+<div class="ribbon">Loueurs Airbnb&nbsp;: vos réservations en direct, sans commission. <a href="realisations.html">Voir La Bonne Aventure <svg width="7" height="12" viewBox="0 0 7 12" aria-hidden="true"><path d="m1 1 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
 <main id="contenu">
-
-<!-- HERO · Promise and outcome shelf -->
-<section class="hero" aria-labelledby="hero-title">
-  <div class="wrap hero-grid">
-    <div class="hero-left">
-      <p class="eyebrow" data-intro="eyebrow"><span class="voyant voyant-pulse" aria-hidden="true"></span>Sites web pour les pros · Annecy</p>
-      <h1 class="display hero-title" id="hero-title">Ouvert même quand vous êtes fermé.</h1>
-    </div>
-    <div class="hero-right">
-      <p class="lead hero-lead" data-intro="lead">Votre site prend les demandes, les réservations et les paiements 24 h/24. Vous, vous travaillez. Ou vous dormez.</p>
-      <div class="btn-row" data-intro="ctas">
-        <a class="btn btn-green" href="contact.html">Demander un devis <svg class="arr" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <a class="btn btn-grey" href="#offres">Voir les prix</a>
-      </div>
-    </div>
+<section class="hero s-white" aria-labelledby="titre">
+  <div class="wrap center" data-hero>
+    <p class="eyebrow"><span class="voyant voyant-pulse" aria-hidden="true"></span>Sites web pour les pros · Annecy</p>
+    <h1 class="hero-title" id="titre">Ouvert même quand vous êtes fermé.</h1>
+    <p class="sub">Votre site prend les demandes, les réservations et les paiements 24&nbsp;h/24.</p>
+    <div class="cta-row"><a class="btn btn-fill" href="contact.html">Demander un devis</a><a class="btn btn-line" href="#offres">Voir les prix</a></div>
   </div>
+  <div class="media">
+    <figure class="window">
+      <div class="window-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">labonneaventure-aixlesbains.fr</span></div>
+      <img src="assets/bonneaventure-desktop.webp" srcset="assets/bonneaventure-desktop-720.webp 720w, assets/bonneaventure-desktop.webp 1440w" sizes="(min-width: 1120px) 1024px, 92vw" alt="Page d'accueil du site La Bonne Aventure, studio à Aix-les-Bains" width="1440" height="900" decoding="async" fetchpriority="high">
+    </figure>
+    <div class="phone" aria-hidden="true"><img src="assets/bonneaventure-mobile.webp" alt="" width="390" height="844" decoding="async"></div>
+  </div>
+</section>
 
-  <div class="shelf" data-intro="shelf" aria-label="Ce que votre site fait pour vous">
-    <div class="shelf-track">
-      <ul class="shelf-set">
-        <li class="sv sv-cal">
-          <div class="sv-card">
-            <div class="cal-head"><b>Juin</b><span>Réservation</span></div>
-            <div class="cal-grid" aria-hidden="true">
-              <i>L</i><i>M</i><i>M</i><i>J</i><i>V</i><i>S</i><i>D</i>
-              <span class="off">1</span><span class="off">2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
-              <span>8</span><span>9</span><span class="sel s">10</span><span class="sel">11</span><span class="sel">12</span><span class="sel e">13</span><span>14</span>
-              <span>15</span><span class="busy">16</span><span class="busy">17</span><span>18</span><span>19</span><span>20</span><span>21</span>
-            </div>
-          </div>
-          <p class="sv-cap">Le calendrier se remplit tout seul</p>
-        </li>
-        <li class="sv sv-pay">
-          <div class="sv-card">
-            <div class="pay-top"><span class="pay-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16"><path d="m3.5 8.5 3 3 6-7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="pay-brand">stripe</span></div>
-            <p class="pay-title">Paiement reçu</p>
-            <p class="pay-sub">Réservation du 10 au 13 juin</p>
-            <div class="pay-line"></div>
-            <p class="pay-sub">Mail de confirmation envoyé</p>
-          </div>
-          <p class="sv-cap">Payé en ligne, sans relance</p>
-        </li>
-        <li class="sv sv-notif">
-          <div class="sv-card">
-            <div class="notif-top"><span class="notif-app" aria-hidden="true"></span><b>Nouvelle demande</b><span class="notif-time">23:42</span></div>
-            <p>Devis : rénovation de salle de bain. Disponible la semaine prochaine&nbsp;?</p>
-          </div>
-          <p class="sv-cap">Une demande, même à minuit</p>
-        </li>
-        <li class="sv sv-google">
-          <div class="sv-card">
-            <div class="g-bar" aria-hidden="true"><span></span></div>
-            <p class="g-name">Votre entreprise</p>
-            <p class="g-cat">Artisan · Annecy</p>
-            <p class="g-open"><span class="voyant" aria-hidden="true"></span>Ouvert</p>
-            <div class="g-actions" aria-hidden="true"><span>Site web</span><span>Itinéraire</span><span>Appeler</span></div>
-          </div>
-          <p class="sv-cap">Trouvé sur Google</p>
-        </li>
-        <li class="sv sv-phone">
-          <div class="sv-card">
-            <div class="ph-notch" aria-hidden="true"></div>
-            <p class="ph-name">Votre activité</p>
-            <p class="ph-h">Votre métier, ici.</p>
-            <div class="ph-img" aria-hidden="true"></div>
-            <span class="ph-btn">Appeler</span>
-            <span class="ph-btn ph-btn-2">Demander un devis</span>
-          </div>
-          <p class="sv-cap">Pensé pour le téléphone</p>
-        </li>
-        <li class="sv sv-tall">
-          <div class="sv-card">
-            <img src="assets/bonneaventure-mobile-240.webp" srcset="assets/bonneaventure-mobile-240.webp 240w, assets/bonneaventure-mobile.webp 390w" sizes="170px" alt="Le site de La Bonne Aventure sur téléphone" width="240" height="519" decoding="async">
-          </div>
-          <p class="sv-cap">La Bonne Aventure, Aix-les-Bains</p>
-        </li>
-      </ul>
+<section class="sec s-frost" aria-label="En bref">
+  <div class="wide">
+    <ul class="facts" data-stagger><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 3 5 13.5h6L10.5 21 19 10.5h-6z"/></svg></span><b>2 semaines</b><span>pour avoir votre site en ligne</span></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17 6.5a6.5 6.5 0 1 0 0 11M4.5 10.5h9M4.5 13.5h9"/></svg></span><b>Dès 390 €</b><span>payé une fois, prix affichés</span></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.5 4.5 6.5v5c0 4.5 3.2 7.8 7.5 9 4.3-1.2 7.5-4.5 7.5-9v-5z"/><path d="m9 12 2 2 4-4"/></svg></span><b>À votre nom</b><span>le site et le nom de domaine</span></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20.5c1.2-3.8 4-5.7 7.5-5.7s6.3 1.9 7.5 5.7"/></svg></span><b>Un seul contact</b><span>celui qui fait votre site</span></li></ul>
+  </div>
+</section>
+
+<section class="sec s-white" aria-label="Le principe">
+  <div class="wrap">
+    <p class="lit" data-lit>Votre site répond aux clients, prend les réservations et encaisse les paiements. <span class="lit-accent">Vous, vous travaillez.</span> Ou vous dormez.</p>
+  </div>
+</section>
+
+<section class="s-white" aria-labelledby="tuiles-titre" style="padding-bottom:var(--sec)">
+  <div class="wide">
+    <h2 class="sr-only" id="tuiles-titre">Ce que votre site fait pour vous</h2>
+    <div class="tiles">
+      <article class="tile tile-wash">
+        <h3 class="h2">Réservation en direct.</h3>
+        <p class="sub">Le client voit vos dates libres et réserve tout seul. Sans commission de plateforme.</p>
+        <a class="more" href="realisations.html">Voir un exemple <svg width="7" height="12" viewBox="0 0 7 12" aria-hidden="true"><path d="m1 1 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="tile-mock" aria-hidden="true"><div class="m-card"><div class="m-cal-head"><b>Juin</b><span>Réservation</span></div><div class="m-cal">
+<i>L</i><i>M</i><i>M</i><i>J</i><i>V</i><i>S</i><i>D</i>
+<span class="off">1</span><span class="off">2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+<span>8</span><span>9</span><span class="sel s">10</span><span class="sel">11</span><span class="sel">12</span><span class="sel e">13</span><span>14</span>
+<span>15</span><span class="busy">16</span><span class="busy">17</span><span>18</span><span>19</span><span>20</span><span>21</span>
+</div></div></div>
+      </article>
+      <article class="tile tile-dark">
+        <h3 class="h2">Paiement en ligne.</h3>
+        <p class="sub">Par carte, avec Stripe. L'argent arrive sur votre compte, la confirmation part toute seule.</p>
+        <a class="more" href="services.html#sur-mesure">Voir l'offre Sur mesure <svg width="7" height="12" viewBox="0 0 7 12" aria-hidden="true"><path d="m1 1 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="tile-mock" aria-hidden="true"><div class="m-card"><div class="m-pay-top"><span class="m-check"><svg width="15" height="15" viewBox="0 0 16 16"><path d="m3.5 8.5 3 3 6-7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="m-stripe">stripe</span></div>
+<p class="m-title">Paiement reçu</p><p class="m-sm">Réservation du 10 au 13 juin</p><div class="m-line"></div><p class="m-sm">Mail de confirmation envoyé au client</p></div></div>
+      </article>
+      <article class="tile ">
+        <h3 class="h2">Trouvé sur Google.</h3>
+        <p class="sub">Les bases du référencement local&nbsp;: on vous trouve quand on cherche près de chez vous.</p>
+        <a class="more" href="services.html">Voir les offres <svg width="7" height="12" viewBox="0 0 7 12" aria-hidden="true"><path d="m1 1 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="tile-mock" aria-hidden="true"><div class="m-card"><div class="m-gbar"><svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3 3"/></svg>plombier annecy</div>
+<p class="m-gname">Votre entreprise</p><p class="m-gcat">Artisan · Annecy</p><p class="m-gopen"><span class="voyant"></span>Ouvert</p>
+<div class="m-gact"><span>Site web</span><span>Itinéraire</span><span>Appeler</span></div></div></div>
+      </article>
+      <article class="tile tile-ice">
+        <p class="eyebrow">Nouveau</p><h3 class="h2">Visible sur les IA.</h3>
+        <p class="sub">Quand on demande à ChatGPT un pro près de chez soi, il trouve les bonnes infos sur vous.</p>
+        <a class="more" href="services.html#ia">En savoir plus <svg width="7" height="12" viewBox="0 0 7 12" aria-hidden="true"><path d="m1 1 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="tile-mock" aria-hidden="true"><div class="m-card"><div class="m-q"><span>Un plombier dispo à Annecy cette semaine&nbsp;?</span></div>
+<div class="m-a">Voici un pro près de chez vous&nbsp;:<b><span class="voyant"></span>Votre entreprise</b><span class="m-sm">Plombier · Annecy · Ouvert aujourd'hui<br>Devis en ligne sur son site.</span></div></div></div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- PRODUCT THEATRE · Blueprint -->
-<section class="theatre" aria-labelledby="theatre-title">
-  <div class="wrap">
-    <div class="sec-head sec-head-center">
-      <p class="kicker">Exemple en ligne</p>
-      <h2 class="h2" id="theatre-title" data-split>Votre site travaille la nuit.</h2>
-      <p class="lead" data-reveal>La Bonne Aventure, un studio à Aix-les-Bains. Les voyageurs choisissent leurs dates, paient et reçoivent leur confirmation. Sans passer par Airbnb.</p>
-    </div>
+<section class="sec s-dark" aria-labelledby="lba-titre">
+  <div class="wrap center head">
+    <p class="eyebrow">Réalisation</p>
+    <h2 class="h2" id="lba-titre">La Bonne Aventure.</h2>
+    <p class="sub" style="max-width:600px">Un studio à Aix-les-Bains. Les voyageurs choisissent leurs dates, paient et reçoivent leur confirmation. Sans passer par Airbnb.</p>
+    <div class="cta-row" style="margin-top:28px"><a class="btn btn-fill" href="realisations.html">Voir la réalisation</a><a class="btn btn-line" href="https://labonneaventure-aixlesbains.fr/" target="_blank" rel="noopener">Voir le site<span class="sr-only"> (nouvel onglet)</span> <svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
   </div>
-
-  <div class="stage">
-    <div class="blueprint" aria-hidden="true">
-      <span class="bp-mark bp-tl"></span><span class="bp-mark bp-tr"></span><span class="bp-mark bp-bl"></span><span class="bp-mark bp-br"></span>
-      <span class="bp-dim bp-dim-x">1440 px</span>
-      <span class="bp-dim bp-dim-y">900 px</span>
+  
+  <div data-gallery>
+    <div class="gallery" tabindex="0" aria-label="Captures du site La Bonne Aventure">
+      <figure><div class="g-media"><img src="assets/bonneaventure-desktop.webp" srcset="assets/bonneaventure-desktop-720.webp 720w, assets/bonneaventure-desktop.webp 1440w" sizes="(min-width: 980px) 820px, 86vw" alt="Page d'accueil du site La Bonne Aventure" width="1440" height="900" loading="lazy" decoding="async"></div><figcaption><b>L'accueil.</b> Le studio et ses infos clés, en un coup d'œil.</figcaption></figure>
+      <figure><div class="g-media"><img src="assets/bonneaventure-calendrier.webp" srcset="assets/bonneaventure-calendrier-720.webp 720w, assets/bonneaventure-calendrier.webp 1440w" sizes="(min-width: 980px) 820px, 86vw" alt="Calendrier de réservation du site La Bonne Aventure" width="1440" height="900" loading="lazy" decoding="async"></div><figcaption><b>Le calendrier.</b> Les dates libres, à jour. Le voyageur choisit et réserve seul.</figcaption></figure>
+      <figure><div class="g-media"><img src="assets/bonneaventure-galerie.webp" srcset="assets/bonneaventure-galerie-720.webp 720w, assets/bonneaventure-galerie.webp 1440w" sizes="(min-width: 980px) 820px, 86vw" alt="Galerie photos du site La Bonne Aventure" width="1440" height="900" loading="lazy" decoding="async"></div><figcaption><b>La galerie.</b> Le studio en photos, pour donner envie de réserver.</figcaption></figure>
+      <figure><div class="g-media"><img src="assets/bonneaventure-avis.webp" srcset="assets/bonneaventure-avis-720.webp 720w, assets/bonneaventure-avis.webp 1440w" sizes="(min-width: 980px) 820px, 86vw" alt="Avis des voyageurs sur le site La Bonne Aventure" width="1440" height="900" loading="lazy" decoding="async"></div><figcaption><b>Les avis.</b> Ce que disent les voyageurs, directement sur le site.</figcaption></figure>
+      <figure><div class="g-media g-phone"><img src="assets/bonneaventure-mobile.webp" alt="Le site La Bonne Aventure sur téléphone" width="390" height="844" loading="lazy" decoding="async"></div><figcaption><b>Sur téléphone.</b> Tout le site marche aussi bien sur mobile.</figcaption></figure>
     </div>
-    <div class="window-wrap">
-      <figure class="window">
-        <div class="window-bar" aria-hidden="true">
-          <span class="dots"><i></i><i></i><i></i></span>
-          <span class="url"><svg width="11" height="11" viewBox="0 0 16 16"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2M3.5 7h9v7h-9z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>labonneaventure-aixlesbains.fr</span>
-        </div>
-        <img src="assets/bonneaventure-desktop.webp" srcset="assets/bonneaventure-desktop-720.webp 720w, assets/bonneaventure-desktop.webp 1440w" sizes="(min-width: 1200px) 1100px, 92vw" alt="Page d'accueil du site La Bonne Aventure, studio à Aix-les-Bains" width="1440" height="900" loading="lazy" decoding="async">
-      </figure>
-      <div class="float float-chip" aria-hidden="true">
-        <span class="voyant voyant-pulse"></span>
-        <span><b>Réservation confirmée</b><br>Mail envoyé au voyageur</span>
-      </div>
-      <div class="float float-phone" aria-hidden="true">
-        <img src="assets/bonneaventure-mobile-240.webp" srcset="assets/bonneaventure-mobile-240.webp 240w, assets/bonneaventure-mobile.webp 390w" sizes="(min-width: 861px) 200px, 120px" alt="" width="240" height="519" loading="lazy" decoding="async">
-      </div>
+    <div class="wide g-ctrl">
+      <button type="button" data-prev aria-label="Image précédente"><svg width="9" height="15" viewBox="0 0 7 12" aria-hidden="true"><path d="M6 1 1 6l5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button type="button" data-next aria-label="Image suivante"><svg width="9" height="15" viewBox="0 0 7 12" aria-hidden="true"><path d="m1 1 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     </div>
-  </div>
-
-  <div class="wrap">
-    <ul class="benefits" data-stagger>
-      <li>
-        <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 10h17M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="m9 15 2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <h3>Réservation en direct</h3>
-        <p>Le client voit vos dates libres et réserve tout seul. Sans commission de plateforme.</p>
-      </li>
-      <li>
-        <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3 10h18M7 15h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
-        <h3>Paiement en ligne + mails automatiques</h3>
-        <p>Paiement par carte avec Stripe. La confirmation part tout de suite, chez le client et chez vous.</p>
-      </li>
-      <li>
-        <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m15 15 5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
-        <h3>Trouvé sur Google</h3>
-        <p>Les bases du référencement local : on vous trouve quand on cherche près de chez vous.</p>
-      </li>
-      <li>
-        <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3.5 4.5 6.5v5c0 4.5 3.2 7.8 7.5 9 4.3-1.2 7.5-4.5 7.5-9v-5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <h3>Le site est à vous</h3>
-        <p>Le site et le nom de domaine sont à votre nom. Vous restez libre.</p>
-      </li>
-    </ul>
   </div>
 </section>
 
-<!-- POURQUOI -->
-<section class="why" aria-labelledby="why-title">
-  <div class="wrap why-grid">
-    <div class="why-left">
-      <p class="kicker">Pourquoi Ouvert</p>
-      <h2 class="h2" id="why-title" data-split>Simple, clair, sans surprise.</h2>
-      <div class="about-card" data-reveal>
-        <p>Je suis Théo. Automaticien de métier, je crée des sites pour les pros autour d'Annecy, en plus de mon travail. Je fais des choses qui marchent, sans jargon.</p>
-        <a class="link" href="a-propos.html">En savoir plus sur moi <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<section class="sec s-white" id="offres" aria-labelledby="offres-titre">
+  <div class="wide">
+    <div class="head center">
+      <p class="eyebrow">Tarifs</p>
+      <h2 class="h2" id="offres-titre">Des prix clairs, payés une fois.</h2>
+      <p class="sub">Vous payez le site une seule fois. Ensuite, l'hébergement est sans engagement.</p>
+    </div>
+    <div class="compare" data-stagger>
+      <div class="col">
+        <p class="col-tag"></p>
+        <h3 class="col-name">Une page</h3>
+        <p class="col-for">Pour être trouvé et joint facilement.</p>
+        <p class="price"><b>390 €</b><span>paiement unique</span></p>
+        <div class="cta-row"><a class="btn btn-fill" data-pay="une-page" href="contact.html?offre=une-page">Payer 390 €</a><a class="more" href="services.html#une-page">En savoir plus <svg width="7" height="12" viewBox="0 0 7 12" aria-hidden="true"><path d="m1 1 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+        <ul class="col-list"><li>1 page adaptée au téléphone</li><li>Formulaire + bouton d'appel</li><li>Bases Google</li><li>En ligne en 1 semaine</li></ul>
+      </div>
+      <div class="col">
+        <p class="col-tag"><span class="voyant" aria-hidden="true"></span>Le plus demandé</p>
+        <h3 class="col-name">Vitrine</h3>
+        <p class="col-for">Pour présenter votre activité en détail.</p>
+        <p class="price"><b>790 €</b><span>paiement unique</span></p>
+        <div class="cta-row"><a class="btn btn-fill" data-pay="vitrine" href="contact.html?offre=vitrine">Payer 790 €</a><a class="more" href="services.html#vitrine">En savoir plus <svg width="7" height="12" viewBox="0 0 7 12" aria-hidden="true"><path d="m1 1 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+        <ul class="col-list"><li>Logo offert</li><li>Jusqu'à 5 pages</li><li>Galerie + avis Google</li><li>Référencement local de base</li><li>2 allers-retours sur la maquette</li><li>En ligne en 2 semaines</li></ul>
+      </div>
+      <div class="col">
+        <p class="col-tag"></p>
+        <h3 class="col-name">Sur mesure</h3>
+        <p class="col-for">Pour prendre des réservations et des paiements.</p>
+        <p class="price"><b><span class="from">dès</span>1 290 €</b><span>paiement unique</span></p>
+        <div class="cta-row"><a class="btn btn-fill" href="contact.html?offre=sur-mesure">Demander un devis</a><a class="more" href="services.html#sur-mesure">En savoir plus <svg width="7" height="12" viewBox="0 0 7 12" aria-hidden="true"><path d="m1 1 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+        <ul class="col-list"><li>Logo offert</li><li>Réservation en direct + calendrier</li><li>Paiement Stripe</li><li>Mails automatiques</li><li>Espace client, fidélité, langues&nbsp;: selon besoin</li></ul>
       </div>
     </div>
-    <ol class="why-list">
-      <li><span class="num">01</span><div><h3>Prix affichés</h3><p>Vous savez ce que vous payez avant de commencer. Les tarifs sont sur le site, pas dans un devis flou.</p></div></li>
-      <li><span class="num">02</span><div><h3>En ligne en 2 semaines</h3><p>Une semaine pour une page, deux pour un site vitrine. On fixe la date ensemble au départ.</p></div></li>
-      <li><span class="num">03</span><div><h3>Tout est à vous</h3><p>Le site et le nom de domaine sont à votre nom. L'hébergement est sans engagement.</p></div></li>
-      <li><span class="num">04</span><div><h3>Un seul interlocuteur</h3><p>Vous parlez à celui qui fait le site. Basé près d'Annecy, disponible à distance partout en France.</p></div></li>
+    <p class="pay-note"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2M3.5 7h9v7h-9z"/></svg>Paiement sécurisé par Stripe. Je vous contacte juste après pour lancer le site.</p>
+    <p class="center below">Hébergement dès 9 €/mois, sans engagement. <a class="more" href="services.html#hebergement">Options et détails <svg width="7" height="12" viewBox="0 0 7 12" aria-hidden="true"><path d="m1 1 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+  </div>
+</section>
+
+<section class="sec s-frost" aria-labelledby="methode-titre">
+  <div class="wide">
+    <div class="head center"><h2 class="h2" id="methode-titre">Comment ça se passe.</h2></div>
+    <ol class="steps" data-stagger>
+      <li><span class="step-n">1</span><h3>On en parle</h3><p>20 minutes, gratuit. Vous m'expliquez votre activité, je vous dis ce qui est utile.</p></li>
+      <li><span class="step-n">2</span><h3>Je fais la maquette</h3><p>Vous voyez votre site avant qu'il soit en ligne. On ajuste ensemble.</p></li>
+      <li><span class="step-n">3</span><h3>Mise en ligne</h3><p>Je m'occupe du nom de domaine, de l'hébergement et de Google.</p></li>
+      <li><span class="step-n">4</span><h3>Je reste là</h3><p>Une modif, une question&nbsp;: vous savez qui contacter.</p></li>
     </ol>
   </div>
 </section>
 
-<!-- PREUVE · rail de cartes portrait -->
-<section class="proof" id="realisation" aria-labelledby="proof-title">
-  <div class="wrap">
-    <div class="sec-head sec-head-split">
-      <div>
-        <p class="kicker">Réalisation</p>
-        <h2 class="h2" id="proof-title" data-split>Un vrai projet, en ligne.</h2>
-      </div>
-      <p class="lead" data-reveal>Je préfère vous montrer un site qui tourne vraiment, plutôt qu'une liste de logos. Le prochain peut être le vôtre.</p>
-    </div>
-  </div>
-  <div class="rail" data-rail>
-    <article class="pcard pcard-lba" id="la-bonne-aventure">
-      <div class="pcard-img">
-        <img src="assets/bonneaventure-galerie.webp" srcset="assets/bonneaventure-galerie-720.webp 720w, assets/bonneaventure-galerie.webp 1440w" sizes="420px" alt="Galerie photos du site La Bonne Aventure" width="1440" height="900" loading="lazy" decoding="async">
-      </div>
-      <div class="pcard-body">
-        <p class="tag">Location courte durée · Aix-les-Bains</p>
-        <h3>Résa en direct, sans commission Airbnb</h3>
-        <ul class="ticks">
-          <li>Calendrier et réservation en direct</li>
-          <li>Paiement Stripe + taxe de séjour</li>
-          <li>Mails de confirmation automatiques</li>
-          <li>Espace client et fidélité : −10 % au séjour suivant</li>
-          <li>Avis des voyageurs</li>
-        </ul>
-        <a class="link" href="https://labonneaventure-aixlesbains.fr/" target="_blank" rel="noopener">Voir le site<span class="sr-only"> (nouvel onglet)</span> <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      </div>
-    </article>
-    <!-- Les vrais avis clients (tableau AVIS dans js/site.js) s'insèrent ici -->
-    <a class="pcard pcard-you" href="contact.html" data-avis-anchor>
-      <span class="plus" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
-      <h3>Votre site ici</h3>
-      <p>On en parle 20 minutes, c'est gratuit. Vous saurez tout de suite ce qui est utile pour vous.</p>
-      <span class="link">Prendre contact <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-    </a>
+<section class="sec s-white" aria-labelledby="theo-titre">
+  <div class="wrap center" data-reveal>
+    <p class="eyebrow">Qui fait votre site</p>
+    <h2 class="h2" id="theo-titre" style="margin-bottom:16px">Je suis Théo.</h2>
+    <p class="sub" style="max-width:640px;margin-bottom:12px">Automaticien de métier, je crée des sites pour les pros autour d'Annecy, en plus de mon travail. Je fais des choses qui marchent, sans jargon.</p>
+    <a class="more" href="a-propos.html">En savoir plus sur moi <svg width="7" height="12" viewBox="0 0 7 12" aria-hidden="true"><path d="m1 1 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 </section>
 
-<!-- OFFRES -->
-<section class="offers" id="offres" aria-labelledby="offers-title">
+<section class="sec s-frost" aria-labelledby="faq-titre">
   <div class="wrap">
-    <div class="sec-head sec-head-center">
-      <p class="kicker">Tarifs</p>
-      <h2 class="h2" id="offers-title" data-split>Des prix clairs, payés une fois.</h2>
-      <p class="lead" data-reveal>Vous payez le site une seule fois. Ensuite, l'hébergement est sans engagement.</p>
-    </div>
-
-    <div class="plans" data-stagger>
-      <article class="plan">
-        <h3 class="plan-name">Une page</h3>
-        <p class="plan-for">Pour être trouvé et joint facilement.</p>
-        <p class="price"><span class="amount">390 €</span><span class="per">paiement unique</span></p>
-        <ul class="ticks">
-          <li>1 page adaptée au téléphone</li>
-          <li>Formulaire + bouton d'appel</li>
-          <li>Bases Google</li>
-          <li>En ligne en 1 semaine</li>
-        </ul>
-        <a class="btn btn-grey btn-block" data-pay="une-page" href="contact.html?offre=une-page">Payer 390 €</a>
-      </article>
-      <article class="plan plan-featured">
-        <p class="badge"><span class="voyant" aria-hidden="true"></span>Le plus demandé</p>
-        <h3 class="plan-name">Vitrine</h3>
-        <p class="plan-for">Pour présenter votre activité en détail.</p>
-        <p class="price"><span class="amount">790 €</span><span class="per">paiement unique</span></p>
-        <ul class="ticks">
-          <li>Logo offert</li>
-          <li>Jusqu'à 5 pages</li>
-          <li>Galerie + avis Google</li>
-          <li>Référencement local de base</li>
-          <li>2 allers-retours sur la maquette</li>
-          <li>En ligne en 2 semaines</li>
-        </ul>
-        <a class="btn btn-green btn-block" data-pay="vitrine" href="contact.html?offre=vitrine">Payer 790 €</a>
-      </article>
-      <article class="plan">
-        <h3 class="plan-name">Sur mesure</h3>
-        <p class="plan-for">Pour prendre des réservations et des paiements.</p>
-        <p class="price"><span class="from">dès</span><span class="amount">1 290 €</span><span class="per">paiement unique</span></p>
-        <ul class="ticks">
-          <li>Logo offert</li>
-          <li>Réservation en direct + calendrier</li>
-          <li>Paiement Stripe</li>
-          <li>Mails automatiques</li>
-          <li>Espace client, fidélité, langues : selon besoin</li>
-        </ul>
-        <a class="btn btn-grey btn-block" href="contact.html?offre=sur-mesure">Demander un devis</a>
-      </article>
-    </div>
-    <p class="pay-note"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2M3.5 7h9v7h-9z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>Paiement sécurisé par Stripe. Je vous contacte juste après pour lancer le site.</p>
-
-    <div class="extras">
-      <div class="extras-col" data-reveal>
-        <h3 class="h3">Hébergement &amp; suivi <span class="muted">· sans engagement</span></h3>
-        <div class="host">
-          <div class="host-row">
-            <div><b>Hébergement</b><p>Nom de domaine, hébergement, https, sauvegardes.</p></div>
-            <p class="host-price"><b>9 €</b>/mois<br><span>ou 90 €/an</span></p>
-          </div>
-          <div class="host-row">
-            <div><b>Hébergement + suivi</b><p>Tout l'hébergement, plus 30 min de modifs par mois et la vérification que formulaires, paiements et mails marchent.</p></div>
-            <p class="host-price"><b>19 €</b>/mois<br><span>ou 190 €/an</span></p>
-          </div>
-        </div>
-      </div>
-      <div class="extras-col" data-reveal>
-        <h3 class="h3">Options</h3>
-        <dl class="opts">
-          <div><dt>Page en plus</dt><dd>90 €</dd></div>
-          <div><dt>Rédaction des textes</dt><dd>60 €/page</dd></div>
-          <div><dt>Langue en plus</dt><dd>150 €</dd></div>
-          <div><dt>Logo seul</dt><dd>150 €</dd></div>
-          <div><dt>Paiement Stripe + mails auto</dt><dd>250 €</dd></div>
-          <div><dt>Visible sur les IA (ChatGPT, Google…) · <a class="link-inline" href="services.html#ia">détails</a></dt><dd>190 €</dd></div>
-          <div><dt>Modif hors forfait</dt><dd>45 €/h</dd></div>
-        </dl>
-      </div>
-    </div>
-    <p class="center-link"><a class="link" href="services.html">Tous les détails des offres <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
-  </div>
-</section>
-
-<!-- MÉTHODE -->
-<section class="method" aria-labelledby="method-title">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="kicker">Méthode</p>
-      <h2 class="h2" id="method-title" data-split>Comment ça se passe.</h2>
-    </div>
-    <div class="steps-wrap">
-      <div class="steps-line" aria-hidden="true"><span></span></div>
-      <ol class="steps">
-        <li><span class="step-dot" aria-hidden="true"></span><p class="step-n">Étape 1</p><h3>On en parle</h3><p>20 minutes, gratuit. Vous m'expliquez votre activité, je vous dis ce qui est utile.</p></li>
-        <li><span class="step-dot" aria-hidden="true"></span><p class="step-n">Étape 2</p><h3>Je fais la maquette</h3><p>Vous voyez votre site avant qu'il soit en ligne. On ajuste ensemble.</p></li>
-        <li><span class="step-dot" aria-hidden="true"></span><p class="step-n">Étape 3</p><h3>Mise en ligne</h3><p>Je m'occupe du nom de domaine, de l'hébergement et de Google.</p></li>
-        <li><span class="step-dot" aria-hidden="true"></span><p class="step-n">Étape 4</p><h3>Je reste là pour la suite</h3><p>Une modif, une question : vous savez qui contacter.</p></li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq" aria-labelledby="faq-title">
-  <div class="wrap faq-grid">
-    <div class="faq-head">
-      <h2 class="h2" id="faq-title" data-split>Questions fréquentes</h2>
-      <p class="muted">Une autre question&nbsp;? <a class="link-inline" href="contact.html">Écrivez-moi</a>.</p>
-    </div>
+    <div class="head center"><h2 class="h2" id="faq-titre">Questions fréquentes.</h2></div>
     <div class="faq-list">
       <details>
         <summary>Combien de temps pour avoir mon site&nbsp;?<span class="pm" aria-hidden="true"></span></summary>
@@ -430,75 +254,44 @@
         <div class="faq-a"><p>Le logo est offert avec la Vitrine et le sur mesure (150 € seul). Je peux aussi écrire vos textes pour 60 € par page.</p></div>
       </details>
     </div>
+    <p class="center small" style="margin-top:32px">Une autre question&nbsp;? <a class="link-inline" href="contact.html">Écrivez-moi</a>.</p>
   </div>
 </section>
-
-<!-- CLÔTURE · Immersive closing invitation -->
-<section class="closing" aria-labelledby="closing-title">
-  <div class="flutes" aria-hidden="true"></div>
-  <div class="wrap closing-grid">
-    <div class="closing-text">
-      <p class="eyebrow eyebrow-dark"><span class="voyant voyant-pulse" aria-hidden="true"></span>Annecy · Haute-Savoie · partout en France</p>
-      <h2 class="h2 closing-title" id="closing-title" data-split>Votre site en ligne en deux semaines.</h2>
-      <p class="lead" data-reveal>On en parle 20 minutes. C'est gratuit, et vous repartez avec des idées claires.</p>
-      <div class="btn-row" data-reveal>
-        <a class="btn btn-green" href="contact.html">Demander un devis <svg class="arr" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <a class="btn btn-dark" href="mailto:contact@studio-ouvert.fr">contact@studio-ouvert.fr</a>
-      </div>
-    </div>
-    <div class="stack" aria-hidden="true">
-      <img class="sk sk-1" src="assets/bonneaventure-avis-720.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
-      <img class="sk sk-2" src="assets/bonneaventure-galerie-720.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
-      <img class="sk sk-3" src="assets/bonneaventure-calendrier-720.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
-    </div>
+<section class="sec s-white" aria-labelledby="fin-titre">
+  <div class="wrap center" data-reveal>
+    <h2 class="h2" id="fin-titre" style="max-width:15ch;margin:0 auto 16px">Votre site en ligne en deux semaines.</h2>
+    <p class="sub" style="max-width:560px;margin-bottom:32px">On en parle 20 minutes. C'est gratuit, et vous repartez avec des idées claires.</p>
+    <div class="cta-row"><a class="btn btn-fill" href="contact.html">Demander un devis</a><a class="btn btn-line" href="mailto:contact@studio-ouvert.fr">Écrire un mail</a></div>
   </div>
 </section>
-
 </main>
-
-<!-- FOOTER · Monumental emblem -->
 <footer class="footer">
-  <div class="wrap footer-grid">
-    <div class="f-brand">
-      <a class="brand" href="./" aria-label="Ouvert, accueil">
-        <img class="brand-logo" src="assets/ouvert-logo.svg" alt="" width="132" height="32" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
-        <span class="brand-text" hidden>ouvert</span>
-        <span class="voyant brand-voyant" aria-hidden="true"></span>
-      </a>
-      <p>Des sites simples, rapides et beaux pour les pros autour d'Annecy.</p>
+  <div class="wide">
+    <div class="f-note">
+      <p>Prix en euros. La création du site se paie une fois&nbsp;; l'hébergement est facturé à part, sans engagement.</p>
+      <p>Paiement en ligne sécurisé par Stripe. Ouvert ne prend aucune commission sur vos ventes.</p>
     </div>
-    <nav class="f-col" aria-label="Pages">
-      <p class="f-title">Pages</p>
-      <a href="./">Accueil</a>
-      <a href="a-propos.html">À propos</a>
-      <a href="services.html">Services</a>
-      <a href="realisations.html">Réalisations</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <nav class="f-col" aria-label="Offres">
-      <p class="f-title">Offres</p>
-      <a href="services.html#une-page">Une page · 390 €</a>
-      <a href="services.html#vitrine">Vitrine · 790 €</a>
-      <a href="services.html#sur-mesure">Sur mesure · dès 1 290 €</a>
-      <a href="services.html#ia">Visible sur les IA · 190 €</a>
-      <a href="services.html#hebergement">Hébergement &amp; suivi</a>
-    </nav>
-    <div class="f-col">
-      <p class="f-title">Contact</p>
-      <a href="mailto:contact@studio-ouvert.fr">contact@studio-ouvert.fr</a>
-      <!-- Téléphone : renseigner CONFIG.phone dans js/site.js -->
-      <a data-phone hidden href="#"></a>
-      <p>Annecy, Haute-Savoie</p>
-      <p>À distance partout en France</p>
+    <div class="f-dir">
+      <div class="f-brand">
+        <img src="assets/ouvert-logo.svg" alt="Ouvert" width="132" height="35" loading="lazy">
+        <p>Des sites simples, rapides et beaux pour les pros autour d'Annecy.</p>
+      </div>
+      <nav aria-label="Pages"><h2>Pages</h2><ul>
+        <li><a href="./">Accueil</a></li><li><a href="a-propos.html">À propos</a></li><li><a href="services.html">Services</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="contact.html">Contact</a></li>
+      </ul></nav>
+      <nav aria-label="Offres"><h2>Offres</h2><ul>
+        <li><a href="services.html#une-page">Une page · 390 €</a></li><li><a href="services.html#vitrine">Vitrine · 790 €</a></li><li><a href="services.html#sur-mesure">Sur mesure · dès 1 290 €</a></li><li><a href="services.html#ia">Visible sur les IA · 190 €</a></li><li><a href="services.html#hebergement">Hébergement et suivi</a></li>
+      </ul></nav>
+      <div><h2>Contact</h2><ul>
+        <li><a href="mailto:contact@studio-ouvert.fr">contact@studio-ouvert.fr</a></li>
+        <li data-phone-row hidden><a data-phone hidden href="#"></a></li>
+        <li>Annecy, Haute-Savoie</li><li>À distance partout en France</li>
+      </ul></div>
     </div>
-  </div>
-  <div class="wrap f-bottom">
-    <p>© <span data-year>2026</span> Ouvert · Théo Bonaventure, entrepreneur individuel</p>
-    <a href="mentions-legales.html">Mentions légales</a>
-  </div>
-  <div class="emblem" aria-hidden="true">
-    <!-- PLACEHOLDER : à remplacer par le "o" + point extraits de assets/ouvert-logo.svg -->
-    <svg viewBox="0 0 200 200" width="672" height="672"><circle cx="100" cy="100" r="78" fill="none" stroke="currentColor" stroke-width="34" stroke-dasharray="400 90" transform="rotate(-50 100 100)"/><circle class="emblem-dot" cx="158" cy="36" r="17" fill="currentColor"/></svg>
+    <div class="f-bottom">
+      <p>© <span data-year>2026</span> Ouvert · Théo Bonaventure, entrepreneur individuel</p>
+      <nav aria-label="Légal"><a href="mentions-legales.html">Mentions légales</a><a href="contact.html">Contact</a></nav>
+    </div>
   </div>
 </footer>
 </body>

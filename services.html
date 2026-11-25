@@ -6,9 +6,8 @@
 <title>Services et tarifs · Ouvert, sites web près d'Annecy</title>
 <meta name="description" content="Une page à 390 €, Vitrine à 790 €, Sur mesure dès 1 290 €. Hébergement sans engagement, option visible sur les IA. Paiement en ligne sécurisé.">
 <link rel="canonical" href="https://studio-ouvert.fr/services.html">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#fafafc">
 <link rel="icon" href="assets/ouvert-icone.svg" type="image/svg+xml">
-
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Ouvert">
@@ -17,49 +16,32 @@
 <meta property="og:url" content="https://studio-ouvert.fr/services.html">
 <meta property="og:image" content="https://studio-ouvert.fr/assets/bonneaventure-desktop.webp">
 <meta name="twitter:card" content="summary_large_image">
-
-<script>document.documentElement.className=matchMedia('(prefers-reduced-motion: reduce)').matches?'rm':'motion';setTimeout(function(){document.documentElement.classList.add('intro-ready')},3000);</script>
-
-<link rel="preload" href="fonts/outfit-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.className=matchMedia('(prefers-reduced-motion: reduce)').matches?'rm':'motion';setTimeout(function(){document.documentElement.classList.add('intro-ready')},2500);</script>
 <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="stylesheet" href="css/site.css">
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="js/site.js" defer></script>
 </head>
-<body>
+<body class="has-localnav">
 <a class="skip" href="#contenu">Aller au contenu</a>
-
-<!-- Bandeau d'annonce -->
-<div class="announce">
-  <a href="realisations.html#la-bonne-aventure">
-    <span>Loueurs Airbnb : vos réservations en direct, sans commission</span>
-    <span class="announce-cta">voir La Bonne Aventure <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-  </a>
-</div>
-
-<header class="nav">
-  <div class="wrap nav-in">
-    <a class="brand" href="./" aria-label="Ouvert, accueil">
-      <img class="brand-logo" src="assets/ouvert-logo.svg" alt="" width="132" height="32" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
-      <span class="brand-text" hidden>ouvert</span>
-      <span class="voyant brand-voyant" aria-hidden="true"></span>
-    </a>
-    <nav class="nav-links" aria-label="Navigation principale">
+<header class="gnav">
+  <div class="wide gnav-in">
+    <a class="brand" href="./" aria-label="Ouvert, accueil"><img src="assets/ouvert-logo.svg" alt="" width="132" height="35"></a>
+    <nav class="gnav-links" aria-label="Navigation principale">
       <a href="a-propos.html">À propos</a>
       <a href="services.html" aria-current="page">Services</a>
       <a href="realisations.html">Réalisations</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <div class="nav-actions">
-      <a class="btn btn-green btn-sm nav-cta" href="contact.html">Demander un devis</a>
-      <button class="burger" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu">
-        <span></span><span></span>
-      </button>
+    <div class="gnav-right">
+      <a class="btn btn-fill btn-sm" href="contact.html">Demander un devis</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu"><span></span><span></span></button>
     </div>
   </div>
-  <div class="menu-mobile" id="menu-mobile" hidden>
+  <div class="gnav-menu" id="menu-mobile" hidden>
     <nav aria-label="Navigation mobile">
       <a href="./">Accueil</a>
       <a href="a-propos.html">À propos</a>
@@ -67,178 +49,148 @@
       <a href="realisations.html">Réalisations</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <a class="btn btn-green" href="contact.html">Demander un devis</a>
+    <a class="btn btn-fill" href="contact.html">Demander un devis</a>
   </div>
 </header>
-
+<nav class="lnav" aria-label="Sections de la page Services">
+  <div class="wide lnav-in">
+    <a class="lnav-title" href="#titre">Services</a>
+    <div class="lnav-right">
+      <a href="#une-page">Une page</a><a href="#vitrine">Vitrine</a><a href="#sur-mesure">Sur mesure</a><a href="#hebergement">Hébergement</a><a href="#ia">IA</a>
+      <a class="btn btn-fill btn-sm" href="contact.html">Demander un devis</a>
+    </div>
+  </div>
+</nav>
 <main id="contenu">
-<section class="page-hero">
-  <div class="wrap page-hero-grid">
-    <div>
-      <p class="kicker">Services</p>
-      <h1 class="page-title" data-split>Des sites clairs, à prix affichés.</h1>
+<section class="hero s-white hero-only" aria-labelledby="titre">
+  <div class="wrap center" data-hero>
+    <p class="eyebrow">Services</p>
+    <h1 class="h1" id="titre">Un site pour chaque besoin.</h1>
+    <p class="sub">De la page simple au site qui prend les réservations et les paiements. Prix affichés, payés une fois.</p>
+    <div class="cta-row"><a class="btn btn-fill" href="contact.html">Demander un devis</a><a class="btn btn-line" href="#une-page">Voir les offres</a></div>
+  </div>
+</section>
+<section class="sec s-frost offer" id="une-page" aria-labelledby="une-page-t">
+  <div class="wrap center">
+    <div class="head" data-reveal>
+      
+      <h2 class="h2" id="une-page-t">Une page.</h2>
+      <p class="sub" style="margin-bottom:32px">Pour être trouvé et joint facilement.</p>
+      <p class="price"><b>390 €</b><span>paiement unique</span></p>
+      <div class="cta-row"><a class="btn btn-fill" data-pay="une-page" href="contact.html?offre=une-page">Payer 390 €</a><a class="btn btn-line" href="contact.html?offre=une-page">Poser une question</a></div>
+      <p class="small">Paiement sécurisé par Stripe. Je vous contacte juste après pour lancer le site.</p>
     </div>
-    <div>
-      <p class="lead" data-reveal>Trois offres, de la page simple au site qui prend les réservations et les paiements. Vous payez le site une fois, l'hébergement est sans engagement.</p>
-      <div class="btn-row" data-reveal><a class="btn btn-green" href="#vitrine">Voir les offres <svg class="arr" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-grey" href="contact.html">Poser une question</a></div>
+    <ul class="features" data-stagger><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg></span><p>1 page adaptée au téléphone</p></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5.5h16v10H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg></span><p>Formulaire de contact + bouton d'appel</p></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5 5"/></svg></span><p>Bases Google<span>titre, description, fiche</span></p></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg></span><p>Vos infos clés<span>services, horaires, zone</span></p></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m4 17 5-4.5 4 3.5 3-2.5 4 3.5"/></svg></span><p>Vos photos</p></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.6 3.5 5.4 3.5 8.5s-1 5.9-3.5 8.5c-2.5-2.6-3.5-5.4-3.5-8.5s1-5.9 3.5-8.5z"/></svg></span><p>Mise en ligne sur votre nom de domaine</p></li></ul>
+    <div class="stats" data-reveal><div><b>1 semaine</b><span>pour être en ligne</span></div><div><b>1 page</b><span>claire et complète</span></div><div><b>150 €</b><span>si vous voulez un logo</span></div></div>
+    <p class="ideal"><strong>Idéal pour&nbsp;:</strong> artisan, coach ou indépendant qui veut une présence propre, avec un moyen simple de le contacter.</p>
+  </div>
+</section>
+<section class="sec s-white offer" id="vitrine" aria-labelledby="vitrine-t">
+  <div class="wrap center">
+    <div class="head" data-reveal>
+      <p class="eyebrow"><span class="voyant" aria-hidden="true"></span>Le plus demandé</p>
+      <h2 class="h2" id="vitrine-t">Vitrine.</h2>
+      <p class="sub" style="margin-bottom:32px">Pour présenter votre activité en détail.</p>
+      <p class="price"><b>790 €</b><span>paiement unique</span></p>
+      <div class="cta-row"><a class="btn btn-fill" data-pay="vitrine" href="contact.html?offre=vitrine">Payer 790 €</a><a class="btn btn-line" href="contact.html?offre=vitrine">Poser une question</a></div>
+      <p class="small">Paiement sécurisé par Stripe. Je vous contacte juste après pour lancer le site.</p>
     </div>
+    <ul class="features" data-stagger><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="13" r="6.5" stroke-dasharray="33 8"/><circle cx="17.8" cy="6.2" r="1.8"/></svg></span><p>Logo offert</p></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="3.5" width="11" height="14" rx="1.5"/><path d="M8.5 20.5h9a1.5 1.5 0 0 0 1.5-1.5V7"/></svg></span><p>Jusqu'à 5 pages<span>accueil, services, réalisations, à propos, contact</span></p></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m4 17 5-4.5 4 3.5 3-2.5 4 3.5"/></svg></span><p>Galerie photos</p></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3.8 2.5 5.1 5.6.8-4 4 .9 5.6-5-2.7-5 2.7.9-5.6-4-4 5.6-.8z"/></svg></span><p>Avis Google</p></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5 5"/></svg></span><p>Référencement local de base</p></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19.5 12a7.5 7.5 0 0 1-13 5.1M4.5 12a7.5 7.5 0 0 1 13-5.1"/><path d="M17.5 3.5v3.4h-3.4M6.5 20.5v-3.4h3.4"/></svg></span><p>2 allers-retours<span>sur la maquette</span></p></li></ul>
+    <div class="stats" data-reveal><div><b>2 semaines</b><span>pour être en ligne</span></div><div><b>5 pages</b><span>maximum</span></div><div><b>Logo</b><span>offert</span></div></div>
+    <p class="ideal"><strong>Idéal pour&nbsp;:</strong> commerce, restaurant ou artisan qui veut montrer son travail et rassurer avant le premier appel.</p>
+  </div>
+</section>
+<section class="sec s-frost offer" id="sur-mesure" aria-labelledby="sur-mesure-t">
+  <div class="wrap center">
+    <div class="head" data-reveal>
+      
+      <h2 class="h2" id="sur-mesure-t">Sur mesure.</h2>
+      <p class="sub" style="margin-bottom:32px">Pour prendre des réservations et des paiements.</p>
+      <p class="price"><b><span class="from">dès</span>1 290 €</b><span>paiement unique</span></p>
+      <div class="cta-row"><a class="btn btn-fill" href="contact.html?offre=sur-mesure">Demander un devis</a><a class="more" href="realisations.html">Exemple&nbsp;: La Bonne Aventure <svg width="7" height="12" viewBox="0 0 7 12" aria-hidden="true"><path d="m1 1 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+      <p class="small">Le prix dépend de ce dont vous avez besoin. On en parle d'abord, puis je vous envoie un devis clair.</p>
+    </div>
+    <ul class="features" data-stagger><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="m9 15 2 2 4-4"/></svg></span><p>Réservation en direct<span>avec calendrier</span></p></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span><p>Paiement en ligne<span>avec Stripe</span></p></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span><p>Mails de confirmation<span>automatiques</span></p></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20.5c1.2-3.8 4-5.7 7.5-5.7s6.3 1.9 7.5 5.7"/></svg></span><p>Espace client<span>selon besoin</span></p></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 19.5s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 7.5 2.5c0 5.6-7.5 10-7.5 10z"/></svg></span><p>Fidélité<span>selon besoin</span></p></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h9M8.5 4v2c0 4-2 7-5 8.5M6 10c1 2 3 3.5 6 4.5"/><path d="m12 20 4-9 4 9M13.4 17h5.2"/></svg></span><p>Plusieurs langues<span>selon besoin</span></p></li></ul>
+    <div class="stats" data-reveal><div><b>Sur devis</b><span>date fixée ensemble</span></div><div><b>0 commission</b><span>l'argent va sur votre compte</span></div><div><b>Logo</b><span>offert</span></div></div>
+    <p class="ideal"><strong>Idéal pour&nbsp;:</strong> loueur, gîte, salle ou prestataire qui veut prendre des réservations et des paiements sans plateforme. Tout ce qu'il y a dans la Vitrine est inclus.</p>
   </div>
 </section>
 
-<section class="sec" aria-label="Les offres">
+<section class="sec s-white" id="commander" aria-labelledby="commander-t">
   <div class="wrap">
-    <article class="svc" id="une-page">
-      <div class="svc-side" data-reveal>
-        
-        <h2 class="plan-name">Une page</h2>
-        <p class="plan-for">Pour être trouvé et joint facilement.</p>
-        <p class="price"><span class="amount">390 €</span><span class="per">paiement unique</span></p>
-        <a class="btn btn-green" data-pay="une-page" href="contact.html?offre=une-page">Payer 390 € <svg class="arr" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-grey" href="contact.html?offre=une-page">Poser une question</a>
-        <p class="svc-note">Paiement sécurisé par Stripe. Je vous contacte juste après pour lancer le site.</p>
-      </div>
-      <div class="svc-main" data-reveal>
-        <h3>Ce qui est inclus</h3>
-        <ul class="ticks"><li>1 page adaptée au téléphone</li><li>Vos infos clés : services, horaires, zone, photos</li><li>Formulaire de contact + bouton d'appel</li><li>Bases Google : titre, description, fiche Google</li><li>Mise en ligne sur votre nom de domaine</li></ul>
-        <div class="svc-facts"><div><b>1 semaine</b><span>pour être en ligne</span></div><div><b>1 page</b><span>claire et complète</span></div><div><b>150 €</b><span>si vous voulez un logo</span></div></div>
-        <p class="svc-for"><strong>Idéal pour :</strong> artisan, coach ou indépendant qui veut une présence propre, avec un moyen simple de le contacter.</p>
-      </div>
-    </article>
-
-    <article class="svc svc-featured" id="vitrine">
-      <div class="svc-side" data-reveal>
-        <p class="badge"><span class="voyant" aria-hidden="true"></span>Le plus demandé</p>
-        <h2 class="plan-name">Vitrine</h2>
-        <p class="plan-for">Pour présenter votre activité en détail.</p>
-        <p class="price"><span class="amount">790 €</span><span class="per">paiement unique</span></p>
-        <a class="btn btn-green" data-pay="vitrine" href="contact.html?offre=vitrine">Payer 790 € <svg class="arr" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-dark" href="contact.html?offre=vitrine">Poser une question</a>
-        <p class="svc-note">Paiement sécurisé par Stripe. Je vous contacte juste après pour lancer le site.</p>
-      </div>
-      <div class="svc-main" data-reveal>
-        <h3>Ce qui est inclus</h3>
-        <ul class="ticks"><li>Logo offert</li><li>Jusqu'à 5 pages : accueil, services, réalisations, à propos, contact</li><li>Galerie photos + avis Google</li><li>Référencement local de base</li><li>Formulaire de contact + bouton d'appel</li><li>2 allers-retours sur la maquette</li></ul>
-        <div class="svc-facts"><div><b>2 semaines</b><span>pour être en ligne</span></div><div><b>5 pages</b><span>maximum</span></div><div><b>Logo</b><span>offert</span></div></div>
-        <p class="svc-for"><strong>Idéal pour :</strong> commerce, restaurant ou artisan qui veut montrer son travail et rassurer avant le premier appel.</p>
-      </div>
-    </article>
-
-    <article class="svc" id="sur-mesure">
-      <div class="svc-side" data-reveal>
-        
-        <h2 class="plan-name">Sur mesure</h2>
-        <p class="plan-for">Pour prendre des réservations et des paiements.</p>
-        <p class="price"><span class="from">dès</span><span class="amount">1 290 €</span><span class="per">paiement unique</span></p>
-        <a class="btn btn-green" href="contact.html?offre=sur-mesure">Demander un devis <svg class="arr" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <p class="svc-note">Le prix dépend de ce dont vous avez besoin. On en parle d'abord, puis je vous envoie un devis clair.</p>
-      </div>
-      <div class="svc-main" data-reveal>
-        <h3>Ce qui est inclus</h3>
-        <ul class="ticks"><li>Logo offert</li><li>Tout ce qu'il y a dans la Vitrine</li><li>Réservation en direct + calendrier</li><li>Paiement en ligne avec Stripe</li><li>Mails de confirmation automatiques</li><li>Espace client, fidélité, plusieurs langues : selon besoin</li></ul>
-        <div class="svc-facts"><div><b>Sur devis</b><span>date fixée ensemble</span></div><div><b>Sans commission</b><span>l'argent va sur votre compte</span></div><div><b>Logo</b><span>offert</span></div></div>
-        <p class="svc-for"><strong>Idéal pour :</strong> loueur, gîte, salle ou prestataire qui veut prendre des réservations et des paiements sans plateforme.</p>
-        <p style="margin-top:20px"><a class="link" href="realisations.html#la-bonne-aventure">Exemple : La Bonne Aventure <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<section class="sec sec-soft" aria-labelledby="commande-title">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="kicker">Commander</p>
-      <h2 class="h2" id="commande-title" data-split>Comment ça se passe.</h2>
-    </div>
-    <div class="how-pay" data-stagger>
-      <article>
+    <div class="head center"><h2 class="h2" id="commander-t">Comment ça se passe.</h2></div>
+    <div class="pair" data-stagger>
+      <div>
         <h3>Une page et Vitrine</h3>
-        <ol>
-          <li>Vous payez en ligne, par carte.</li>
-          <li>Je vous contacte pour un appel de 20 minutes.</li>
-          <li>Vous m'envoyez vos textes, photos et logo si vous en avez.</li>
-          <li>Je fais la maquette, on ajuste, et c'est en ligne.</li>
-        </ol>
-      </article>
-      <article>
+        <p class="muted">Vous payez en ligne, je m'occupe du reste.</p>
+        <ol><li>Vous payez en ligne, par carte.</li><li>Je vous contacte pour un appel de 20 minutes.</li><li>Vous m'envoyez textes, photos et logo si vous en avez.</li><li>Je fais la maquette, on ajuste, et c'est en ligne.</li></ol>
+      </div>
+      <div>
         <h3>Sur mesure</h3>
-        <ol>
-          <li>On en parle 20 minutes, c'est gratuit.</li>
-          <li>Je vous envoie un devis clair.</li>
-          <li>Vous validez, je fais la maquette.</li>
-          <li>On ajuste, et c'est en ligne.</li>
-        </ol>
-      </article>
+        <p class="muted">On en parle d'abord, puis je vous envoie un devis.</p>
+        <ol><li>On en parle 20 minutes, c'est gratuit.</li><li>Je vous envoie un devis clair.</li><li>Vous validez, je fais la maquette.</li><li>On ajuste, et c'est en ligne.</li></ol>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="sec" aria-labelledby="extras-title">
+<section class="sec s-frost" id="hebergement" aria-labelledby="heb-t">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="kicker">Après la mise en ligne</p>
-      <h2 class="h2" id="extras-title" data-split>Hébergement et options.</h2>
-      <p class="lead" data-reveal>Sans engagement : vous arrêtez quand vous voulez, et vous gardez votre site et votre nom de domaine.</p>
+    <div class="head center">
+      <h2 class="h2" id="heb-t">Hébergement et suivi.</h2>
+      <p class="sub">Sans engagement. Vous arrêtez quand vous voulez, et vous gardez votre site et votre nom de domaine.</p>
     </div>
-    <div class="extras">
-      <div class="extras-col" id="hebergement" data-reveal>
-        <h3 class="h3">Hébergement &amp; suivi <span class="muted">· sans engagement</span></h3>
-        <div class="host">
-          <div class="host-row">
-            <div><b>Hébergement</b><p>Nom de domaine, hébergement, https, sauvegardes.</p></div>
-            <p class="host-price"><b>9 €</b>/mois<br><span>ou 90 €/an</span></p>
-          </div>
-          <div class="host-row">
-            <div><b>Hébergement + suivi</b><p>Tout l'hébergement, plus 30 min de modifs par mois et la vérification que formulaires, paiements et mails marchent.</p></div>
-            <p class="host-price"><b>19 €</b>/mois<br><span>ou 190 €/an</span></p>
-          </div>
-        </div>
+    <div class="pair" data-stagger>
+      <div>
+        <h3>Hébergement</h3>
+        <p class="price"><b>9 €<small>/mois</small></b><span>ou 90 €/an</span></p>
+        <p class="muted">Nom de domaine, hébergement, https, sauvegardes.</p>
       </div>
-      <div class="extras-col" id="options" data-reveal>
-        <h3 class="h3">Options</h3>
-        <dl class="opts">
-          <div><dt>Page en plus</dt><dd>90 €</dd></div>
-          <div><dt>Rédaction des textes</dt><dd>60 €/page</dd></div>
-          <div><dt>Langue en plus</dt><dd>150 €</dd></div>
-          <div><dt>Logo seul</dt><dd>150 €</dd></div>
-          <div><dt>Paiement Stripe + mails auto</dt><dd>250 €</dd></div>
-          <div><dt>Visible sur les IA (ChatGPT, Google…) · <a class="link-inline" href="services.html#ia">détails</a></dt><dd>190 €</dd></div>
-          <div><dt>Modif hors forfait</dt><dd>45 €/h</dd></div>
-        </dl>
-      </div>
-    </div>
-    
-  </div>
-</section>
-
-<section class="sec" id="ia" aria-labelledby="ia-title">
-  <div class="wrap ai">
-    <div>
-      <p class="kicker">Nouveau</p>
-      <h2 class="h2" id="ia-title" data-split>Visible sur ChatGPT et les autres IA.</h2>
-      <p class="lead" data-reveal style="margin-top:20px">De plus en plus de gens demandent à ChatGPT « un plombier à Annecy » au lieu de chercher sur Google. Je fais en sorte que les IA trouvent les bonnes infos sur vous.</p>
-      <div data-reveal>
-        <p class="price"><span class="amount">190 €</span><span class="per">paiement unique, en option ou seul</span></p>
-        <ul class="ticks"><li>Fiche de votre entreprise sur ChatGPT, créée et remplie</li><li>Fiches Google, Bing et Apple complètes et à jour</li><li>Site lisible par les IA : infos claires et données structurées</li><li>Test avant / après : 10 questions posées à ChatGPT, Gemini et Perplexity, avec un compte rendu</li></ul>
-        <a class="btn btn-green" href="contact.html?offre=ia">Demander cette option <svg class="arr" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <p class="ai-warn">Personne ne peut garantir que ChatGPT vous recommandera. Je mets tout en place pour que les IA vous connaissent et donnent les bonnes infos, et je vous montre le résultat.</p>
-      </div>
-    </div>
-    <div class="ai-card" aria-hidden="true" data-reveal>
-      <div class="ai-q"><span>Un plombier disponible à Annecy cette semaine&nbsp;?</span></div>
-      <div class="ai-a">
-        <b><span class="voyant"></span>Votre entreprise</b>
-        <p>Plombier · Annecy · Ouvert aujourd'hui</p>
-        <p>Dépannage et rénovation de salle de bain. Devis en ligne sur son site.</p>
+      <div>
+        <h3>Hébergement + suivi</h3>
+        <p class="price"><b>19 €<small>/mois</small></b><span>ou 190 €/an</span></p>
+        <p class="muted">Tout l'hébergement, plus 30 min de modifs par mois et la vérification que formulaires, paiements et mails marchent.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="faq" aria-labelledby="faq-title">
-  <div class="wrap faq-grid">
-    <div class="faq-head">
-      <h2 class="h2" id="faq-title" data-split>Questions fréquentes</h2>
-      <p class="muted">Une autre question&nbsp;? <a class="link-inline" href="contact.html">Écrivez-moi</a>.</p>
+<section class="sec s-white" id="options" aria-labelledby="opt-t">
+  <div class="wrap">
+    <div class="head center"><h2 class="h2" id="opt-t">Options.</h2><p class="sub">À ajouter à n'importe quelle offre.</p></div>
+    <dl class="specs" data-reveal>
+      <div><dt>Page en plus</dt><dd>90 €</dd></div>
+      <div><dt>Rédaction des textes</dt><dd>60 €/page</dd></div>
+      <div><dt>Langue en plus</dt><dd>150 €</dd></div>
+      <div><dt>Logo seul</dt><dd>150 €</dd></div>
+      <div><dt>Paiement Stripe + mails automatiques</dt><dd>250 €</dd></div>
+      <div><dt><a href="#ia">Visible sur les IA</a></dt><dd>190 €</dd></div>
+      <div><dt>Modification hors forfait</dt><dd>45 €/h</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sec s-wash" id="ia" aria-labelledby="ia-t">
+  <div class="wrap center">
+    <div class="head" data-reveal style="margin-bottom:0">
+      <p class="eyebrow"><span class="voyant voyant-pulse" aria-hidden="true"></span>Nouveau</p>
+      <h2 class="h2" id="ia-t">Visible sur ChatGPT et les autres IA.</h2>
+      <p class="sub" style="margin-bottom:32px">De plus en plus de gens demandent à ChatGPT «&nbsp;un plombier à Annecy&nbsp;» au lieu de chercher sur Google. Je fais en sorte que les IA trouvent les bonnes infos sur vous.</p>
+      <p class="price"><b>190 €</b><span>paiement unique, en option ou seul</span></p>
+      <ul class="checks"><li>Fiche de votre entreprise sur ChatGPT, créée et remplie</li><li>Fiches Google, Bing et Apple complètes et à jour</li><li>Site lisible par les IA&nbsp;: infos claires et données structurées</li><li>Test avant / après&nbsp;: 10 questions posées à ChatGPT, Gemini et Perplexity, avec un compte rendu</li></ul>
+      <div class="cta-row" style="margin-top:32px"><a class="btn btn-fill" href="contact.html?offre=ia">Demander cette option</a></div>
+      <p class="note">Personne ne peut garantir que ChatGPT vous recommandera. Je mets tout en place pour que les IA vous connaissent et donnent les bonnes infos, et je vous montre le résultat.</p>
     </div>
+    <div class="chat" aria-hidden="true" data-reveal>
+      <div class="m-q"><span>Un plombier dispo à Annecy cette semaine&nbsp;?</span></div>
+      <div class="m-a">Voici un pro près de chez vous&nbsp;:<b><span class="voyant"></span>Votre entreprise</b><span class="m-sm">Plombier · Annecy · Ouvert aujourd'hui. Devis en ligne sur son site.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec s-frost" aria-labelledby="faq-titre">
+  <div class="wrap">
+    <div class="head center"><h2 class="h2" id="faq-titre">Questions fréquentes.</h2></div>
     <div class="faq-list">
       <details>
         <summary>Le paiement en ligne, c'est sécurisé&nbsp;?<span class="pm" aria-hidden="true"></span></summary>
@@ -261,75 +213,44 @@
         <div class="faq-a"><p>Le logo est offert avec la Vitrine et le sur mesure (150 € seul). Je peux aussi écrire vos textes pour 60 € par page.</p></div>
       </details>
     </div>
+    <p class="center small" style="margin-top:32px">Une autre question&nbsp;? <a class="link-inline" href="contact.html">Écrivez-moi</a>.</p>
   </div>
 </section>
-<!-- CLÔTURE · Immersive closing invitation -->
-<section class="closing" aria-labelledby="closing-title">
-  <div class="flutes" aria-hidden="true"></div>
-  <div class="wrap closing-grid">
-    <div class="closing-text">
-      <p class="eyebrow eyebrow-dark"><span class="voyant voyant-pulse" aria-hidden="true"></span>Annecy · Haute-Savoie · partout en France</p>
-      <h2 class="h2 closing-title" id="closing-title" data-split>Votre site en ligne en deux semaines.</h2>
-      <p class="lead" data-reveal>On en parle 20 minutes. C'est gratuit, et vous repartez avec des idées claires.</p>
-      <div class="btn-row" data-reveal>
-        <a class="btn btn-green" href="contact.html">Demander un devis <svg class="arr" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <a class="btn btn-dark" href="mailto:contact@studio-ouvert.fr">contact@studio-ouvert.fr</a>
-      </div>
-    </div>
-    <div class="stack" aria-hidden="true">
-      <img class="sk sk-1" src="assets/bonneaventure-avis-720.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
-      <img class="sk sk-2" src="assets/bonneaventure-galerie-720.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
-      <img class="sk sk-3" src="assets/bonneaventure-calendrier-720.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
-    </div>
+<section class="sec s-white" aria-labelledby="fin-titre">
+  <div class="wrap center" data-reveal>
+    <h2 class="h2" id="fin-titre" style="max-width:15ch;margin:0 auto 16px">Votre site en ligne en deux semaines.</h2>
+    <p class="sub" style="max-width:560px;margin-bottom:32px">On en parle 20 minutes. C'est gratuit, et vous repartez avec des idées claires.</p>
+    <div class="cta-row"><a class="btn btn-fill" href="contact.html">Demander un devis</a><a class="btn btn-line" href="mailto:contact@studio-ouvert.fr">Écrire un mail</a></div>
   </div>
 </section>
-
-
 </main>
-
-<!-- FOOTER · Monumental emblem -->
 <footer class="footer">
-  <div class="wrap footer-grid">
-    <div class="f-brand">
-      <a class="brand" href="./" aria-label="Ouvert, accueil">
-        <img class="brand-logo" src="assets/ouvert-logo.svg" alt="" width="132" height="32" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
-        <span class="brand-text" hidden>ouvert</span>
-        <span class="voyant brand-voyant" aria-hidden="true"></span>
-      </a>
-      <p>Des sites simples, rapides et beaux pour les pros autour d'Annecy.</p>
+  <div class="wide">
+    <div class="f-note">
+      <p>Prix en euros. La création du site se paie une fois&nbsp;; l'hébergement est facturé à part, sans engagement.</p>
+      <p>Paiement en ligne sécurisé par Stripe. Ouvert ne prend aucune commission sur vos ventes.</p>
     </div>
-    <nav class="f-col" aria-label="Pages">
-      <p class="f-title">Pages</p>
-      <a href="./">Accueil</a>
-      <a href="a-propos.html">À propos</a>
-      <a href="services.html">Services</a>
-      <a href="realisations.html">Réalisations</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <nav class="f-col" aria-label="Offres">
-      <p class="f-title">Offres</p>
-      <a href="services.html#une-page">Une page · 390 €</a>
-      <a href="services.html#vitrine">Vitrine · 790 €</a>
-      <a href="services.html#sur-mesure">Sur mesure · dès 1 290 €</a>
-      <a href="services.html#ia">Visible sur les IA · 190 €</a>
-      <a href="services.html#hebergement">Hébergement &amp; suivi</a>
-    </nav>
-    <div class="f-col">
-      <p class="f-title">Contact</p>
-      <a href="mailto:contact@studio-ouvert.fr">contact@studio-ouvert.fr</a>
-      <!-- Téléphone : renseigner CONFIG.phone dans js/site.js -->
-      <a data-phone hidden href="#"></a>
-      <p>Annecy, Haute-Savoie</p>
-      <p>À distance partout en France</p>
+    <div class="f-dir">
+      <div class="f-brand">
+        <img src="assets/ouvert-logo.svg" alt="Ouvert" width="132" height="35" loading="lazy">
+        <p>Des sites simples, rapides et beaux pour les pros autour d'Annecy.</p>
+      </div>
+      <nav aria-label="Pages"><h2>Pages</h2><ul>
+        <li><a href="./">Accueil</a></li><li><a href="a-propos.html">À propos</a></li><li><a href="services.html">Services</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="contact.html">Contact</a></li>
+      </ul></nav>
+      <nav aria-label="Offres"><h2>Offres</h2><ul>
+        <li><a href="services.html#une-page">Une page · 390 €</a></li><li><a href="services.html#vitrine">Vitrine · 790 €</a></li><li><a href="services.html#sur-mesure">Sur mesure · dès 1 290 €</a></li><li><a href="services.html#ia">Visible sur les IA · 190 €</a></li><li><a href="services.html#hebergement">Hébergement et suivi</a></li>
+      </ul></nav>
+      <div><h2>Contact</h2><ul>
+        <li><a href="mailto:contact@studio-ouvert.fr">contact@studio-ouvert.fr</a></li>
+        <li data-phone-row hidden><a data-phone hidden href="#"></a></li>
+        <li>Annecy, Haute-Savoie</li><li>À distance partout en France</li>
+      </ul></div>
     </div>
-  </div>
-  <div class="wrap f-bottom">
-    <p>© <span data-year>2026</span> Ouvert · Théo Bonaventure, entrepreneur individuel</p>
-    <a href="mentions-legales.html">Mentions légales</a>
-  </div>
-  <div class="emblem" aria-hidden="true">
-    <!-- PLACEHOLDER : à remplacer par le "o" + point extraits de assets/ouvert-logo.svg -->
-    <svg viewBox="0 0 200 200" width="672" height="672"><circle cx="100" cy="100" r="78" fill="none" stroke="currentColor" stroke-width="34" stroke-dasharray="400 90" transform="rotate(-50 100 100)"/><circle class="emblem-dot" cx="158" cy="36" r="17" fill="currentColor"/></svg>
+    <div class="f-bottom">
+      <p>© <span data-year>2026</span> Ouvert · Théo Bonaventure, entrepreneur individuel</p>
+      <nav aria-label="Légal"><a href="mentions-legales.html">Mentions légales</a><a href="contact.html">Contact</a></nav>
+    </div>
   </div>
 </footer>
 </body>

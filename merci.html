@@ -7,9 +7,8 @@
 <meta name="description" content="Paiement reçu. Je vous contacte très vite pour lancer votre site.">
 <meta name="robots" content="noindex">
 <link rel="canonical" href="https://studio-ouvert.fr/merci.html">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#fafafc">
 <link rel="icon" href="assets/ouvert-icone.svg" type="image/svg+xml">
-
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Ouvert">
@@ -18,41 +17,32 @@
 <meta property="og:url" content="https://studio-ouvert.fr/merci.html">
 <meta property="og:image" content="https://studio-ouvert.fr/assets/bonneaventure-desktop.webp">
 <meta name="twitter:card" content="summary_large_image">
-
-<script>document.documentElement.className=matchMedia('(prefers-reduced-motion: reduce)').matches?'rm':'motion';setTimeout(function(){document.documentElement.classList.add('intro-ready')},3000);</script>
-
-<link rel="preload" href="fonts/outfit-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.className=matchMedia('(prefers-reduced-motion: reduce)').matches?'rm':'motion';setTimeout(function(){document.documentElement.classList.add('intro-ready')},2500);</script>
 <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="stylesheet" href="css/site.css">
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="js/site.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
-
-<header class="nav">
-  <div class="wrap nav-in">
-    <a class="brand" href="./" aria-label="Ouvert, accueil">
-      <img class="brand-logo" src="assets/ouvert-logo.svg" alt="" width="132" height="32" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
-      <span class="brand-text" hidden>ouvert</span>
-      <span class="voyant brand-voyant" aria-hidden="true"></span>
-    </a>
-    <nav class="nav-links" aria-label="Navigation principale">
+<header class="gnav">
+  <div class="wide gnav-in">
+    <a class="brand" href="./" aria-label="Ouvert, accueil"><img src="assets/ouvert-logo.svg" alt="" width="132" height="35"></a>
+    <nav class="gnav-links" aria-label="Navigation principale">
       <a href="a-propos.html">À propos</a>
       <a href="services.html">Services</a>
       <a href="realisations.html">Réalisations</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <div class="nav-actions">
-      <a class="btn btn-green btn-sm nav-cta" href="contact.html">Demander un devis</a>
-      <button class="burger" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu">
-        <span></span><span></span>
-      </button>
+    <div class="gnav-right">
+      <a class="btn btn-fill btn-sm" href="contact.html">Demander un devis</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu"><span></span><span></span></button>
     </div>
   </div>
-  <div class="menu-mobile" id="menu-mobile" hidden>
+  <div class="gnav-menu" id="menu-mobile" hidden>
     <nav aria-label="Navigation mobile">
       <a href="./">Accueil</a>
       <a href="a-propos.html">À propos</a>
@@ -60,83 +50,56 @@
       <a href="realisations.html">Réalisations</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <a class="btn btn-green" href="contact.html">Demander un devis</a>
+    <a class="btn btn-fill" href="contact.html">Demander un devis</a>
   </div>
 </header>
 
 <main id="contenu">
-<section class="page-hero">
-  <div class="wrap page-hero-grid">
-    <div>
-      <p class="kicker">Paiement reçu</p>
-      <h1 class="page-title" data-split>Merci, c'est parti&nbsp;!</h1>
-    </div>
-    <div>
-      <p class="lead" data-reveal>Votre paiement est bien reçu. Je vous contacte très vite pour fixer notre appel de 20 minutes et lancer votre site.</p>
-      
-    </div>
+<section class="hero s-white hero-only" aria-labelledby="titre">
+  <div class="wrap center" data-hero>
+    <p class="eyebrow"><span class="voyant voyant-pulse" aria-hidden="true"></span>Paiement reçu</p>
+    <h1 class="h1" id="titre">Merci, c'est parti&nbsp;!</h1>
+    <p class="sub">Votre paiement est bien reçu. Je vous contacte très vite pour fixer notre appel de 20 minutes et lancer votre site.</p>
+    
   </div>
 </section>
 
-<section class="sec">
-  <div class="wrap split">
-    <div class="split-left">
-      <p class="kicker">En attendant</p>
-      <h2 class="h2" data-split>Ce que vous pouvez préparer.</h2>
-    </div>
-    <div data-reveal>
-      <ul class="ticks"><li>Votre logo, si vous en avez un</li><li>Quelques photos de votre travail ou de vos locaux</li><li>Vos services, vos horaires et votre zone</li><li>Deux ou trois sites que vous aimez bien, pour l'inspiration</li></ul>
-      <p class="muted" style="margin-bottom:24px">Pas tout sous la main&nbsp;? Pas grave, on fait le point ensemble pendant l'appel.</p>
-      <div class="btn-row"><a class="btn btn-grey" href="./">Retour à l'accueil</a><a class="btn btn-green" href="mailto:contact@studio-ouvert.fr">M'écrire <svg class="arr" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-    </div>
+<section class="sec s-frost" aria-labelledby="prep-t">
+  <div class="wrap center">
+    <div class="head"><h2 class="h2" id="prep-t">Ce que vous pouvez préparer.</h2></div>
+    <ul class="checks" data-reveal><li>Votre logo, si vous en avez un</li><li>Quelques photos de votre travail ou de vos locaux</li><li>Vos services, vos horaires et votre zone</li><li>Deux ou trois sites que vous aimez bien, pour l'inspiration</li></ul>
+    <p class="note">Pas tout sous la main&nbsp;? Pas grave, on fait le point ensemble pendant l'appel.</p>
+    <div class="cta-row" style="margin-top:32px"><a class="btn btn-fill" href="mailto:contact@studio-ouvert.fr">M'écrire</a><a class="btn btn-line" href="./">Retour à l'accueil</a></div>
   </div>
 </section>
-
 </main>
-
-<!-- FOOTER · Monumental emblem -->
 <footer class="footer">
-  <div class="wrap footer-grid">
-    <div class="f-brand">
-      <a class="brand" href="./" aria-label="Ouvert, accueil">
-        <img class="brand-logo" src="assets/ouvert-logo.svg" alt="" width="132" height="32" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
-        <span class="brand-text" hidden>ouvert</span>
-        <span class="voyant brand-voyant" aria-hidden="true"></span>
-      </a>
-      <p>Des sites simples, rapides et beaux pour les pros autour d'Annecy.</p>
+  <div class="wide">
+    <div class="f-note">
+      <p>Prix en euros. La création du site se paie une fois&nbsp;; l'hébergement est facturé à part, sans engagement.</p>
+      <p>Paiement en ligne sécurisé par Stripe. Ouvert ne prend aucune commission sur vos ventes.</p>
     </div>
-    <nav class="f-col" aria-label="Pages">
-      <p class="f-title">Pages</p>
-      <a href="./">Accueil</a>
-      <a href="a-propos.html">À propos</a>
-      <a href="services.html">Services</a>
-      <a href="realisations.html">Réalisations</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <nav class="f-col" aria-label="Offres">
-      <p class="f-title">Offres</p>
-      <a href="services.html#une-page">Une page · 390 €</a>
-      <a href="services.html#vitrine">Vitrine · 790 €</a>
-      <a href="services.html#sur-mesure">Sur mesure · dès 1 290 €</a>
-      <a href="services.html#ia">Visible sur les IA · 190 €</a>
-      <a href="services.html#hebergement">Hébergement &amp; suivi</a>
-    </nav>
-    <div class="f-col">
-      <p class="f-title">Contact</p>
-      <a href="mailto:contact@studio-ouvert.fr">contact@studio-ouvert.fr</a>
-      <!-- Téléphone : renseigner CONFIG.phone dans js/site.js -->
-      <a data-phone hidden href="#"></a>
-      <p>Annecy, Haute-Savoie</p>
-      <p>À distance partout en France</p>
+    <div class="f-dir">
+      <div class="f-brand">
+        <img src="assets/ouvert-logo.svg" alt="Ouvert" width="132" height="35" loading="lazy">
+        <p>Des sites simples, rapides et beaux pour les pros autour d'Annecy.</p>
+      </div>
+      <nav aria-label="Pages"><h2>Pages</h2><ul>
+        <li><a href="./">Accueil</a></li><li><a href="a-propos.html">À propos</a></li><li><a href="services.html">Services</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="contact.html">Contact</a></li>
+      </ul></nav>
+      <nav aria-label="Offres"><h2>Offres</h2><ul>
+        <li><a href="services.html#une-page">Une page · 390 €</a></li><li><a href="services.html#vitrine">Vitrine · 790 €</a></li><li><a href="services.html#sur-mesure">Sur mesure · dès 1 290 €</a></li><li><a href="services.html#ia">Visible sur les IA · 190 €</a></li><li><a href="services.html#hebergement">Hébergement et suivi</a></li>
+      </ul></nav>
+      <div><h2>Contact</h2><ul>
+        <li><a href="mailto:contact@studio-ouvert.fr">contact@studio-ouvert.fr</a></li>
+        <li data-phone-row hidden><a data-phone hidden href="#"></a></li>
+        <li>Annecy, Haute-Savoie</li><li>À distance partout en France</li>
+      </ul></div>
     </div>
-  </div>
-  <div class="wrap f-bottom">
-    <p>© <span data-year>2026</span> Ouvert · Théo Bonaventure, entrepreneur individuel</p>
-    <a href="mentions-legales.html">Mentions légales</a>
-  </div>
-  <div class="emblem" aria-hidden="true">
-    <!-- PLACEHOLDER : à remplacer par le "o" + point extraits de assets/ouvert-logo.svg -->
-    <svg viewBox="0 0 200 200" width="672" height="672"><circle cx="100" cy="100" r="78" fill="none" stroke="currentColor" stroke-width="34" stroke-dasharray="400 90" transform="rotate(-50 100 100)"/><circle class="emblem-dot" cx="158" cy="36" r="17" fill="currentColor"/></svg>
+    <div class="f-bottom">
+      <p>© <span data-year>2026</span> Ouvert · Théo Bonaventure, entrepreneur individuel</p>
+      <nav aria-label="Légal"><a href="mentions-legales.html">Mentions légales</a><a href="contact.html">Contact</a></nav>
+    </div>
   </div>
 </footer>
 </body>

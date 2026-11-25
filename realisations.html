@@ -6,9 +6,8 @@
 <title>Réalisations · Ouvert, sites web près d'Annecy</title>
 <meta name="description" content="La Bonne Aventure, studio à Aix-les-Bains : réservation en direct, paiement Stripe, mails automatiques et espace client, sans commission Airbnb.">
 <link rel="canonical" href="https://studio-ouvert.fr/realisations.html">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#fafafc">
 <link rel="icon" href="assets/ouvert-icone.svg" type="image/svg+xml">
-
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Ouvert">
@@ -17,49 +16,32 @@
 <meta property="og:url" content="https://studio-ouvert.fr/realisations.html">
 <meta property="og:image" content="https://studio-ouvert.fr/assets/bonneaventure-desktop.webp">
 <meta name="twitter:card" content="summary_large_image">
-
-<script>document.documentElement.className=matchMedia('(prefers-reduced-motion: reduce)').matches?'rm':'motion';setTimeout(function(){document.documentElement.classList.add('intro-ready')},3000);</script>
-
-<link rel="preload" href="fonts/outfit-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.className=matchMedia('(prefers-reduced-motion: reduce)').matches?'rm':'motion';setTimeout(function(){document.documentElement.classList.add('intro-ready')},2500);</script>
 <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="stylesheet" href="css/site.css">
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="js/site.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
-
-<!-- Bandeau d'annonce -->
-<div class="announce">
-  <a href="realisations.html#la-bonne-aventure">
-    <span>Loueurs Airbnb : vos réservations en direct, sans commission</span>
-    <span class="announce-cta">voir La Bonne Aventure <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-  </a>
-</div>
-
-<header class="nav">
-  <div class="wrap nav-in">
-    <a class="brand" href="./" aria-label="Ouvert, accueil">
-      <img class="brand-logo" src="assets/ouvert-logo.svg" alt="" width="132" height="32" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
-      <span class="brand-text" hidden>ouvert</span>
-      <span class="voyant brand-voyant" aria-hidden="true"></span>
-    </a>
-    <nav class="nav-links" aria-label="Navigation principale">
+<header class="gnav">
+  <div class="wide gnav-in">
+    <a class="brand" href="./" aria-label="Ouvert, accueil"><img src="assets/ouvert-logo.svg" alt="" width="132" height="35"></a>
+    <nav class="gnav-links" aria-label="Navigation principale">
       <a href="a-propos.html">À propos</a>
       <a href="services.html">Services</a>
       <a href="realisations.html" aria-current="page">Réalisations</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <div class="nav-actions">
-      <a class="btn btn-green btn-sm nav-cta" href="contact.html">Demander un devis</a>
-      <button class="burger" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu">
-        <span></span><span></span>
-      </button>
+    <div class="gnav-right">
+      <a class="btn btn-fill btn-sm" href="contact.html">Demander un devis</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu"><span></span><span></span></button>
     </div>
   </div>
-  <div class="menu-mobile" id="menu-mobile" hidden>
+  <div class="gnav-menu" id="menu-mobile" hidden>
     <nav aria-label="Navigation mobile">
       <a href="./">Accueil</a>
       <a href="a-propos.html">À propos</a>
@@ -67,126 +49,87 @@
       <a href="realisations.html" aria-current="page">Réalisations</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <a class="btn btn-green" href="contact.html">Demander un devis</a>
+    <a class="btn btn-fill" href="contact.html">Demander un devis</a>
   </div>
 </header>
 
 <main id="contenu">
-<section class="page-hero">
-  <div class="wrap page-hero-grid">
-    <div>
-      <p class="kicker">Réalisations</p>
-      <h1 class="page-title" data-split>Un vrai projet, en ligne.</h1>
+<section class="hero s-white" aria-labelledby="titre">
+  <div class="wrap center" data-hero>
+    <p class="eyebrow">Réalisation · Aix-les-Bains</p>
+    <h1 class="h1" id="titre">La Bonne Aventure.</h1>
+    <p class="sub">Un site de réservation en direct pour un studio. Les voyageurs choisissent leurs dates, paient en ligne et reçoivent leur confirmation, sans passer par Airbnb.</p>
+    <div class="cta-row"><a class="btn btn-fill" href="contact.html?offre=sur-mesure">Un site comme celui-ci</a><a class="btn btn-line" href="https://labonneaventure-aixlesbains.fr/" target="_blank" rel="noopener">Voir le site<span class="sr-only"> (nouvel onglet)</span> <svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+  </div>
+  <div class="media">
+    <figure class="window">
+      <div class="window-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">labonneaventure-aixlesbains.fr</span></div>
+      <img src="assets/bonneaventure-desktop.webp" srcset="assets/bonneaventure-desktop-720.webp 720w, assets/bonneaventure-desktop.webp 1440w" sizes="(min-width: 1120px) 1024px, 92vw" alt="Page d'accueil du site La Bonne Aventure, studio à Aix-les-Bains" width="1440" height="900" decoding="async" fetchpriority="high">
+    </figure>
+    <div class="phone" aria-hidden="true"><img src="assets/bonneaventure-mobile.webp" alt="" width="390" height="844" decoding="async"></div>
+  </div>
+</section>
+
+<section class="sec s-frost" aria-labelledby="fait-t">
+  <div class="wide">
+    <div class="head center"><h2 class="h2" id="fait-t">Ce que fait le site.</h2></div>
+    <ul class="facts" data-stagger><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="m9 15 2 2 4-4"/></svg></span><b>Réservation en direct</b><span>Le calendrier affiche les dates libres, le voyageur réserve seul.</span></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span><b>Paiement Stripe</b><span>Par carte, taxe de séjour comprise.</span></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span><b>Mails automatiques</b><span>La confirmation part tout de suite, chez le voyageur et chez le propriétaire.</span></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 19.5s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 7.5 2.5c0 5.6-7.5 10-7.5 10z"/></svg></span><b>Espace client</b><span>Fidélité&nbsp;: −10 % au séjour suivant.</span></li></ul>
+  </div>
+</section>
+
+<section class="sec s-dark" aria-labelledby="temps-t">
+  <div class="wrap center head"><h2 class="h2" id="temps-t">Les temps forts.</h2></div>
+  
+  <div data-gallery>
+    <div class="gallery" tabindex="0" aria-label="Captures du site La Bonne Aventure">
+      <figure><div class="g-media"><img src="assets/bonneaventure-desktop.webp" srcset="assets/bonneaventure-desktop-720.webp 720w, assets/bonneaventure-desktop.webp 1440w" sizes="(min-width: 980px) 820px, 86vw" alt="Page d'accueil du site La Bonne Aventure" width="1440" height="900" loading="lazy" decoding="async"></div><figcaption><b>L'accueil.</b> Le studio et ses infos clés, en un coup d'œil.</figcaption></figure>
+      <figure><div class="g-media"><img src="assets/bonneaventure-calendrier.webp" srcset="assets/bonneaventure-calendrier-720.webp 720w, assets/bonneaventure-calendrier.webp 1440w" sizes="(min-width: 980px) 820px, 86vw" alt="Calendrier de réservation du site La Bonne Aventure" width="1440" height="900" loading="lazy" decoding="async"></div><figcaption><b>Le calendrier.</b> Les dates libres, à jour. Le voyageur choisit et réserve seul.</figcaption></figure>
+      <figure><div class="g-media"><img src="assets/bonneaventure-galerie.webp" srcset="assets/bonneaventure-galerie-720.webp 720w, assets/bonneaventure-galerie.webp 1440w" sizes="(min-width: 980px) 820px, 86vw" alt="Galerie photos du site La Bonne Aventure" width="1440" height="900" loading="lazy" decoding="async"></div><figcaption><b>La galerie.</b> Le studio en photos, pour donner envie de réserver.</figcaption></figure>
+      <figure><div class="g-media"><img src="assets/bonneaventure-avis.webp" srcset="assets/bonneaventure-avis-720.webp 720w, assets/bonneaventure-avis.webp 1440w" sizes="(min-width: 980px) 820px, 86vw" alt="Avis des voyageurs sur le site La Bonne Aventure" width="1440" height="900" loading="lazy" decoding="async"></div><figcaption><b>Les avis.</b> Ce que disent les voyageurs, directement sur le site.</figcaption></figure>
+      <figure><div class="g-media g-phone"><img src="assets/bonneaventure-mobile.webp" alt="Le site La Bonne Aventure sur téléphone" width="390" height="844" loading="lazy" decoding="async"></div><figcaption><b>Sur téléphone.</b> Tout le site marche aussi bien sur mobile.</figcaption></figure>
     </div>
-    <div>
-      <p class="lead" data-reveal>Je préfère vous montrer un site qui tourne vraiment plutôt qu'une liste de logos. Le prochain peut être le vôtre.</p>
-      
+    <div class="wide g-ctrl">
+      <button type="button" data-prev aria-label="Image précédente"><svg width="9" height="15" viewBox="0 0 7 12" aria-hidden="true"><path d="M6 1 1 6l5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button type="button" data-next aria-label="Image suivante"><svg width="9" height="15" viewBox="0 0 7 12" aria-hidden="true"><path d="m1 1 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     </div>
   </div>
 </section>
 
-<section class="sec" id="la-bonne-aventure" aria-labelledby="lba-title" style="scroll-margin-top:80px">
-  <div class="wrap">
-    <div class="sec-head sec-head-split">
-      <div>
-        <p class="kicker">Location courte durée · Aix-les-Bains</p>
-        <h2 class="h2" id="lba-title" data-split>La Bonne Aventure</h2>
-      </div>
-      <div data-reveal>
-        <p class="lead">Un site de réservation en direct pour un studio. Les voyageurs choisissent leurs dates, paient en ligne et reçoivent leur confirmation, sans passer par Airbnb.</p>
-        <a class="link" href="https://labonneaventure-aixlesbains.fr/" target="_blank" rel="noopener">Voir le site<span class="sr-only"> (nouvel onglet)</span> <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      </div>
-    </div>
-    <div class="case-window" data-reveal>
-      <figure class="window" data-parallax>
-        <div class="window-bar" aria-hidden="true">
-          <span class="dots"><i></i><i></i><i></i></span>
-          <span class="url"><svg width="11" height="11" viewBox="0 0 16 16"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2M3.5 7h9v7h-9z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>labonneaventure-aixlesbains.fr</span>
-        </div>
-        <img src="assets/bonneaventure-desktop.webp" srcset="assets/bonneaventure-desktop-720.webp 720w, assets/bonneaventure-desktop.webp 1440w" sizes="(min-width: 1200px) 1100px, 92vw" alt="Page d'accueil du site La Bonne Aventure" width="1440" height="900" decoding="async">
-      </figure>
-    </div>
-    <ul class="case-facts" data-stagger>
-      <li><b>Réservation en direct</b><span>Le calendrier affiche les dates libres, le voyageur réserve seul.</span></li>
-      <li><b>Paiement Stripe</b><span>Par carte, taxe de séjour comprise.</span></li>
-      <li><b>Mails automatiques</b><span>La confirmation part tout de suite, chez le voyageur et chez le propriétaire.</span></li>
-      <li><b>Espace client</b><span>Fidélité : −10 % au séjour suivant.</span></li>
-    </ul>
-    <div class="case-grid" data-stagger>
-      <figure><div class="ci" data-parallax><img src="assets/bonneaventure-calendrier.webp" srcset="assets/bonneaventure-calendrier-720.webp 720w, assets/bonneaventure-calendrier.webp 1440w" sizes="(min-width: 1100px) 620px, 92vw" alt="Calendrier de réservation du site La Bonne Aventure" width="1440" height="900" loading="lazy" decoding="async"></div><figcaption><b>Le calendrier</b>Les dates libres, à jour en direct.</figcaption></figure>
-      <figure><div class="ci" data-parallax><img src="assets/bonneaventure-galerie.webp" srcset="assets/bonneaventure-galerie-720.webp 720w, assets/bonneaventure-galerie.webp 1440w" sizes="(min-width: 1100px) 620px, 92vw" alt="Galerie photos du site La Bonne Aventure" width="1440" height="900" loading="lazy" decoding="async"></div><figcaption><b>La galerie</b>Le studio en photos, pour donner envie.</figcaption></figure>
-      <figure><div class="ci" data-parallax><img src="assets/bonneaventure-avis.webp" srcset="assets/bonneaventure-avis-720.webp 720w, assets/bonneaventure-avis.webp 1440w" sizes="(min-width: 1100px) 620px, 92vw" alt="Avis des voyageurs sur le site La Bonne Aventure" width="1440" height="900" loading="lazy" decoding="async"></div><figcaption><b>Les avis</b>Ce que disent les voyageurs.</figcaption></figure>
-      <figure class="case-mobile"><div class="ci"><img src="assets/bonneaventure-mobile.webp" alt="Le site La Bonne Aventure sur téléphone" width="390" height="844" loading="lazy" decoding="async"></div><figcaption><b>Sur téléphone</b>La plupart des réservations se font sur mobile.</figcaption></figure>
-    </div>
+<section class="sec s-white" aria-labelledby="fin-titre">
+  <div class="wrap center" data-reveal>
+    <h2 class="h2" id="fin-titre" style="max-width:15ch;margin:0 auto 16px">Le prochain site, c'est le vôtre&nbsp;?</h2>
+    <p class="sub" style="max-width:560px;margin-bottom:32px">On en parle 20 minutes. C'est gratuit, et vous saurez tout de suite ce qui est utile pour vous.</p>
+    <div class="cta-row"><a class="btn btn-fill" href="contact.html">Demander un devis</a><a class="btn btn-line" href="mailto:contact@studio-ouvert.fr">Écrire un mail</a></div>
   </div>
 </section>
-<!-- CLÔTURE · Immersive closing invitation -->
-<section class="closing" aria-labelledby="closing-title">
-  <div class="flutes" aria-hidden="true"></div>
-  <div class="wrap closing-grid">
-    <div class="closing-text">
-      <p class="eyebrow eyebrow-dark"><span class="voyant voyant-pulse" aria-hidden="true"></span>Annecy · Haute-Savoie · partout en France</p>
-      <h2 class="h2 closing-title" id="closing-title" data-split>Le prochain site, c'est le vôtre&nbsp;?</h2>
-      <p class="lead" data-reveal>On en parle 20 minutes. C'est gratuit, et vous saurez tout de suite ce qui est utile pour vous.</p>
-      <div class="btn-row" data-reveal>
-        <a class="btn btn-green" href="contact.html">Demander un devis <svg class="arr" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <a class="btn btn-dark" href="mailto:contact@studio-ouvert.fr">contact@studio-ouvert.fr</a>
-      </div>
-    </div>
-    <div class="stack" aria-hidden="true">
-      <img class="sk sk-1" src="assets/bonneaventure-avis-720.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
-      <img class="sk sk-2" src="assets/bonneaventure-galerie-720.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
-      <img class="sk sk-3" src="assets/bonneaventure-calendrier-720.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
-    </div>
-  </div>
-</section>
-
-
 </main>
-
-<!-- FOOTER · Monumental emblem -->
 <footer class="footer">
-  <div class="wrap footer-grid">
-    <div class="f-brand">
-      <a class="brand" href="./" aria-label="Ouvert, accueil">
-        <img class="brand-logo" src="assets/ouvert-logo.svg" alt="" width="132" height="32" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
-        <span class="brand-text" hidden>ouvert</span>
-        <span class="voyant brand-voyant" aria-hidden="true"></span>
-      </a>
-      <p>Des sites simples, rapides et beaux pour les pros autour d'Annecy.</p>
+  <div class="wide">
+    <div class="f-note">
+      <p>Prix en euros. La création du site se paie une fois&nbsp;; l'hébergement est facturé à part, sans engagement.</p>
+      <p>Paiement en ligne sécurisé par Stripe. Ouvert ne prend aucune commission sur vos ventes.</p>
     </div>
-    <nav class="f-col" aria-label="Pages">
-      <p class="f-title">Pages</p>
-      <a href="./">Accueil</a>
-      <a href="a-propos.html">À propos</a>
-      <a href="services.html">Services</a>
-      <a href="realisations.html">Réalisations</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <nav class="f-col" aria-label="Offres">
-      <p class="f-title">Offres</p>
-      <a href="services.html#une-page">Une page · 390 €</a>
-      <a href="services.html#vitrine">Vitrine · 790 €</a>
-      <a href="services.html#sur-mesure">Sur mesure · dès 1 290 €</a>
-      <a href="services.html#ia">Visible sur les IA · 190 €</a>
-      <a href="services.html#hebergement">Hébergement &amp; suivi</a>
-    </nav>
-    <div class="f-col">
-      <p class="f-title">Contact</p>
-      <a href="mailto:contact@studio-ouvert.fr">contact@studio-ouvert.fr</a>
-      <!-- Téléphone : renseigner CONFIG.phone dans js/site.js -->
-      <a data-phone hidden href="#"></a>
-      <p>Annecy, Haute-Savoie</p>
-      <p>À distance partout en France</p>
+    <div class="f-dir">
+      <div class="f-brand">
+        <img src="assets/ouvert-logo.svg" alt="Ouvert" width="132" height="35" loading="lazy">
+        <p>Des sites simples, rapides et beaux pour les pros autour d'Annecy.</p>
+      </div>
+      <nav aria-label="Pages"><h2>Pages</h2><ul>
+        <li><a href="./">Accueil</a></li><li><a href="a-propos.html">À propos</a></li><li><a href="services.html">Services</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="contact.html">Contact</a></li>
+      </ul></nav>
+      <nav aria-label="Offres"><h2>Offres</h2><ul>
+        <li><a href="services.html#une-page">Une page · 390 €</a></li><li><a href="services.html#vitrine">Vitrine · 790 €</a></li><li><a href="services.html#sur-mesure">Sur mesure · dès 1 290 €</a></li><li><a href="services.html#ia">Visible sur les IA · 190 €</a></li><li><a href="services.html#hebergement">Hébergement et suivi</a></li>
+      </ul></nav>
+      <div><h2>Contact</h2><ul>
+        <li><a href="mailto:contact@studio-ouvert.fr">contact@studio-ouvert.fr</a></li>
+        <li data-phone-row hidden><a data-phone hidden href="#"></a></li>
+        <li>Annecy, Haute-Savoie</li><li>À distance partout en France</li>
+      </ul></div>
     </div>
-  </div>
-  <div class="wrap f-bottom">
-    <p>© <span data-year>2026</span> Ouvert · Théo Bonaventure, entrepreneur individuel</p>
-    <a href="mentions-legales.html">Mentions légales</a>
-  </div>
-  <div class="emblem" aria-hidden="true">
-    <!-- PLACEHOLDER : à remplacer par le "o" + point extraits de assets/ouvert-logo.svg -->
-    <svg viewBox="0 0 200 200" width="672" height="672"><circle cx="100" cy="100" r="78" fill="none" stroke="currentColor" stroke-width="34" stroke-dasharray="400 90" transform="rotate(-50 100 100)"/><circle class="emblem-dot" cx="158" cy="36" r="17" fill="currentColor"/></svg>
+    <div class="f-bottom">
+      <p>© <span data-year>2026</span> Ouvert · Théo Bonaventure, entrepreneur individuel</p>
+      <nav aria-label="Légal"><a href="mentions-legales.html">Mentions légales</a><a href="contact.html">Contact</a></nav>
+    </div>
   </div>
 </footer>
 </body>
