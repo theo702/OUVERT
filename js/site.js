@@ -24,6 +24,13 @@ const AVIS = [];
   const $ = (s, c) => (c || document).querySelector(s);
   const $$ = (s, c) => Array.from((c || document).querySelectorAll(s));
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const editMode = new URLSearchParams(location.search).has('edit') && window.self !== window.top;
+  if (editMode) {
+    root.classList.add('intro-ready', 'is-editing');
+    const sc = document.createElement('script');
+    sc.src = 'js/editor.js';
+    document.body.appendChild(sc);
+  }
 
   /* Année, téléphone */
   $$('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
@@ -95,6 +102,31 @@ const AVIS = [];
       if (form.botcheck && form.botcheck.checked) return;
       const data = Object.fromEntries(new FormData(form).entries());
       delete data.botcheck;
+      const btn = form.querySelector('[type="submit"]');
+
+      // 1) Enregistrement dans l'admin du site (/admin/)
+      let saved = false;
+      btn.disabled = true;
+      say('Envoi en cours…');
+      try {
+        const r = await fetch('/api/devis', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+        const j = await r.json();
+        saved = r.ok && j.ok;
+        if (!saved && r.status === 400 && j.message) { say(j.message, 'err'); btn.disabled = false; return; }
+      } catch (err) { saved = false; }
+      btn.disabled = false;
+
+      // 2) Copie par mail via Web3Forms (si une clé est renseignée)
+      if (KEY) {
+        try {
+          await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify(Object.assign({ access_key: KEY, subject: 'Demande de devis · ' + data.nom, from_name: 'Site Ouvert' }, data))
+          }).then(r => r.json()).then(j => { if (j.success) saved = true; });
+        } catch (err) { /* l'enregistrement suffit */ }
+      }
+      if (saved) { form.reset(); say('Merci, votre demande est bien partie. Je vous réponds rapidement.', 'ok'); return; }
 
       if (!KEY) {
         const body = [
@@ -111,24 +143,7 @@ const AVIS = [];
         return;
       }
 
-      const btn = form.querySelector('[type="submit"]');
-      btn.disabled = true;
-      say('Envoi en cours…');
-      try {
-        const res = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify(Object.assign({ access_key: KEY, subject: 'Demande de devis · ' + data.nom, from_name: 'Site Ouvert' }, data))
-        });
-        const j = await res.json();
-        if (!j.success) throw new Error(j.message);
-        form.reset();
-        say('Merci, votre message est bien parti. Je vous réponds rapidement.', 'ok');
-      } catch (err) {
-        say('L\'envoi n\'a pas marché. Écrivez-moi directement à ' + CONTACT_EMAIL + '.', 'err');
-      } finally {
-        btn.disabled = false;
-      }
+      say('L\'envoi n\'a pas marché. Écrivez-moi directement à ' + CONTACT_EMAIL + '.', 'err');
     });
   }
 
@@ -149,6 +164,7 @@ const AVIS = [];
     if (shelf) shelf.classList.add('is-running');
   };
 
+  if (editMode) return;
   if (reduce || !window.gsap || !window.ScrollTrigger) { showAll(); return; }
 
   /* =======================================================

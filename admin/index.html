@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin · Ouvert</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/assets/ouvert-icone.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/outfit-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/admin/admin.css">
+<script src="/admin/admin.js" defer></script>
+</head>
+<body class="adm">
+
+<!-- Connexion -->
+<section class="login" id="login" hidden>
+  <form class="login-card" id="login-form">
+    <p class="adm-brand">ouvert<span class="voyant voyant-pulse" aria-hidden="true"></span><small>admin</small></p>
+    <h1 class="h3">Connexion</h1>
+    <div class="field">
+      <label for="pw">Mot de passe</label>
+      <input id="pw" name="password" type="password" autocomplete="current-password" required>
+    </div>
+    <button class="btn btn-green btn-block" type="submit">Se connecter</button>
+    <p class="form-status" id="login-status" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+<!-- Application -->
+<div class="app" id="app" hidden>
+  <aside class="side">
+    <p class="adm-brand">ouvert<span class="voyant voyant-pulse" aria-hidden="true"></span><small>admin</small></p>
+    <nav class="side-nav" aria-label="Admin">
+      <button type="button" data-view="dash" aria-current="page"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M4 13h6V4H4zM14 20h6v-9h-6zM4 20h6v-4H4zM14 4v4h6V4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>Tableau de bord</button>
+      <button type="button" data-view="devis"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>Demandes de devis <span class="pill-count" id="count-new" hidden></span></button>
+      <button type="button" data-view="prix"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7.5" cy="8.5" r="1.5" fill="currentColor"/></svg>Offres &amp; prix</button>
+      <button type="button" data-view="editeur"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m13 7 4 4" stroke="currentColor" stroke-width="1.7"/></svg>Éditeur du site</button>
+    </nav>
+    <div class="side-foot">
+      <a href="/" target="_blank" rel="noopener">Voir le site ↗</a>
+      <button type="button" id="logout">Déconnexion</button>
+    </div>
+  </aside>
+
+  <main class="main" id="main">
+
+    <!-- TABLEAU DE BORD -->
+    <section class="view" data-view="dash">
+      <header class="view-head">
+        <p class="kicker" id="today"></p>
+        <h1 class="h2">Bonjour Théo</h1>
+      </header>
+      <div class="stats">
+        <div class="stat"><p>Nouvelles demandes</p><b id="st-new">0</b></div>
+        <div class="stat"><p>En cours</p><b id="st-open">0</b></div>
+        <div class="stat"><p>Gagnées</p><b id="st-won">0</b></div>
+        <div class="stat"><p>Montant gagné</p><b id="st-amount">0 €</b></div>
+      </div>
+      <div class="dash-grid">
+        <div class="panel">
+          <div class="panel-head"><h2 class="h3">Dernières demandes</h2><button class="link" type="button" data-goto="devis">Tout voir →</button></div>
+          <ul class="mini-list" id="dash-list"></ul>
+        </div>
+        <div class="panel">
+          <h2 class="h3">Raccourcis</h2>
+          <div class="shortcuts">
+            <button type="button" class="btn btn-grey" data-goto="prix">Modifier les prix</button>
+            <button type="button" class="btn btn-grey" data-goto="editeur">Modifier les textes</button>
+            <a class="btn btn-grey" href="/" target="_blank" rel="noopener">Voir le site ↗</a>
+          </div>
+          <p class="hint" id="notify-hint"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEVIS -->
+    <section class="view" data-view="devis" hidden>
+      <header class="view-head">
+        <p class="kicker">Formulaire de contact</p>
+        <h1 class="h2">Demandes de devis</h1>
+      </header>
+      <div class="toolbar">
+        <div class="chips" id="devis-filters" role="group" aria-label="Filtrer par statut">
+          <button type="button" data-f="open" aria-pressed="true">En cours</button>
+          <button type="button" data-f="nouveau" aria-pressed="false">Nouveau</button>
+          <button type="button" data-f="devis-envoye" aria-pressed="false">Devis envoyé</button>
+          <button type="button" data-f="gagne" aria-pressed="false">Gagné</button>
+          <button type="button" data-f="perdu" aria-pressed="false">Perdu</button>
+          <button type="button" data-f="all" aria-pressed="false">Toutes</button>
+        </div>
+        <label class="search"><span class="sr-only">Rechercher</span><input id="devis-q" type="search" placeholder="Rechercher un nom, un email…"></label>
+      </div>
+      <div class="devis-list" id="devis-list"></div>
+    </section>
+
+    <!-- PRIX -->
+    <section class="view" data-view="prix" hidden>
+      <header class="view-head view-head-row">
+        <div>
+          <p class="kicker" id="prix-state">Prix affichés sur le site</p>
+          <h1 class="h2">Offres &amp; prix</h1>
+        </div>
+        <div class="btn-row">
+          <button type="button" class="btn btn-grey" id="prix-reset">Prix par défaut</button>
+          <button type="button" class="btn btn-green" id="prix-save">Enregistrer</button>
+        </div>
+      </header>
+      <p class="hint">Les changements s'appliquent sur tout le site : offres, tableau comparatif, FAQ, pied de page et formulaire.</p>
+      <h2 class="h3 sub">Offres</h2>
+      <div class="plan-forms" id="plan-forms"></div>
+      <h2 class="h3 sub">Hébergement &amp; suivi</h2>
+      <div class="host-forms" id="host-forms"></div>
+      <h2 class="h3 sub">Options</h2>
+      <div class="opt-table" id="opt-forms"></div>
+      <button type="button" class="btn btn-grey" id="opt-add">+ Ajouter une option</button>
+      <p class="form-status" id="prix-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <!-- ÉDITEUR -->
+    <section class="view view-editor" data-view="editeur" hidden>
+      <div class="ed-bar">
+        <label class="ed-page"><span class="sr-only">Page</span>
+          <select id="ed-page">
+            <option value="/">Accueil</option>
+            <option value="/a-propos">À propos</option>
+            <option value="/services">Services</option>
+            <option value="/realisations">Réalisations</option>
+            <option value="/contact">Contact</option>
+            <option value="/mentions-legales">Mentions légales</option>
+          </select>
+        </label>
+        <div class="chips" role="group" aria-label="Taille d'écran">
+          <button type="button" data-device="desk" aria-pressed="true">Ordinateur</button>
+          <button type="button" data-device="mob" aria-pressed="false">Mobile</button>
+        </div>
+        <p class="ed-info" id="ed-info" role="status" aria-live="polite">Cliquez sur un texte pour le modifier.</p>
+        <div class="btn-row">
+          <button type="button" class="btn btn-grey btn-sm" id="ed-cancel" disabled>Annuler</button>
+          <button type="button" class="btn btn-green btn-sm" id="ed-save" disabled>Enregistrer</button>
+        </div>
+      </div>
+      <div class="ed-wrap">
+        <div class="ed-frame" id="ed-frame"><iframe id="ed-iframe" title="Aperçu modifiable du site"></iframe></div>
+        <aside class="ed-side">
+          <h2 class="h3">Texte sélectionné</h2>
+          <p class="ed-sel" id="ed-sel">Aucun</p>
+          <button type="button" class="btn btn-grey btn-sm btn-block" id="ed-restore" disabled>Remettre le texte d'origine</button>
+          <h2 class="h3">Textes modifiés</h2>
+          <ul class="ed-list" id="ed-list"></ul>
+          <p class="hint">Entrée pour valider, Échap pour annuler. Les prix se changent dans « Offres &amp; prix ».</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

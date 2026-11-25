@@ -54,24 +54,24 @@
       "name": "France"
     }
   ],
-  "priceRange": "390 € – 1 290 €+",
+  "priceRange": "190 € – 690 €+",
   "makesOffer": [
     {
       "@type": "Offer",
       "name": "Une page",
-      "price": "390",
+      "price": "190",
       "priceCurrency": "EUR"
     },
     {
       "@type": "Offer",
       "name": "Vitrine",
-      "price": "790",
+      "price": "390",
       "priceCurrency": "EUR"
     },
     {
       "@type": "Offer",
       "name": "Sur mesure",
-      "price": "1290",
+      "price": "690",
       "priceCurrency": "EUR"
     }
   ]
@@ -87,7 +87,7 @@
 <!-- Bandeau d'annonce -->
 <div class="announce" data-intro="announce">
   <a href="realisations.html#la-bonne-aventure">
-    <span>Loueurs Airbnb : vos réservations en direct, sans commission</span>
+    <span data-edit="global:announce">Loueurs Airbnb : vos réservations en direct, sans commission</span>
     <span class="announce-cta">voir La Bonne Aventure <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
   </a>
 </div>
@@ -132,10 +132,10 @@
     <div class="hero-left">
       <p class="crumbs" data-intro="eyebrow"><a href="./">Accueil</a> / Contact</p>
       <p class="eyebrow" data-intro="eyebrow"><span class="voyant voyant-pulse" aria-hidden="true"></span>Contact</p>
-      <h1 class="display hero-title" id="hero-title">Parlons de votre site.</h1>
+      <h1 class="display hero-title" id="hero-title" data-edit="contact:482170d0">Parlons de votre site.</h1>
     </div>
     <div class="hero-right">
-      <p class="lead hero-lead" data-intro="lead">Dites-moi en quelques mots ce que vous faites et ce dont vous avez besoin. Le premier échange de 20 minutes est gratuit.</p>
+      <p class="lead hero-lead" data-intro="lead" data-edit="contact:36e3d2ff">Dites-moi en quelques mots ce que vous faites et ce dont vous avez besoin. Le premier échange de 20 minutes est gratuit.</p>
     </div>
   </div>
 </section>
@@ -143,8 +143,8 @@
 <section class="contact" aria-label="Formulaire de contact">
   <div class="wrap contact-grid">
     <div class="form-panel">
-      <h2 class="h3">Demander un devis</h2>
-      <p>Les champs marqués d'une * sont obligatoires.</p>
+      <h2 class="h3" data-edit="contact:8a1f1c6c">Demander un devis</h2>
+      <p data-edit="contact:70334aba">Les champs marqués d'une * sont obligatoires.</p>
       <form id="contact-form" novalidate>
         <div class="field-row">
           <div class="field"><label for="f-nom">Nom *</label><input id="f-nom" name="nom" type="text" autocomplete="name" required></div>
@@ -166,9 +166,9 @@
         <div class="field"><label for="f-offre">Offre qui vous intéresse</label>
           <select id="f-offre" name="offre">
             <option value="je-ne-sais-pas">Je ne sais pas encore</option>
-            <option value="une-page">Une page · 390 €</option>
-            <option value="vitrine">Vitrine · 790 €</option>
-            <option value="sur-mesure">Sur mesure · dès 1 290 €</option>
+            <option value="une-page" data-plan-label="une-page">Une page · 190 €</option>
+            <option value="vitrine" data-plan-label="vitrine">Vitrine · 390 €</option>
+            <option value="sur-mesure" data-plan-label="sur-mesure">Sur mesure · dès 690 €</option>
           </select>
         </div>
         <div class="field"><label for="f-msg">Votre projet *</label><textarea id="f-msg" name="message" required placeholder="Ex. : je loue un studio à Annecy et je veux prendre les réservations en direct."></textarea></div>
@@ -184,15 +184,15 @@
         <img src="assets/bonneaventure-desktop.webp" srcset="assets/bonneaventure-desktop-720.webp 720w, assets/bonneaventure-desktop.webp 1440w" sizes="(min-width: 1100px) 640px, 92vw" alt="Exemple de site réalisé : La Bonne Aventure" width="1440" height="900" decoding="async">
       </figure>
       <dl class="contact-info">
-        <div><dt>Email</dt><dd><a href="mailto:contact@studio-ouvert.fr">contact@studio-ouvert.fr</a></dd></div>
-        <div data-phone-wrap hidden><dt>Téléphone</dt><dd><a data-phone hidden href="#"></a></dd></div>
-        <div><dt>Zone</dt><dd>Annecy et alentours, Haute-Savoie</dd></div>
-        <div><dt>À distance</dt><dd>Partout en France</dd></div>
+        <div><dt data-edit="contact:84add5b2">Email</dt><dd><a href="mailto:contact@studio-ouvert.fr">contact@studio-ouvert.fr</a></dd></div>
+        <div data-phone-wrap hidden><dt data-edit="contact:d3b023ea">Téléphone</dt><dd><a data-phone hidden href="#"></a></dd></div>
+        <div><dt data-edit="contact:03efccb4">Zone</dt><dd data-edit="contact:d3698868">Annecy et alentours, Haute-Savoie</dd></div>
+        <div><dt data-edit="contact:65d1dda9">À distance</dt><dd data-edit="contact:5dee7b0f">Partout en France</dd></div>
       </dl>
       <ol class="next-steps">
-        <li><span class="num">01</span><div><b>Je vous réponds</b><span>Par mail ou par téléphone, comme vous préférez.</span></div></li>
-        <li><span class="num">02</span><div><b>On en parle 20 minutes</b><span>Gratuit. Je vous dis ce qui est utile pour vous.</span></div></li>
-        <li><span class="num">03</span><div><b>Vous recevez un devis clair</b><span>Avec les prix du site. Pas de surprise.</span></div></li>
+        <li><span class="num">01</span><div><b data-edit="contact:46d25a6b">Je vous réponds</b><span>Par mail ou par téléphone, comme vous préférez.</span></div></li>
+        <li><span class="num">02</span><div><b data-edit="contact:1e999157">On en parle 20 minutes</b><span>Gratuit. Je vous dis ce qui est utile pour vous.</span></div></li>
+        <li><span class="num">03</span><div><b data-edit="contact:495c6667">Vous recevez un devis clair</b><span>Avec les prix du site. Pas de surprise.</span></div></li>
       </ol>
     </div>
   </div>
@@ -209,7 +209,7 @@
         <span class="brand-text" hidden>ouvert</span>
         <span class="voyant brand-voyant" aria-hidden="true"></span>
       </a>
-      <p>Des sites simples, rapides et beaux pour les pros autour d'Annecy.</p>
+      <p data-edit="global:eca6feaa">Des sites simples, rapides et beaux pour les pros autour d'Annecy.</p>
     </div>
     <nav class="f-col" aria-label="Pages">
       <p class="f-title">Pages</p>
@@ -221,9 +221,9 @@
     </nav>
     <nav class="f-col" aria-label="Offres">
       <p class="f-title">Offres</p>
-      <a href="services.html#une-page">Une page · 390 €</a>
-      <a href="services.html#vitrine">Vitrine · 790 €</a>
-      <a href="services.html#sur-mesure">Sur mesure · dès 1 290 €</a>
+      <a href="services.html#une-page" data-plan-label="une-page">Une page · 190 €</a>
+      <a href="services.html#vitrine" data-plan-label="vitrine">Vitrine · 390 €</a>
+      <a href="services.html#sur-mesure" data-plan-label="sur-mesure">Sur mesure · dès 690 €</a>
       <a href="services.html#hebergement">Hébergement &amp; suivi</a>
     </nav>
     <div class="f-col">
