@@ -20,22 +20,22 @@
 <link rel="preload" href="fonts/intertight-800.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-<link rel="stylesheet" href="css/site.css?v=202611260105">
+<link rel="stylesheet" href="css/site.css?v=202611260210">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-<script src="js/site.js?v=202611260105" defer></script>
+<script src="js/site.js?v=202611260210" defer></script>
 </head>
 <body class="has-localnav">
 <a class="skip" href="#contenu">Aller au contenu</a>
 <header class="gnav">
-  <div class="wide gnav-in">
+  <div class="gnav-in">
     <a class="brand" href="./" aria-label="Ouvert, accueil"><img src="assets/ouvert-logo.svg" alt="" width="132" height="35"></a>
     <nav class="gnav-links" aria-label="Navigation principale">
-      <a href="a-propos.html">À propos</a>
+      <span class="nav-glow" aria-hidden="true"></span>
       <a href="services.html" aria-current="page">Services</a>
       <a href="realisations.html">Réalisations</a>
-      <a href="contact.html">Contact</a>
+      <a href="a-propos.html">À propos</a>
     </nav>
     <div class="gnav-right">
       <a class="btn btn-fill btn-sm" href="contact.html">Demander un devis</a>
@@ -45,20 +45,19 @@
   <div class="gnav-menu" id="menu-mobile" hidden>
     <nav aria-label="Navigation mobile">
       <a href="./">Accueil</a>
-      <a href="a-propos.html">À propos</a>
       <a href="services.html" aria-current="page">Services</a>
       <a href="realisations.html">Réalisations</a>
+      <a href="a-propos.html">À propos</a>
       <a href="contact.html">Contact</a>
     </nav>
     <a class="btn btn-fill" href="contact.html">Demander un devis</a>
   </div>
 </header>
 <nav class="lnav" aria-label="Sections de la page Services">
-  <div class="wide lnav-in">
+  <div class="lnav-in">
     <a class="lnav-title" href="#titre">Services</a>
     <div class="lnav-right">
       <a href="#une-page">Une page</a><a href="#vitrine">Vitrine</a><a href="#sur-mesure">Sur mesure</a><a href="#hebergement">Hébergement</a><a href="#ia">IA</a>
-      <a class="btn btn-fill btn-sm" href="contact.html">Demander un devis</a>
     </div>
   </div>
 </nav>
@@ -68,7 +67,7 @@
     <p class="eyebrow">Services</p>
     <h1 class="h1" id="titre">Un site pour chaque besoin.</h1>
     <p class="sub">De la page simple au site qui prend les réservations et les paiements. Prix affichés, payés une fois.</p>
-    <div class="cta-row"><a class="btn btn-fill" href="contact.html">Demander un devis</a><a class="btn btn-line" href="#une-page">Voir les offres</a></div>
+    <div class="cta-row"><a class="btn btn-spark" href="#une-page">Voir les offres</a></div>
   </div>
 </section>
 <section class="sec s-frost offer" id="une-page" aria-labelledby="une-page-t">
@@ -237,7 +236,7 @@
         <p>Des sites simples, rapides et beaux pour les pros autour d'Annecy.</p>
       </div>
       <nav aria-label="Pages"><h2>Pages</h2><ul>
-        <li><a href="./">Accueil</a></li><li><a href="a-propos.html">À propos</a></li><li><a href="services.html">Services</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="./">Accueil</a></li><li><a href="services.html">Services</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="a-propos.html">À propos</a></li><li><a href="contact.html">Contact</a></li>
       </ul></nav>
       <nav aria-label="Offres"><h2>Offres</h2><ul>
         <li><a href="services.html#une-page">Une page · 390 €</a></li><li><a href="services.html#vitrine">Vitrine · 790 €</a></li><li><a href="services.html#sur-mesure">Sur mesure · dès 1 290 €</a></li><li><a href="services.html#ia">Visible sur les IA · 190 €</a></li><li><a href="services.html#hebergement">Hébergement et suivi</a></li>

@@ -20,22 +20,22 @@
 <link rel="preload" href="fonts/intertight-800.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-<link rel="stylesheet" href="css/site.css?v=202611260105">
+<link rel="stylesheet" href="css/site.css?v=202611260210">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-<script src="js/site.js?v=202611260105" defer></script>
+<script src="js/site.js?v=202611260210" defer></script>
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
 <header class="gnav">
-  <div class="wide gnav-in">
+  <div class="gnav-in">
     <a class="brand" href="./" aria-label="Ouvert, accueil"><img src="assets/ouvert-logo.svg" alt="" width="132" height="35"></a>
     <nav class="gnav-links" aria-label="Navigation principale">
-      <a href="a-propos.html">À propos</a>
+      <span class="nav-glow" aria-hidden="true"></span>
       <a href="services.html">Services</a>
       <a href="realisations.html" aria-current="page">Réalisations</a>
-      <a href="contact.html">Contact</a>
+      <a href="a-propos.html">À propos</a>
     </nav>
     <div class="gnav-right">
       <a class="btn btn-fill btn-sm" href="contact.html">Demander un devis</a>
@@ -45,9 +45,9 @@
   <div class="gnav-menu" id="menu-mobile" hidden>
     <nav aria-label="Navigation mobile">
       <a href="./">Accueil</a>
-      <a href="a-propos.html">À propos</a>
       <a href="services.html">Services</a>
       <a href="realisations.html" aria-current="page">Réalisations</a>
+      <a href="a-propos.html">À propos</a>
       <a href="contact.html">Contact</a>
     </nav>
     <a class="btn btn-fill" href="contact.html">Demander un devis</a>
@@ -57,9 +57,9 @@
 <main id="contenu">
 <section class="hero s-white" aria-labelledby="titre">
   <div class="wrap center" data-hero>
-    <p class="eyebrow">Réalisation · Aix-les-Bains</p>
+    <p class="eyebrow">Un exemple · Aix-les-Bains</p>
     <h1 class="h1" id="titre">La Bonne Aventure.</h1>
-    <p class="sub">Un site de réservation en direct pour un studio. Les voyageurs choisissent leurs dates, paient en ligne et reçoivent leur confirmation, sans passer par Airbnb.</p>
+    <p class="sub">Un exemple de site sur mesure, pour un studio. Les voyageurs choisissent leurs dates, paient en ligne et reçoivent leur confirmation, sans passer par Airbnb. Le même soin, pour un artisan ou un commerce.</p>
     <div class="cta-row"><a class="btn btn-fill" href="contact.html?offre=sur-mesure">Un site comme celui-ci</a><a class="btn btn-line" href="https://labonneaventure-aixlesbains.fr/" target="_blank" rel="noopener">Voir le site<span class="sr-only"> (nouvel onglet)</span> <svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
   </div>
   <div class="media">
@@ -96,6 +96,24 @@
   </div>
 </section>
 
+<section class="rail-sec" aria-label="Autres métiers">
+  <p class="eyebrow">Le même soin, d'autres métiers</p>
+  <div class="rail">
+    <div class="rail-track">
+      <figure><img src="assets/annecy-metier.webp" alt="Main qui passe un rouleau de peinture" width="1600" height="1200" loading="lazy" decoding="async"><figcaption>Artisan</figcaption></figure>
+      <figure><img src="assets/annecy-commerce.webp" alt="Viennoiseries sur un comptoir de pierre" width="1600" height="1200" loading="lazy" decoding="async"><figcaption>Commerce</figcaption></figure>
+      <figure><img src="assets/annecy-atelier.webp" alt="Établi de menuisier" width="1600" height="1200" loading="lazy" decoding="async"><figcaption>Atelier</figcaption></figure>
+      <figure><img src="assets/annecy-lac.webp" alt="Quai au bord d'un lac" width="1600" height="900" loading="lazy" decoding="async"><figcaption>Le lac</figcaption></figure>
+      <figure><img src="assets/annecy-location.webp" alt="Terrasse au bord d'un lac alpin" width="1100" height="1467" loading="lazy" decoding="async"><figcaption>Location</figcaption></figure>
+      <figure><img src="assets/annecy-metier.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async"><figcaption>Artisan</figcaption></figure>
+      <figure><img src="assets/annecy-commerce.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async"><figcaption>Commerce</figcaption></figure>
+      <figure><img src="assets/annecy-atelier.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async"><figcaption>Atelier</figcaption></figure>
+      <figure><img src="assets/annecy-lac.webp" alt="" width="1600" height="900" loading="lazy" decoding="async"><figcaption>Le lac</figcaption></figure>
+      <figure><img src="assets/annecy-location.webp" alt="" width="1100" height="1467" loading="lazy" decoding="async"><figcaption>Location</figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <section class="sec s-white" aria-labelledby="fin-titre">
   <div class="wrap center" data-reveal>
     <h2 class="h2" id="fin-titre" style="max-width:15ch;margin:0 auto 16px">Le prochain site, c'est le vôtre&nbsp;?</h2>
@@ -116,7 +134,7 @@
         <p>Des sites simples, rapides et beaux pour les pros autour d'Annecy.</p>
       </div>
       <nav aria-label="Pages"><h2>Pages</h2><ul>
-        <li><a href="./">Accueil</a></li><li><a href="a-propos.html">À propos</a></li><li><a href="services.html">Services</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="./">Accueil</a></li><li><a href="services.html">Services</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="a-propos.html">À propos</a></li><li><a href="contact.html">Contact</a></li>
       </ul></nav>
       <nav aria-label="Offres"><h2>Offres</h2><ul>
         <li><a href="services.html#une-page">Une page · 390 €</a></li><li><a href="services.html#vitrine">Vitrine · 790 €</a></li><li><a href="services.html#sur-mesure">Sur mesure · dès 1 290 €</a></li><li><a href="services.html#ia">Visible sur les IA · 190 €</a></li><li><a href="services.html#hebergement">Hébergement et suivi</a></li>

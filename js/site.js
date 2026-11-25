@@ -134,28 +134,101 @@ const CONFIG = {
   if (reduce || !window.gsap || !window.ScrollTrigger) { root.classList.add('intro-ready'); return; }
 
   /* =======================================================
-     Animations (GSAP + ScrollTrigger), sobres
+     Animations
      ======================================================= */
   gsap.registerPlugin(ScrollTrigger);
-  const EASE = 'power2.out';
+  const EASE = 'power3.out';
 
-  /* Entrée du haut de page */
-  root.classList.add('intro-ready');
-  if ($('[data-hero]')) gsap.from('[data-hero] > *', { opacity: 0, y: 24, duration: 1.1, ease: EASE, stagger: .09, delay: .1 });
+  const prog = document.createElement('div');
+  prog.className = 'scroll-progress';
+  document.body.append(prog);
+  gsap.to(prog, { scaleX: 1, ease: 'none', scrollTrigger: { trigger: document.documentElement, start: 0, end: 'max', scrub: 0.3 } });
 
-  /* Rendu produit : la fenêtre se redresse au scroll */
-  $$('.media').forEach(m => {
-    const win = m.querySelector('.window');
-    const ph = m.querySelector('.phone');
-    if (win) gsap.fromTo(win, { scale: .9, y: 40, opacity: .6 }, { scale: 1, y: 0, opacity: 1, ease: 'none', scrollTrigger: { trigger: m, start: 'top 95%', end: 'top 30%', scrub: .6 } });
-    if (ph) gsap.fromTo(ph, { y: 44 }, { y: 0, ease: 'none', scrollTrigger: { trigger: m, start: 'top bottom', end: 'bottom 60%', scrub: .6 } });
+  /* Pastille qui glisse sous le lien du menu */
+  const nav = $('.gnav-links');
+  const glow = $('.nav-glow');
+  if (nav && glow) {
+    const links = $$('.gnav-links a');
+    const current = nav.querySelector('[aria-current="page"]');
+    const place = (a, anim) => {
+      const nr = nav.getBoundingClientRect();
+      const r = a.getBoundingClientRect();
+      gsap.to(glow, { x: r.left - nr.left, width: r.width, opacity: 1, duration: anim ? .4 : 0, ease: 'power3.out' });
+    };
+    gsap.set(glow, { opacity: 0 });
+    if (current) place(current, false);
+    links.forEach(a => a.addEventListener('mouseenter', () => place(a, true)));
+    nav.addEventListener('mouseleave', () => current ? place(current, true) : gsap.to(glow, { opacity: 0, duration: .3 }));
+    window.addEventListener('resize', () => { if (current) place(current, false); });
+  }
+
+  /* Titres : les mots montent */
+  const splitRise = el => {
+    const walk = node => Array.from(node.childNodes).forEach(n => {
+      if (n.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        n.textContent.split(/(\s+)/).forEach(part => {
+          if (!part) return;
+          if (/^\s+$/.test(part)) { frag.append(part); return; }
+          const o = document.createElement('span'); o.className = 'rise';
+          const w = document.createElement('span'); w.className = 'rise-w'; w.textContent = part;
+          o.append(w); frag.append(o);
+        });
+        n.replaceWith(frag);
+      } else if (n.nodeType === 1 && !n.classList.contains('rise')) walk(n);
+    });
+    walk(el);
+    return el.querySelectorAll('.rise-w');
+  };
+  $$('[data-hero] h1').forEach(h => {
+    const words = splitRise(h);
+    gsap.set(words, { yPercent: 120 });
+    gsap.to(words, { yPercent: 0, duration: 1.15, ease: 'power4.out', stagger: .045, delay: .05 });
   });
 
-  /* Apparitions */
-  $$('[data-reveal]').forEach(el => gsap.from(el, { opacity: 0, y: 32, duration: 1, ease: EASE, scrollTrigger: { trigger: el, start: 'top 88%' } }));
-  $$('[data-stagger]').forEach(list => gsap.from(list.children, { opacity: 0, y: 32, duration: 1, ease: EASE, stagger: .1, scrollTrigger: { trigger: list, start: 'top 85%' } }));
+  root.classList.add('intro-ready');
+  if ($('[data-hero]')) gsap.from('[data-hero] > *:not(h1)', { opacity: 0, y: 36, duration: 1, ease: EASE, stagger: .08, delay: .15 });
 
-  /* Texte qui s'allume mot à mot */
+  /* Boutons aimantés */
+  $$('.btn').forEach(btn => {
+    btn.addEventListener('mousemove', e => {
+      const r = btn.getBoundingClientRect();
+      gsap.to(btn, { x: (e.clientX - r.left - r.width / 2) * .35, y: (e.clientY - r.top - r.height / 2) * .5, duration: .35, ease: 'power3.out' });
+    });
+    btn.addEventListener('mouseleave', () => gsap.to(btn, { x: 0, y: 0, duration: .7, ease: 'elastic.out(1,.5)' }));
+  });
+
+  /* Cartes qui s'inclinent */
+  $$('.tile, .col, .facts li, .features li').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width - .5;
+      const py = (e.clientY - r.top) / r.height - .5;
+      gsap.to(card, { rotateY: px * 7, rotateX: py * -7, transformPerspective: 900, duration: .4, ease: 'power2.out' });
+    });
+    card.addEventListener('mouseleave', () => gsap.to(card, { rotateX: 0, rotateY: 0, duration: .6, ease: 'power3.out' }));
+  });
+
+  /* Pictos dessinés au trait */
+  $$('.ico svg').forEach(svg => {
+    const shapes = svg.querySelectorAll('path, circle, rect');
+    shapes.forEach(s => {
+      let len = 80;
+      try { len = s.getTotalLength(); } catch (e) {}
+      s.style.strokeDasharray = len;
+      s.style.strokeDashoffset = len;
+    });
+    gsap.to(shapes, { strokeDashoffset: 0, duration: 1.3, stagger: .08, ease: 'power2.out', scrollTrigger: { trigger: svg, start: 'top 92%' } });
+  });
+
+  $$('.media').forEach(m => {
+    const win = m.querySelector('.window');
+    if (win) gsap.fromTo(win, { scale: .86, y: 70, rotate: -1.5 }, { scale: 1, y: 0, rotate: 0, ease: 'none', scrollTrigger: { trigger: m, start: 'top 95%', end: 'top 35%', scrub: .6 } });
+  });
+
+  $$('[data-reveal]').forEach(el => gsap.from(el, { opacity: 0, y: 64, scale: .96, duration: 1.1, ease: EASE, scrollTrigger: { trigger: el, start: 'top 88%' } }));
+  $$('[data-stagger]').forEach(list => gsap.from(list.children, { opacity: 0, y: 56, scale: .94, duration: 1, ease: EASE, stagger: .08, scrollTrigger: { trigger: list, start: 'top 86%' } }));
+
   $$('[data-lit]').forEach(p => {
     const walk = node => Array.from(node.childNodes).forEach(n => {
       if (n.nodeType === 3) {
@@ -169,18 +242,28 @@ const CONFIG = {
       } else if (n.nodeType === 1) walk(n);
     });
     walk(p);
-    gsap.fromTo(p.querySelectorAll('.lw'), { opacity: .42 }, { opacity: 1, ease: 'none', stagger: .1, scrollTrigger: { trigger: p, start: 'top 80%', end: 'bottom 50%', scrub: true } });
+    gsap.fromTo(p.querySelectorAll('.lw'), { opacity: .18, y: 8 }, { opacity: 1, y: 0, ease: 'none', stagger: .08, scrollTrigger: { trigger: p, start: 'top 82%', end: 'bottom 45%', scrub: true } });
   });
 
-  /* Tuiles : la maquette monte */
-  $$('.tile-mock > *').forEach(m => gsap.fromTo(m, { y: 90 }, { y: 28, ease: 'none', scrollTrigger: { trigger: m.closest('.tile'), start: 'top bottom', end: 'center 55%', scrub: .6 } }));
+  $$('.mosaic .shot').forEach((shot, i) => {
+    gsap.from(shot, { opacity: 0, scale: .9, duration: 1.15, ease: 'power3.out', delay: .15 + i * .08 });
+    gsap.to(shot, { yPercent: i % 2 ? -10 : -18, ease: 'none', scrollTrigger: { trigger: '.mosaic', start: 'top bottom', end: 'bottom top', scrub: 1 } });
+  });
 
-  /* Galerie : glisse à l'entrée */
-  $$('.gallery').forEach(g => gsap.from(g.children, { x: 120, opacity: 0, duration: 1.2, ease: 'power3.out', stagger: .1, scrollTrigger: { trigger: g, start: 'top 85%' } }));
+  $$('.tile-mock > *').forEach(m => gsap.fromTo(m, { y: 140, rotate: 2 }, { y: 18, rotate: 0, ease: 'none', scrollTrigger: { trigger: m.closest('.tile'), start: 'top bottom', end: 'center 50%', scrub: .5 } }));
 
-  /* FAQ : ouverture animée */
+  $$('.gallery').forEach(g => gsap.from(g.children, { x: 160, opacity: 0, rotate: 2, duration: 1.2, ease: 'power3.out', stagger: .12, scrollTrigger: { trigger: g, start: 'top 88%' } }));
+
+  const line = $('.steps-line span');
+  if (line) gsap.to(line, { scaleX: 1, ease: 'none', scrollTrigger: { trigger: '.steps', start: 'top 75%', end: 'bottom 60%', scrub: .4 } });
+
+  $$('.exemple .window, .duo img').forEach(el => {
+    gsap.from(el, { clipPath: 'inset(14% 14% 14% 14% round 32px)', scale: 1.12, duration: 1.3, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 90%' } });
+  });
+
   faqs.forEach(d => {
     const s = d.querySelector('summary'), a = d.querySelector('.faq-a');
+    if (!s || !a) return;
     s.addEventListener('click', e => {
       e.preventDefault();
       if (d.open) {
