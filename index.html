@@ -20,7 +20,7 @@
 <link rel="preload" href="fonts/intertight-800.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-<link rel="stylesheet" href="css/site.css?v=202611260210">
+<link rel="stylesheet" href="css/site.css?v=202611270020">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -85,10 +85,10 @@
     <div class="mosaic">
       <figure class="shot shot-a"><img src="assets/annecy-atelier.webp" alt="Établi de menuisier, lumière du matin" width="1600" height="1200" decoding="async" fetchpriority="high"><span>Atelier</span></figure>
       <figure class="shot shot-b"><img src="assets/annecy-commerce.webp" alt="Viennoiseries sur un comptoir de pierre" width="1600" height="1200" decoding="async"><span>Commerce</span></figure>
-      <a class="shot shot-ex" href="realisations.html"><img src="assets/bonneaventure-desktop.webp" alt="Aperçu du site La Bonne Aventure, un exemple" width="1440" height="900" decoding="async"><span>Exemple · La Bonne Aventure</span></a>
+      <a class="shot shot-ex" href="#appli"><div class="mini-stock" aria-hidden="true"><b>Espace ménage</b><p>Papier toilette <i>4</i></p><p class="low">Café <i>1</i></p><p>Sacs poubelle <i>6</i></p></div><span>Appli stock</span></a>
       <figure class="shot shot-c"><img src="assets/annecy-location.webp" alt="Terrasse au bord d'un lac alpin" width="1100" height="1467" decoding="async"><span>Location</span></figure>
     </div>
-    <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Services</span><span>Réservations</span><span>Paiements</span><span>Annecy</span><span>24h/24</span><span>Google</span><span>Services</span><span>Réservations</span><span>Paiements</span><span>Annecy</span><span>24h/24</span><span>Google</span></div></div>
+    <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Services</span><span>Stock</span><span>Réservations</span><span>Paiements</span><span>Annecy</span><span>24h/24</span><span>Services</span><span>Stock</span><span>Réservations</span><span>Paiements</span><span>Annecy</span><span>24h/24</span></div></div>
   </div>
 </section>
 
@@ -163,18 +163,31 @@
   </div>
 </section>
 
-<section class="sec exemple" aria-labelledby="lba-titre">
+<section class="sec appli" id="appli" aria-labelledby="appli-titre">
   <div class="wide exemple-in">
     <div>
-      <p class="eyebrow">Un exemple</p>
-      <h2 class="h2" id="lba-titre">La Bonne Aventure.</h2>
-      <p class="sub">Un studio à Aix-les-Bains. Les voyageurs réservent et paient en direct. C'est un exemple de site sur mesure, pas le seul type de site que je fais.</p>
-      <a class="more" href="realisations.html">Voir cet exemple <svg width="7" height="12" viewBox="0 0 7 12" aria-hidden="true"><path d="m1 1 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <p class="eyebrow">Appli ménage</p>
+      <h2 class="h2" id="appli-titre">Le stock, sur son téléphone.</h2>
+      <p class="sub">Après le ménage, elle note ce qu'elle a remis&nbsp;: papier toilette, café, sacs. Vous recevez un mail quand il faut racheter. Un lien privé, posé sur l'écran d'accueil. Rien à installer.</p>
+      <ul class="app-points">
+        <li>Quelques touches, une fois par ménage</li>
+        <li>Alerte dès qu'un produit passe sous le seuil</li>
+        <li>Elle peut annuler si elle s'est trompée</li>
+      </ul>
+      <a class="more" href="realisations.html#menage">Voir l'appli <svg width="7" height="12" viewBox="0 0 7 12" aria-hidden="true"><path d="m1 1 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <p class="small" style="margin-top:14px">Le même studio a aussi son site de réservation. <a class="link-inline" href="realisations.html">La Bonne Aventure</a>.</p>
     </div>
-    <figure class="window">
-      <div class="window-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="url">labonneaventure-aixlesbains.fr</span></div>
-      <img src="assets/bonneaventure-desktop.webp" srcset="assets/bonneaventure-desktop-720.webp 720w, assets/bonneaventure-desktop.webp 1440w" sizes="(min-width: 900px) 620px, 92vw" alt="Page d'accueil du site La Bonne Aventure" width="1440" height="900" loading="lazy" decoding="async">
-    </figure>
+    <div class="stock-phone" aria-hidden="true">
+      <p class="sp-kicker">La Bonne Aventure</p>
+      <p class="sp-title">Espace <em>ménage</em></p>
+      <p class="sp-lead">Après le ménage, ce que vous avez utilisé.</p>
+      <div class="sp-card">
+        <div class="sp-row"><div><b>Papier toilette</b><span>paquet de 6 · reste 4</span></div><i>2</i></div>
+        <div class="sp-row low"><div><b>Café</b><span>à l'unité · reste 1</span></div><i>1</i></div>
+        <div class="sp-row"><div><b>Sacs poubelle</b><span>paquet de 20 · reste 6</span></div><i>0</i></div>
+        <div class="sp-go">Valider</div>
+      </div>
+    </div>
   </div>
 </section>
 

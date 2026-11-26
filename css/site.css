@@ -167,8 +167,33 @@ section{position:relative}
 .mosaic{display:grid;grid-template-columns:1.05fr 1fr .9fr;grid-template-rows:230px 210px;grid-template-areas:"atelier location commerce" "atelier location exemple";gap:14px;width:min(1080px,100%);margin:clamp(36px,5vw,56px) auto 0}
 .shot{position:relative;display:block;border-radius:32px;overflow:hidden;background:#fff;box-shadow:var(--shadow-sm);min-height:0}
 .shot img{width:100%;height:100%;object-fit:cover}
+.shot-ex{background:#0f2a4a}
 .shot-ex img{object-position:left center}
 .motion .shot-ex img{animation:none;transform:none}
+.mini-stock{height:100%;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;padding:16px 14px 46px;color:#FBF7EE}
+.mini-stock b{font:600 13px/1 var(--f);letter-spacing:.08em;text-transform:uppercase;opacity:.75;margin-bottom:4px}
+.mini-stock p{display:flex;justify-content:space-between;align-items:center;background:#fff;color:var(--ink);border-radius:12px;padding:8px 10px;font:600 13px/1 var(--f)}
+.mini-stock i{font-style:normal;font:700 16px/1 var(--f-d)}
+.mini-stock .low i{color:#a9760f}
+.stock-phone{width:min(340px,100%);margin-left:auto;background:#0f2a4a;color:#FBF7EE;border-radius:36px;padding:26px 16px 16px;box-shadow:var(--shadow)}
+.sp-kicker{font:500 12px/1 var(--f);opacity:.65;margin-bottom:8px}
+.sp-title{font:500 32px/1.05 var(--f-d);letter-spacing:-.03em;margin-bottom:8px}
+.sp-title em{font-style:italic;font-weight:450;color:#e6a92c}
+.sp-lead{font-size:14px;line-height:1.4;opacity:.9;margin-bottom:16px}
+.sp-card{background:#fff;color:var(--ink);border-radius:20px;padding:4px 14px 14px}
+.sp-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #F0ECE1}
+.sp-row b{display:block;font-size:15px}
+.sp-row span{font-size:12px;color:var(--slate)}
+.sp-row i{margin-left:auto;font:700 20px/1 var(--f-d);font-style:normal}
+.sp-row.low i{color:#a9760f}
+.sp-go{margin-top:14px;min-height:48px;border-radius:12px;background:#0f2a4a;color:#FBF7EE;display:grid;place-items:center;font:600 12px/1 var(--f);letter-spacing:.14em;text-transform:uppercase}
+.app-points{margin:18px 0 20px;display:flex;flex-direction:column;gap:8px}
+.app-points li{position:relative;padding-left:18px;font-size:15px}
+.app-points li::before{content:"";position:absolute;left:0;top:.55em;width:7px;height:7px;border-radius:50%;background:var(--spark)}
+.menage-block{margin:clamp(28px,4vw,48px) auto 0;text-align:left}
+.hero .menage-block .sub{max-width:46ch;margin:0 0 8px}
+.appli .h2,.menage-block .h2{margin-bottom:16px}
+#appli,#menage{scroll-margin-top:112px}
 .motion .shot img{animation:drift 10s ease-in-out infinite}
 .shot-b img{animation-duration:12s;animation-delay:-3s}
 .shot-c img{animation-duration:14s;animation-delay:-5s}
@@ -197,7 +222,7 @@ section{position:relative}
 .rail img{width:100%;height:220px;object-fit:cover;border-radius:32px}
 .rail figcaption{margin-top:8px;padding-left:6px;color:var(--slate)}
 
-.exemple-in{display:grid;grid-template-columns:.85fr 1.15fr;gap:36px;align-items:center}
+.exemple-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,380px);gap:clamp(28px,5vw,64px);align-items:center}
 .exemple .sub{margin:12px 0 20px}
 
 .duo{display:grid;grid-template-columns:1.25fr .75fr;gap:14px;width:min(1080px,100%);margin:8px auto 0;padding:0 var(--gutter)}
@@ -417,6 +442,7 @@ details[open] .pm::after{transform:rotate(0)}
 @media (max-width:1068px){
   .tiles,.facts,.steps{grid-template-columns:1fr 1fr}
   .compare,.pair,.values,.exemple-in,.duo{grid-template-columns:1fr}
+  .stock-phone{margin:0 auto}
   .compare{max-width:440px;margin:0 auto}
   .col-for,.col-tag{min-height:0}
   .f-dir{grid-template-columns:1fr 1fr}
@@ -435,6 +461,9 @@ details[open] .pm::after{transform:rotate(0)}
   .features{grid-template-columns:1fr 1fr}
   .url{transform:none}
   .mosaic{grid-template-columns:1fr 1fr;grid-template-rows:180px 150px 150px;grid-template-areas:"atelier atelier" "location commerce" "location exemple"}
+  .mini-stock{padding:10px 10px 40px;gap:4px}
+  .mini-stock p:last-of-type{display:none}
+  .mini-stock p{padding:6px 8px;font-size:12px}
 }
 @media (max-width:600px){
   .stage-copy .cta-row,.hero .cta-row,.center .cta-row{flex-direction:column}
