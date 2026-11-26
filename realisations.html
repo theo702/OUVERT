@@ -6,7 +6,7 @@
 <title>Réalisations · Ouvert, sites web près d'Annecy</title>
 <meta name="description" content="La Bonne Aventure, studio à Aix-les-Bains : réservation en direct, paiement Stripe, mails automatiques et espace client, sans commission Airbnb.">
 <link rel="canonical" href="https://studio-ouvert.fr/realisations.html">
-<meta name="theme-color" content="#fafafc">
+<meta name="theme-color" content="#f2f1f3">
 <link rel="icon" href="assets/ouvert-icone.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
@@ -17,24 +17,25 @@
 <meta property="og:image" content="https://studio-ouvert.fr/assets/bonneaventure-desktop.webp">
 <meta name="twitter:card" content="summary_large_image">
 <script>document.documentElement.className=matchMedia('(prefers-reduced-motion: reduce)').matches?'rm':'motion';setTimeout(function(){document.documentElement.classList.add('intro-ready')},2500);</script>
-<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/intertight-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-<link rel="stylesheet" href="css/site.css?v=202611252107">
+<link rel="stylesheet" href="css/site.css?v=202611270020">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-<script src="js/site.js?v=202611252107" defer></script>
+<script src="js/site.js?v=202611260210" defer></script>
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
 <header class="gnav">
-  <div class="wide gnav-in">
+  <div class="gnav-in">
     <a class="brand" href="./" aria-label="Ouvert, accueil"><img src="assets/ouvert-logo.svg" alt="" width="132" height="35"></a>
     <nav class="gnav-links" aria-label="Navigation principale">
-      <a href="a-propos.html">À propos</a>
+      <span class="nav-glow" aria-hidden="true"></span>
       <a href="services.html">Services</a>
       <a href="realisations.html" aria-current="page">Réalisations</a>
-      <a href="contact.html">Contact</a>
+      <a href="a-propos.html">À propos</a>
     </nav>
     <div class="gnav-right">
       <a class="btn btn-fill btn-sm" href="contact.html">Demander un devis</a>
@@ -44,9 +45,9 @@
   <div class="gnav-menu" id="menu-mobile" hidden>
     <nav aria-label="Navigation mobile">
       <a href="./">Accueil</a>
-      <a href="a-propos.html">À propos</a>
       <a href="services.html">Services</a>
       <a href="realisations.html" aria-current="page">Réalisations</a>
+      <a href="a-propos.html">À propos</a>
       <a href="contact.html">Contact</a>
     </nav>
     <a class="btn btn-fill" href="contact.html">Demander un devis</a>
@@ -56,10 +57,35 @@
 <main id="contenu">
 <section class="hero s-white" aria-labelledby="titre">
   <div class="wrap center" data-hero>
-    <p class="eyebrow">Réalisation · Aix-les-Bains</p>
+    <p class="eyebrow">Un exemple · Aix-les-Bains</p>
     <h1 class="h1" id="titre">La Bonne Aventure.</h1>
-    <p class="sub">Un site de réservation en direct pour un studio. Les voyageurs choisissent leurs dates, paient en ligne et reçoivent leur confirmation, sans passer par Airbnb.</p>
+    <p class="sub">Un studio à Aix-les-Bains. Le site prend les réservations. L'appli, elle, sert à la personne qui fait le ménage&nbsp;: le stock, depuis son téléphone.</p>
     <div class="cta-row"><a class="btn btn-fill" href="contact.html?offre=sur-mesure">Un site comme celui-ci</a><a class="btn btn-line" href="https://labonneaventure-aixlesbains.fr/" target="_blank" rel="noopener">Voir le site<span class="sr-only"> (nouvel onglet)</span> <svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+  </div>
+  <div class="wide menage-block" id="menage">
+    <div class="exemple-in">
+      <div>
+        <p class="eyebrow">Appli ménage</p>
+        <h2 class="h2">Elle gère le stock après le passage.</h2>
+        <p class="sub">Papier toilette, café, sacs poubelle. Elle indique ce qu'elle a remis, puis valide. Si un produit descend sous le seuil, un mail part. Le lien est privé, et l'appli se pose sur l'écran d'accueil.</p>
+        <ul class="app-points">
+          <li>Les ménages à venir et les demandes des voyageurs</li>
+          <li>Le stock, en quelques touches</li>
+          <li>Annulation possible juste après, en cas d'erreur</li>
+        </ul>
+      </div>
+      <div class="stock-phone" aria-hidden="true">
+        <p class="sp-kicker">La Bonne Aventure</p>
+        <p class="sp-title">Espace <em>ménage</em></p>
+        <p class="sp-lead">Après le ménage, ce que vous avez utilisé.</p>
+        <div class="sp-card">
+          <div class="sp-row"><div><b>Papier toilette</b><span>paquet de 6 · reste 4</span></div><i>2</i></div>
+          <div class="sp-row low"><div><b>Café</b><span>à l'unité · reste 1</span></div><i>1</i></div>
+          <div class="sp-row"><div><b>Sacs poubelle</b><span>paquet de 20 · reste 6</span></div><i>0</i></div>
+          <div class="sp-go">Valider</div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="media">
     <figure class="window">
@@ -95,6 +121,24 @@
   </div>
 </section>
 
+<section class="rail-sec" aria-label="Autres métiers">
+  <p class="eyebrow">Le même soin, d'autres métiers</p>
+  <div class="rail">
+    <div class="rail-track">
+      <figure><img src="assets/annecy-metier.webp" alt="Main qui passe un rouleau de peinture" width="1600" height="1200" loading="lazy" decoding="async"><figcaption>Artisan</figcaption></figure>
+      <figure><img src="assets/annecy-commerce.webp" alt="Viennoiseries sur un comptoir de pierre" width="1600" height="1200" loading="lazy" decoding="async"><figcaption>Commerce</figcaption></figure>
+      <figure><img src="assets/annecy-atelier.webp" alt="Établi de menuisier" width="1600" height="1200" loading="lazy" decoding="async"><figcaption>Atelier</figcaption></figure>
+      <figure><img src="assets/annecy-lac.webp" alt="Quai au bord d'un lac" width="1600" height="900" loading="lazy" decoding="async"><figcaption>Le lac</figcaption></figure>
+      <figure><img src="assets/annecy-location.webp" alt="Terrasse au bord d'un lac alpin" width="1100" height="1467" loading="lazy" decoding="async"><figcaption>Location</figcaption></figure>
+      <figure><img src="assets/annecy-metier.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async"><figcaption>Artisan</figcaption></figure>
+      <figure><img src="assets/annecy-commerce.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async"><figcaption>Commerce</figcaption></figure>
+      <figure><img src="assets/annecy-atelier.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async"><figcaption>Atelier</figcaption></figure>
+      <figure><img src="assets/annecy-lac.webp" alt="" width="1600" height="900" loading="lazy" decoding="async"><figcaption>Le lac</figcaption></figure>
+      <figure><img src="assets/annecy-location.webp" alt="" width="1100" height="1467" loading="lazy" decoding="async"><figcaption>Location</figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <section class="sec s-white" aria-labelledby="fin-titre">
   <div class="wrap center" data-reveal>
     <h2 class="h2" id="fin-titre" style="max-width:15ch;margin:0 auto 16px">Le prochain site, c'est le vôtre&nbsp;?</h2>
@@ -115,7 +159,7 @@
         <p>Des sites simples, rapides et beaux pour les pros autour d'Annecy.</p>
       </div>
       <nav aria-label="Pages"><h2>Pages</h2><ul>
-        <li><a href="./">Accueil</a></li><li><a href="a-propos.html">À propos</a></li><li><a href="services.html">Services</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="./">Accueil</a></li><li><a href="services.html">Services</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="a-propos.html">À propos</a></li><li><a href="contact.html">Contact</a></li>
       </ul></nav>
       <nav aria-label="Offres"><h2>Offres</h2><ul>
         <li><a href="services.html#une-page">Une page · 390 €</a></li><li><a href="services.html#vitrine">Vitrine · 790 €</a></li><li><a href="services.html#sur-mesure">Sur mesure · dès 1 290 €</a></li><li><a href="services.html#ia">Visible sur les IA · 190 €</a></li><li><a href="services.html#hebergement">Hébergement et suivi</a></li>

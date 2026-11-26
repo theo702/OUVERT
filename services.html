@@ -6,7 +6,7 @@
 <title>Services et tarifs · Ouvert, sites web près d'Annecy</title>
 <meta name="description" content="Une page à 390 €, Vitrine à 790 €, Sur mesure dès 1 290 €. Hébergement sans engagement, option visible sur les IA. Paiement en ligne sécurisé.">
 <link rel="canonical" href="https://studio-ouvert.fr/services.html">
-<meta name="theme-color" content="#fafafc">
+<meta name="theme-color" content="#f2f1f3">
 <link rel="icon" href="assets/ouvert-icone.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
@@ -17,24 +17,25 @@
 <meta property="og:image" content="https://studio-ouvert.fr/assets/bonneaventure-desktop.webp">
 <meta name="twitter:card" content="summary_large_image">
 <script>document.documentElement.className=matchMedia('(prefers-reduced-motion: reduce)').matches?'rm':'motion';setTimeout(function(){document.documentElement.classList.add('intro-ready')},2500);</script>
-<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/intertight-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-<link rel="stylesheet" href="css/site.css?v=202611252107">
+<link rel="stylesheet" href="css/site.css?v=202611270020">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-<script src="js/site.js?v=202611252107" defer></script>
+<script src="js/site.js?v=202611260210" defer></script>
 </head>
 <body class="has-localnav">
 <a class="skip" href="#contenu">Aller au contenu</a>
 <header class="gnav">
-  <div class="wide gnav-in">
+  <div class="gnav-in">
     <a class="brand" href="./" aria-label="Ouvert, accueil"><img src="assets/ouvert-logo.svg" alt="" width="132" height="35"></a>
     <nav class="gnav-links" aria-label="Navigation principale">
-      <a href="a-propos.html">À propos</a>
+      <span class="nav-glow" aria-hidden="true"></span>
       <a href="services.html" aria-current="page">Services</a>
       <a href="realisations.html">Réalisations</a>
-      <a href="contact.html">Contact</a>
+      <a href="a-propos.html">À propos</a>
     </nav>
     <div class="gnav-right">
       <a class="btn btn-fill btn-sm" href="contact.html">Demander un devis</a>
@@ -44,20 +45,19 @@
   <div class="gnav-menu" id="menu-mobile" hidden>
     <nav aria-label="Navigation mobile">
       <a href="./">Accueil</a>
-      <a href="a-propos.html">À propos</a>
       <a href="services.html" aria-current="page">Services</a>
       <a href="realisations.html">Réalisations</a>
+      <a href="a-propos.html">À propos</a>
       <a href="contact.html">Contact</a>
     </nav>
     <a class="btn btn-fill" href="contact.html">Demander un devis</a>
   </div>
 </header>
 <nav class="lnav" aria-label="Sections de la page Services">
-  <div class="wide lnav-in">
+  <div class="lnav-in">
     <a class="lnav-title" href="#titre">Services</a>
     <div class="lnav-right">
       <a href="#une-page">Une page</a><a href="#vitrine">Vitrine</a><a href="#sur-mesure">Sur mesure</a><a href="#hebergement">Hébergement</a><a href="#ia">IA</a>
-      <a class="btn btn-fill btn-sm" href="contact.html">Demander un devis</a>
     </div>
   </div>
 </nav>
@@ -67,7 +67,7 @@
     <p class="eyebrow">Services</p>
     <h1 class="h1" id="titre">Un site pour chaque besoin.</h1>
     <p class="sub">De la page simple au site qui prend les réservations et les paiements. Prix affichés, payés une fois.</p>
-    <div class="cta-row"><a class="btn btn-fill" href="contact.html">Demander un devis</a><a class="btn btn-line" href="#une-page">Voir les offres</a></div>
+    <div class="cta-row"><a class="btn btn-spark" href="#une-page">Voir les offres</a></div>
   </div>
 </section>
 <section class="sec s-frost offer" id="une-page" aria-labelledby="une-page-t">
@@ -107,7 +107,7 @@
       <h2 class="h2" id="sur-mesure-t">Sur mesure.</h2>
       <p class="sub" style="margin-bottom:32px">Pour prendre des réservations et des paiements.</p>
       <p class="price"><b><span class="from">dès</span>1 290 €</b><span>paiement unique</span></p>
-      <div class="cta-row"><a class="btn btn-fill" href="contact.html?offre=sur-mesure">Demander un devis</a><a class="more" href="realisations.html">Exemple&nbsp;: La Bonne Aventure <svg width="7" height="12" viewBox="0 0 7 12" aria-hidden="true"><path d="m1 1 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+      <div class="cta-row"><a class="btn btn-fill" href="contact.html?offre=sur-mesure">Demander un devis</a><a class="more" href="realisations.html#menage">L'appli stock, en exemple <svg width="7" height="12" viewBox="0 0 7 12" aria-hidden="true"><path d="m1 1 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
       <p class="small">Le prix dépend de ce dont vous avez besoin. On en parle d'abord, puis je vous envoie un devis clair.</p>
     </div>
     <ul class="features" data-stagger><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="m9 15 2 2 4-4"/></svg></span><p>Réservation en direct<span>avec calendrier</span></p></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span><p>Paiement en ligne<span>avec Stripe</span></p></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span><p>Mails de confirmation<span>automatiques</span></p></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20.5c1.2-3.8 4-5.7 7.5-5.7s6.3 1.9 7.5 5.7"/></svg></span><p>Espace client<span>selon besoin</span></p></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 19.5s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 7.5 2.5c0 5.6-7.5 10-7.5 10z"/></svg></span><p>Fidélité<span>selon besoin</span></p></li><li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h9M8.5 4v2c0 4-2 7-5 8.5M6 10c1 2 3 3.5 6 4.5"/><path d="m12 20 4-9 4 9M13.4 17h5.2"/></svg></span><p>Plusieurs langues<span>selon besoin</span></p></li></ul>
@@ -236,7 +236,7 @@
         <p>Des sites simples, rapides et beaux pour les pros autour d'Annecy.</p>
       </div>
       <nav aria-label="Pages"><h2>Pages</h2><ul>
-        <li><a href="./">Accueil</a></li><li><a href="a-propos.html">À propos</a></li><li><a href="services.html">Services</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="./">Accueil</a></li><li><a href="services.html">Services</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="a-propos.html">À propos</a></li><li><a href="contact.html">Contact</a></li>
       </ul></nav>
       <nav aria-label="Offres"><h2>Offres</h2><ul>
         <li><a href="services.html#une-page">Une page · 390 €</a></li><li><a href="services.html#vitrine">Vitrine · 790 €</a></li><li><a href="services.html#sur-mesure">Sur mesure · dès 1 290 €</a></li><li><a href="services.html#ia">Visible sur les IA · 190 €</a></li><li><a href="services.html#hebergement">Hébergement et suivi</a></li>
